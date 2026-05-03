@@ -11,8 +11,8 @@ from custom_components.solarmatrix.api import (
     AuthError,
     NotFoundError,
     RateLimitError,
-    SolarMatrixAPI,
     Snapshot,
+    SolarMatrixAPI,
     UnavailableError,
     UpstreamError,
 )
@@ -126,6 +126,6 @@ async def test_x_api_key_header_sent(session: aiohttp.ClientSession) -> None:
         m.get("https://api.example/api/v1/user/systems", payload=[])
         await api.list_systems()
         # aioresponses tracks calls; first request has matching headers.
-        request_calls = list(m.requests.values())[0]
+        request_calls = next(iter(m.requests.values()))
         kwargs = request_calls[0].kwargs
         assert kwargs["headers"]["X-API-Key"] == "sm_secret"
