@@ -1,0 +1,47 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to SolarMatrix",
+        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "data": {
+          "api_key": "API key",
+          "base_url": "Server URL"
+        }
+      },
+      "pick": {
+        "title": "Choose a household",
+        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "data": {
+          "selection": "Household"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-enter API key",
+        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "data": {
+          "api_key": "API key"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "API key is invalid.",
+      "cannot_connect": "Cannot reach the SolarMatrix server."
+    },
+    "abort": {
+      "already_configured": "This household is already configured.",
+      "no_systems": "This API key has no SolarMatrix systems.",
+      "no_households": "No households are accessible with this API key.",
+      "unknown_selection": "Selected household is no longer available."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "solar_power": { "name": "Solar power" },
+      "mi_out_power": { "name": "Microinverter output" },
+      "consumption": { "name": "Consumption" },
+      "battery_power": { "name": "Battery power" },
+      "battery_soc": { "name": "Battery SoC" }
+    }
+  }
+}
