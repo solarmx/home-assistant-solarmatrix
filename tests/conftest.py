@@ -3,9 +3,16 @@
 from __future__ import annotations
 
 import asyncio
+from typing import Any
 
 import aiohttp
 import pytest
+
+
+@pytest.fixture(autouse=True)
+def auto_enable_custom_integrations(enable_custom_integrations: Any) -> Any:
+    """Enable custom integration loading for every test."""
+    yield
 
 
 @pytest.fixture(autouse=True, scope="session")
