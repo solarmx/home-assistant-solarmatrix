@@ -1,0 +1,24 @@
+{
+  "SolarMatrix": "SolarMatrix",
+  "household": {
+    "de": "Haushalt",
+    "fr": "foyer",
+    "it": "abitazione",
+    "es": "hogar",
+    "nl": "huishouden"
+  },
+  "microinverter": {
+    "de": "Mikrowechselrichter",
+    "fr": "micro-onduleur",
+    "it": "microinverter",
+    "es": "microinversor",
+    "nl": "micro-omvormer"
+  },
+  "battery_soc": {
+    "de": "Batterieladezustand",
+    "fr": "charge de la batterie",
+    "it": "stato di carica",
+    "es": "estado de carga",
+    "nl": "batterijniveau"
+  }
+}
