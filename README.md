@@ -50,3 +50,20 @@ python3 -m venv .venv
 pip install -r requirements_test.txt
 pytest
 ```
+
+## Translations
+
+The integration ships translations for the full HA-supported locale list
+(see `scripts/locales.json`). The non-English files in
+`custom_components/solarmatrix/translations/` are currently machine-translated
+placeholders — running maintainers should regenerate them with a real LLM
+backend before each release:
+
+```bash
+OPENAI_API_KEY=sk-... python scripts/translate.py
+# or:
+ANTHROPIC_API_KEY=sk-ant-... MODEL=anthropic python scripts/translate.py
+```
+
+The drift check (run in CI as `python scripts/translate.py --check`) only
+reads files; it does not call any LLM and so does not need credentials.
