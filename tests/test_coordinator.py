@@ -91,3 +91,22 @@ async def test_backoff_caps_at_30_minutes(hass: HomeAssistant) -> None:
             await coord._async_update_data()
     assert coord.update_interval <= BACKOFF_CAP
     assert coord.update_interval >= BACKOFF_FLOOR
+
+
+async def test_setup_entry_runs(hass: HomeAssistant, mock_entry, monkeypatch) -> None:
+    from custom_components.solarmatrix.api import Snapshot
+    from custom_components.solarmatrix.const import DOMAIN
+
+    async def fake_first_refresh(self):
+        self.data = Snapshot(0, 1, 1, 1, 1, 1, 50)
+        self.last_update_success = True
+
+    monkeypatch.setattr(
+        "custom_components.solarmatrix.coordinator.SolarMatrixCoordinator.async_config_entry_first_refresh",
+        fake_first_refresh,
+        raising=False,
+    )
+    mock_entry.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(mock_entry.entry_id)
+    await hass.async_block_till_done()
+    assert mock_entry.entry_id in hass.data[DOMAIN]
