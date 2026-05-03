@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff mypy
+          pip install -r requirements_test.txt
+      - name: Ruff
+        run: ruff check custom_components scripts tests
+      - name: Pytest
+        run: pytest -v
+      - name: Translation drift check
+        run: python scripts/translate.py --check
+        env:
+          MODEL: placeholder  # only the drift check path runs in CI; no LLM call.
