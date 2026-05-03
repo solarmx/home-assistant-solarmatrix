@@ -4,6 +4,15 @@ target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "B", "UP", "ANN", "RUF"]
+# ANN401 forbids `typing.Any`; we allow it at clearly-marked JSON parsing seams.
+# UP037 prefers PEP 604 unquoted annotations; we keep quoted forward-refs in
+# from_json classmethods to avoid bootstrapping issues.
+ignore = ["ANN401", "UP037"]
+
+[tool.ruff.lint.per-file-ignores]
+# Tests use pytest fixtures whose types are defined by the framework; making
+# every test annotate them adds noise without value.
+"tests/**" = ["ANN001", "ANN201", "ANN202"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"

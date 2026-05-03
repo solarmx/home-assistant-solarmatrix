@@ -64,7 +64,10 @@ async def test_full_flow_creates_entry(hass: HomeAssistant, fake_api) -> None:
         assert pick["step_id"] == "pick"
         # Three options: A:0, A:1, B:0.
         schema_keys = list(pick["data_schema"].schema.keys())
-        assert any("sid" in str(k) or "household" in str(k) or "selection" in str(k) for k in schema_keys)
+        assert any(
+            "sid" in str(k) or "household" in str(k) or "selection" in str(k)
+            for k in schema_keys
+        )
 
         result = await hass.config_entries.flow.async_configure(
             pick["flow_id"], {"selection": "sid-A|0"}
