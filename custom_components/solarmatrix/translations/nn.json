@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "Kopla til SolarMatrix",
+        "description": "Lim inn ein SolarMatrix API-nøkkel. Lag ein på https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "API-nøkkel",
+          "base_url": "Server-URL"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "Vel ein husstand",
+        "description": "Vel husstanden som denne integrasjonen skal overvaka. Legg til integrasjonen på nytt for å overvaka fleire — bruk ein annan API-nøkkel eller reduser pollingsfrekvensen for å unngå å treffe grensa.",
         "data": {
-          "selection": "Household"
+          "selection": "Husstand"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "Skriv inn API-nøkkel på nytt",
+        "description": "Din API-nøkkel er ikkje lenger gyldig. Skriv inn ein ny for å halda fram.",
         "data": {
-          "api_key": "API key"
+          "api_key": "API-nøkkel"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "API-nøkkel er ugyldig.",
+      "cannot_connect": "Kan ikkje nå SolarMatrix-serveren."
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "Denne husstanden er allereie konfigurert.",
+      "no_systems": "Denne API-nøkkelen har ingen SolarMatrix-system.",
+      "no_households": "Ingen husstandar er tilgjengelege med denne API-nøkkelen.",
+      "unknown_selection": "Vald husstand er ikkje lenger tilgjengeleleg."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "Solarpaneleffekt"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "Mikro-invertereffekt"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "Forbruk"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "Batterieffekt"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "Batteriladningstilstand"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }

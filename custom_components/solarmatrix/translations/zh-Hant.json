@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "連接到 SolarMatrix",
+        "description": "貼上 SolarMatrix API 金鑰。在 https://app.solarmatrix.eu/settings/api-keys 建立一個。",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "API 金鑰",
+          "base_url": "伺服器網址"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "選擇一個家庭",
+        "description": "選擇此整合應監視的家庭。若要監視更多家庭，請再次新增該整合——使用不同的 API 金鑰，或降低輪詢頻率以避免觸發速率限制。",
         "data": {
-          "selection": "Household"
+          "selection": "家庭"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "重新輸入 API 金鑰",
+        "description": "您的 API 金鑰已不再有效。輸入新的金鑰以繼續。",
         "data": {
-          "api_key": "API key"
+          "api_key": "API 金鑰"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "API 金鑰無效。",
+      "cannot_connect": "無法連接到 SolarMatrix 伺服器。"
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "此家庭已配置。",
+      "no_systems": "此 API 金鑰沒有 SolarMatrix 系統。",
+      "no_households": "此 API 金鑰無法存取任何家庭。",
+      "unknown_selection": "所選家庭不再可用。"
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "太陽能功率"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "微型逆變器輸出"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "消耗"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "電池功率"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "電池電量"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }

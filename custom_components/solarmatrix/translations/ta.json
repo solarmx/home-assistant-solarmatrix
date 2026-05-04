@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "SolarMatrix ஐக் இணைக்கவும்",
+        "description": "SolarMatrix API விசையை ஒட்டவும். https://app.solarmatrix.eu/settings/api-keys இல் ஒன்றை உருவாக்கவும்।",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "API விசை",
+          "base_url": "சர்வர URL"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "ஒரு குடும்பத்தைத் தேர்வு செய்யவும்",
+        "description": "இந்த ஒருங்கிணைப்பு கண்காணிக்க வேண்டிய குடும்பத்தைத் தேர்வு செய்யவும். மேலும் குடும்பங்களைக் கண்காணிக்க, ஒருங்கிணைப்பை மீண்டும் சேர்க்கவும் — வெவ்வேறு API விசையைப் பயன்படுத்தவும், அல்லது வீத வரம்பு அடைய தவிர்க்க பல் அதிர்வெண்ணை குறைக்கவும்।",
         "data": {
-          "selection": "Household"
+          "selection": "குடும்பம்"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "API விசையை மீண்டும் உள்ளிடவும்",
+        "description": "உங்கள் API விசை இனி செல்லுபடியாகாது. தொடர்ந்து செயல்பட ஒரு புதியதை உள்ளிடவும்।",
         "data": {
-          "api_key": "API key"
+          "api_key": "API விசை"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "API விசை செல்லுபடியாகாது।",
+      "cannot_connect": "SolarMatrix சர்வருக்கு இணைய முடியாது।"
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "இந்த குடும்பம் ஏற்கனவே உள்ளமைக்கப்பட்டுள்ளது।",
+      "no_systems": "இந்த API விசையில் SolarMatrix அமைப்புகள் இல்லை।",
+      "no_households": "இந்த API விசையுடன் அணுக முடிந்த குடும்பங்கள் இல்லை।",
+      "unknown_selection": "தேர்ந்தெடுக்கப்பட்ட குடும்பம் இனி கிடைக்கவில்லை।"
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "சூரிய சக்தி"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "மைக்ரோஇনவெர்டர் வெளியீடு"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "நுகர்வு"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "பேட்டரி சக்தி"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "பேட்டரி SoC"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }

@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "SolarMatrix سے منسلک کریں",
+        "description": "ایک SolarMatrix API کلید پیسٹ کریں۔ https://app.solarmatrix.eu/settings/api-keys پر ایک بنائیں۔",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "API کلید",
+          "base_url": "سرور URL"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "ایک گھر منتخب کریں",
+        "description": "اس گھر کو منتخب کریں جو یہ انضمام نگرانی کرے۔ مزید گھرانوں کی نگرانی کے لیے، انضمام کو دوبارہ شامل کریں — ایک مختلف API کلید استعمال کریں، یا شرح کی حد تک پہنچنے سے بچنے کے لیے پولنگ فریکوئنسی کو کم کریں۔",
         "data": {
-          "selection": "Household"
+          "selection": "گھر"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "API کلید دوبارہ درج کریں",
+        "description": "آپ کی API کلید اب درست نہیں ہے۔ جاری رکھنے کے لیے ایک نئی درج کریں۔",
         "data": {
-          "api_key": "API key"
+          "api_key": "API کلید"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "API کلید غلط ہے۔",
+      "cannot_connect": "SolarMatrix سرور تک نہیں پہنچ سکتے۔"
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "یہ گھر پہلے سے ہی ترتیب دیا جا چکا ہے۔",
+      "no_systems": "اس API کلید کے پاس کوئی SolarMatrix نظام نہیں ہے۔",
+      "no_households": "اس API کلید کے ساتھ کوئی گھر قابل رسائی نہیں ہے۔",
+      "unknown_selection": "منتخب گھر اب دستیاب نہیں ہے۔"
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "شمسی طاقت"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "مائیکروانورٹر آؤٹ پٹ"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "کھپت"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "بیٹری طاقت"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "بیٹری SoC"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }

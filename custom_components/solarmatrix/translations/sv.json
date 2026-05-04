@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "Anslut till SolarMatrix",
+        "description": "Klistra in en SolarMatrix API-nyckel. Skapa en på https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "API-nyckel",
+          "base_url": "Server-URL"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "Välj ett hushåll",
+        "description": "Välj det hushåll som denna integration ska övervaka. Lägg till integrationen igen för att övervaka fler — använd en annan API-nyckel eller minska avsökningsfrekvensen för att undvika att nå gränsen.",
         "data": {
-          "selection": "Household"
+          "selection": "Hushåll"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "Ange API-nyckel igen",
+        "description": "Din API-nyckel är inte längre giltig. Ange en ny för att fortsätta.",
         "data": {
-          "api_key": "API key"
+          "api_key": "API-nyckel"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "API-nyckel är ogiltig.",
+      "cannot_connect": "Kan inte nå SolarMatrix-servern."
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "Detta hushåll är redan konfigurerat.",
+      "no_systems": "Denna API-nyckel har inga SolarMatrix-system.",
+      "no_households": "Inga hushåll är tillgängliga med denna API-nyckel.",
+      "unknown_selection": "Valt hushåll är inte längre tillgängligt."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "Solarpanelseffekt"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "Mikro-inverteruteffekt"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "Förbrukning"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "Batterikraft"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "Batteriladningstillstånd"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }
