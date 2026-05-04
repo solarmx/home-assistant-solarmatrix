@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Connecta amb SolarMatrix",
-        "description": "Enganxa una clau API de SolarMatrix. En pots crear una a https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Enganxa una clau API de SolarMatrix. En pots crear una a {api_keys_url}.",
         "data": {
           "api_key": "Clau API",
           "base_url": "URL del servidor"
@@ -53,6 +53,5 @@
         "name": "Estat de càrrega de la bateria"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

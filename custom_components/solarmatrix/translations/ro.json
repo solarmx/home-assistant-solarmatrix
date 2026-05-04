@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Conectare la SolarMatrix",
-        "description": "Lipește o cheie API SolarMatrix. Poți crea una la https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Lipește o cheie API SolarMatrix. Poți crea una la {api_keys_url}.",
         "data": {
           "api_key": "Cheie API",
           "base_url": "URL server"
@@ -53,6 +53,5 @@
         "name": "Nivel încărcare baterie"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

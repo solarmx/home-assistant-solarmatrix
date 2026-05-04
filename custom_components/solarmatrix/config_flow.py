@@ -163,4 +163,7 @@ class SolarMatrixConfigFlow(ConfigFlow, domain=DOMAIN):
                 }
             ),
             errors=errors or {},
+            description_placeholders={
+                "api_keys_url": "https://app.solarmatrix.eu/settings/api-keys",
+            },
         )

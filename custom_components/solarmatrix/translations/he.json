@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "התחברות אל SolarMatrix",
-        "description": "הדביקו מפתח API של SolarMatrix. ניתן ליצור מפתח בכתובת https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "הדביקו מפתח API של SolarMatrix. ניתן ליצור מפתח בכתובת {api_keys_url}.",
         "data": {
           "api_key": "מפתח API",
           "base_url": "כתובת השרת"
@@ -53,6 +53,5 @@
         "name": "מצב טעינת סוללה"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

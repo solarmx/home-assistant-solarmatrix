@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "SolarMatrix से कनेक्ट करें",
-        "description": "अपनी SolarMatrix API कुंजी यहाँ चिपकाएँ। नई कुंजी बनाने के लिए https://app.solarmatrix.eu/settings/api-keys पर जाएँ।",
+        "description": "अपनी SolarMatrix API कुंजी यहाँ चिपकाएँ। नई कुंजी बनाने के लिए {api_keys_url} पर जाएँ।",
         "data": {
           "api_key": "API कुंजी",
           "base_url": "सर्वर URL"
@@ -53,6 +53,5 @@
         "name": "बैटरी चार्ज स्तर"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

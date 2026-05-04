@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "เชื่อมต่อกับ SolarMatrix",
-        "description": "วางคีย์ API ของ SolarMatrix ของคุณที่นี่ สร้างคีย์ใหม่ได้ที่ https://app.solarmatrix.eu/settings/api-keys",
+        "description": "วางคีย์ API ของ SolarMatrix ของคุณที่นี่ สร้างคีย์ใหม่ได้ที่ {api_keys_url}",
         "data": {
           "api_key": "คีย์ API",
           "base_url": "URL เซิร์ฟเวอร์"
@@ -53,6 +53,5 @@
         "name": "ระดับแบตเตอรี่"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

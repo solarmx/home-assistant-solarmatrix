@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Povezivanje sa SolarMatrixom",
-        "description": "Zalijepite SolarMatrix API ključ. Kreirajte ga na https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Zalijepite SolarMatrix API ključ. Kreirajte ga na {api_keys_url}.",
         "data": {
           "api_key": "API ključ",
           "base_url": "URL servera"
@@ -53,6 +53,5 @@
         "name": "Nivo baterije"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

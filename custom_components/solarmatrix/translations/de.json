@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Mit SolarMatrix verbinden",
-        "description": "SolarMatrix-API-Schlüssel einfügen. Einen neuen API-Schlüssel unter https://app.solarmatrix.eu/settings/api-keys erstellen.",
+        "description": "SolarMatrix-API-Schlüssel einfügen. Einen neuen API-Schlüssel unter {api_keys_url} erstellen.",
         "data": {
           "api_key": "API-Schlüssel",
           "base_url": "Server-URL"
@@ -53,6 +53,5 @@
         "name": "Batterieladezustand"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "连接到 SolarMatrix",
-        "description": "粘贴 SolarMatrix API 密钥。可在 https://app.solarmatrix.eu/settings/api-keys 创建。",
+        "description": "粘贴 SolarMatrix API 密钥。可在 {api_keys_url} 创建。",
         "data": {
           "api_key": "API 密钥",
           "base_url": "服务器地址"
@@ -53,6 +53,5 @@
         "name": "电池电量"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

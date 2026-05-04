@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Tengjast við SolarMatrix",
-        "description": "Límdu inn SolarMatrix API-lykil. Þú getur búið til lykil á https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Límdu inn SolarMatrix API-lykil. Þú getur búið til lykil á {api_keys_url}.",
         "data": {
           "api_key": "API-lykill",
           "base_url": "Vefslóð þjóns"
@@ -53,6 +53,5 @@
         "name": "Hleðsla rafhlöðu"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "SolarMatrix に接続",
-        "description": "SolarMatrix のAPIキーを貼り付けてください。https://app.solarmatrix.eu/settings/api-keys で作成できます。",
+        "description": "SolarMatrix のAPIキーを貼り付けてください。{api_keys_url} で作成できます。",
         "data": {
           "api_key": "APIキー",
           "base_url": "サーバーURL"
@@ -53,6 +53,5 @@
         "name": "バッテリー残量"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

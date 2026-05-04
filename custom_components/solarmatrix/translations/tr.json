@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "SolarMatrix'e bağlan",
-        "description": "Bir SolarMatrix API anahtarı yapıştırın. Anahtarınızı https://app.solarmatrix.eu/settings/api-keys adresinden oluşturabilirsiniz.",
+        "description": "Bir SolarMatrix API anahtarı yapıştırın. Anahtarınızı {api_keys_url} adresinden oluşturabilirsiniz.",
         "data": {
           "api_key": "API anahtarı",
           "base_url": "Sunucu adresi"
@@ -53,6 +53,5 @@
         "name": "Pil şarj durumu"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }
