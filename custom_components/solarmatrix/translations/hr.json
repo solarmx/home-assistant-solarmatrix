@@ -2,37 +2,37 @@
   "config": {
     "step": {
       "user": {
-        "title": "Povezivanje na SolarMatrix",
-        "description": "Zalijepite API ključ za SolarMatrix. Kreirajte ga na https://app.solarmatrix.eu/settings/api-keys.",
+        "title": "Povezivanje sa SolarMatrixom",
+        "description": "Zalijepite SolarMatrix API ključ. Izradite ga na https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API ključ",
-          "base_url": "URL servera"
+          "base_url": "URL poslužitelja"
         }
       },
       "pick": {
-        "title": "Odaberite gospodarstvo",
-        "description": "Odaberite gospodarstvo koje bi ova integracija trebala pratiti. Za praćenje više gospodarstava dodajte integraciju ponovno — koristite drugačiji API ključ ili smanjite frekvenciju ispitivanja kako biste izbjegli prekoračenje ograničenja.",
+        "title": "Odaberite kućanstvo",
+        "description": "Odaberite kućanstvo koje će ova integracija pratiti. Za praćenje više kućanstava ponovno dodajte integraciju — upotrijebite drugi API ključ ili smanjite učestalost dohvaćanja kako biste izbjegli ograničenje broja zahtjeva.",
         "data": {
-          "selection": "Gospodarstvo"
+          "selection": "Kućanstvo"
         }
       },
       "reauth_confirm": {
         "title": "Ponovno unesite API ključ",
-        "description": "Vaš API ključ više nije validan. Unesite novi da biste nastavili.",
+        "description": "Vaš API ključ više nije valjan. Unesite novi za nastavak.",
         "data": {
           "api_key": "API ključ"
         }
       }
     },
     "error": {
-      "invalid_auth": "API ključ nije validan.",
-      "cannot_connect": "Nije moguće dosegnuti SolarMatrix server."
+      "invalid_auth": "API ključ nije valjan.",
+      "cannot_connect": "Nije moguće povezati se s poslužiteljem SolarMatrix."
     },
     "abort": {
-      "already_configured": "Ovo gospodarstvo je već konfigurirano.",
+      "already_configured": "Ovo kućanstvo je već konfigurirano.",
       "no_systems": "Ovaj API ključ nema SolarMatrix sustave.",
-      "no_households": "Nema dostupnih gospodarstava s ovim API ključem.",
-      "unknown_selection": "Odabrano gospodarstvo više nije dostupno."
+      "no_households": "S ovim API ključem nije dostupno nijedno kućanstvo.",
+      "unknown_selection": "Odabrano kućanstvo više nije dostupno."
     }
   },
   "entity": {
@@ -50,7 +50,7 @@
         "name": "Snaga baterije"
       },
       "battery_soc": {
-        "name": "Razina nabitosti baterije"
+        "name": "Razina baterije"
       }
     }
   },

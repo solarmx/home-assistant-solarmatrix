@@ -3,45 +3,45 @@
     "step": {
       "user": {
         "title": "Forbind til SolarMatrix",
-        "description": "Indsæt en SolarMatrix API-nøgle. Opret en på https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Indsæt en SolarMatrix-API-nøgle. Opret en på https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API-nøgle",
           "base_url": "Server-URL"
         }
       },
       "pick": {
-        "title": "Vælg et husholdning",
-        "description": "Vælg det husholdning, som denne integration skal overvåge. Tilføj integrationen igen for at overvåge flere — brug en anden API-nøgle eller reducer polling-frekvensen for at undgå at ramme grænserne.",
+        "title": "Vælg en husstand",
+        "description": "Vælg den husstand, som denne integration skal overvåge. For at overvåge flere husstande tilføjes integrationen igen — brug en anden API-nøgle, eller reducér pollingfrekvensen for at undgå at ramme hastighedsgrænsen.",
         "data": {
-          "selection": "Husholdning"
+          "selection": "Husstand"
         }
       },
       "reauth_confirm": {
-        "title": "Gjenindtast API-nøgle",
-        "description": "Din API-nøgle er ikke længere gyldig. Angiv en ny for at fortsætte.",
+        "title": "Indtast API-nøgle igen",
+        "description": "Din API-nøgle er ikke længere gyldig. Indtast en ny for at fortsætte.",
         "data": {
           "api_key": "API-nøgle"
         }
       }
     },
     "error": {
-      "invalid_auth": "API-nøgle er ugyldig.",
+      "invalid_auth": "API-nøglen er ugyldig.",
       "cannot_connect": "Kan ikke nå SolarMatrix-serveren."
     },
     "abort": {
-      "already_configured": "Dette husholdning er allerede konfigureret.",
+      "already_configured": "Denne husstand er allerede konfigureret.",
       "no_systems": "Denne API-nøgle har ingen SolarMatrix-systemer.",
-      "no_households": "Ingen husholdninger er tilgængelige med denne API-nøgle.",
-      "unknown_selection": "Valgt husholdning er ikke længere tilgængelig."
+      "no_households": "Ingen husstande er tilgængelige med denne API-nøgle.",
+      "unknown_selection": "Den valgte husstand er ikke længere tilgængelig."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solarkraft"
+        "name": "Solcelleeffekt"
       },
       "mi_out_power": {
-        "name": "Mikro-invertereffekt"
+        "name": "Mikroinverterudgang"
       },
       "consumption": {
         "name": "Forbrug"
@@ -50,7 +50,7 @@
         "name": "Batterieffekt"
       },
       "battery_soc": {
-        "name": "Batteriladetilstand"
+        "name": "Batteriniveau"
       }
     }
   },

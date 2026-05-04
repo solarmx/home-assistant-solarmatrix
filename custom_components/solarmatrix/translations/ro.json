@@ -3,35 +3,35 @@
     "step": {
       "user": {
         "title": "Conectare la SolarMatrix",
-        "description": "Lipiți o cheie API SolarMatrix. Creați una pe https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Lipește o cheie API SolarMatrix. Poți crea una la https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "Cheie API",
           "base_url": "URL server"
         }
       },
       "pick": {
-        "title": "Alegeți o gospodărie",
-        "description": "Selectați gospodăria pe care această integrare trebuie să o monitorizeze. Pentru a monitoriza mai multe gospodării, adăugați integrarea din nou — utilizați o cheie API diferită, sau reduceți frecvența de sondaj pentru a evita atingerea limitei de viteză.",
+        "title": "Alege o gospodărie",
+        "description": "Alege gospodăria pe care această integrare ar trebui să o monitorizeze. Pentru a monitoriza mai multe gospodării, adaugă din nou integrarea — folosește o altă cheie API sau redu frecvența interogărilor pentru a nu depăși limita de cereri.",
         "data": {
           "selection": "Gospodărie"
         }
       },
       "reauth_confirm": {
-        "title": "Reintroduceți cheia API",
-        "description": "Cheia API nu mai este validă. Introduceți una nouă pentru a continua.",
+        "title": "Reintrodu cheia API",
+        "description": "Cheia ta API nu mai este validă. Introdu una nouă pentru a continua.",
         "data": {
           "api_key": "Cheie API"
         }
       }
     },
     "error": {
-      "invalid_auth": "Cheia API este nevalidă.",
-      "cannot_connect": "Nu se poate accesa serverul SolarMatrix."
+      "invalid_auth": "Cheia API nu este validă.",
+      "cannot_connect": "Serverul SolarMatrix nu poate fi accesat."
     },
     "abort": {
       "already_configured": "Această gospodărie este deja configurată.",
-      "no_systems": "Această cheie API nu are sisteme SolarMatrix.",
-      "no_households": "Nicio gospodărie nu este accesibilă cu această cheie API.",
+      "no_systems": "Această cheie API nu are niciun sistem SolarMatrix.",
+      "no_households": "Nu există gospodării accesibile cu această cheie API.",
       "unknown_selection": "Gospodăria selectată nu mai este disponibilă."
     }
   },
@@ -41,7 +41,7 @@
         "name": "Putere solară"
       },
       "mi_out_power": {
-        "name": "Ieșire microinverter"
+        "name": "Ieșire microinvertor"
       },
       "consumption": {
         "name": "Consum"
@@ -50,7 +50,7 @@
         "name": "Putere baterie"
       },
       "battery_soc": {
-        "name": "Stare baterie"
+        "name": "Nivel încărcare baterie"
       }
     }
   },

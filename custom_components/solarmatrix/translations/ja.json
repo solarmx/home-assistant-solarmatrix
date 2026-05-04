@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "SolarMatrix に接続",
-        "description": "SolarMatrix APIキーを貼り付けます。https://app.solarmatrix.eu/settings/api-keys で作成できます。",
+        "description": "SolarMatrix のAPIキーを貼り付けてください。https://app.solarmatrix.eu/settings/api-keys で作成できます。",
         "data": {
           "api_key": "APIキー",
           "base_url": "サーバーURL"
@@ -11,14 +11,14 @@
       },
       "pick": {
         "title": "世帯を選択",
-        "description": "このインテグレーションが監視する世帯を選択します。より多くの世帯を監視するには、インテグレーションを再度追加してください——別の APIキーを使用するか、レート制限に達しないようにポーリング頻度を下げてください。",
+        "description": "この統合で監視する世帯を選択してください。複数の世帯を監視するには、統合をもう一度追加してください——別のAPIキーを使用するか、レート制限に達しないようポーリング頻度を下げてください。",
         "data": {
           "selection": "世帯"
         }
       },
       "reauth_confirm": {
         "title": "APIキーを再入力",
-        "description": "お客様の APIキーは有効ではなくなりました。続行するには新しいキーを入力してください。",
+        "description": "APIキーが無効になりました。続行するには新しいキーを入力してください。",
         "data": {
           "api_key": "APIキー"
         }
@@ -29,25 +29,25 @@
       "cannot_connect": "SolarMatrix サーバーに接続できません。"
     },
     "abort": {
-      "already_configured": "この世帯は既に構成されています。",
-      "no_systems": "この APIキーに SolarMatrix システムがありません。",
-      "no_households": "このAPIキーでアクセスできる世帯がありません。",
+      "already_configured": "この世帯はすでに設定されています。",
+      "no_systems": "このAPIキーには SolarMatrix システムがありません。",
+      "no_households": "このAPIキーでアクセスできる世帯はありません。",
       "unknown_selection": "選択した世帯は利用できなくなりました。"
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "太陽光パワー"
+        "name": "太陽光発電電力"
       },
       "mi_out_power": {
-        "name": "マイクロインバータ出力"
+        "name": "マイクロインバーター出力"
       },
       "consumption": {
-        "name": "消費"
+        "name": "消費電力"
       },
       "battery_power": {
-        "name": "バッテリーパワー"
+        "name": "バッテリー電力"
       },
       "battery_soc": {
         "name": "バッテリー残量"

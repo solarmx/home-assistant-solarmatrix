@@ -2,23 +2,23 @@
   "config": {
     "step": {
       "user": {
-        "title": "SolarMatrix'e Bağlan",
-        "description": "Bir SolarMatrix API anahtarını yapıştırın. https://app.solarmatrix.eu/settings/api-keys adresinde bir tane oluşturun.",
+        "title": "SolarMatrix'e bağlan",
+        "description": "Bir SolarMatrix API anahtarı yapıştırın. Anahtarınızı https://app.solarmatrix.eu/settings/api-keys adresinden oluşturabilirsiniz.",
         "data": {
           "api_key": "API anahtarı",
-          "base_url": "Sunucu URL'si"
+          "base_url": "Sunucu adresi"
         }
       },
       "pick": {
-        "title": "Bir ev seçin",
-        "description": "Bu entegrasyonun izlemesi gereken evi seçin. Daha fazla evi izlemek için entegrasyonu yeniden ekleyin — farklı bir API anahtarı kullanın veya hız sınırına ulaşmaktan kaçınmak için yoklama sıklığını azaltın.",
+        "title": "Hane seçin",
+        "description": "Bu entegrasyonun izleyeceği haneyi seçin. Daha fazla haneyi izlemek için entegrasyonu tekrar ekleyin — farklı bir API anahtarı kullanın veya hız sınırına takılmamak için sorgulama sıklığını azaltın.",
         "data": {
-          "selection": "Ev"
+          "selection": "Hane"
         }
       },
       "reauth_confirm": {
         "title": "API anahtarını yeniden girin",
-        "description": "API anahtarınız artık geçerli değil. Devam etmek için yeni bir tane girin.",
+        "description": "API anahtarınız artık geçerli değil. Devam etmek için yenisini girin.",
         "data": {
           "api_key": "API anahtarı"
         }
@@ -29,19 +29,19 @@
       "cannot_connect": "SolarMatrix sunucusuna ulaşılamıyor."
     },
     "abort": {
-      "already_configured": "Bu ev zaten yapılandırılmış.",
-      "no_systems": "Bu API anahtarının SolarMatrix sistemleri yok.",
-      "no_households": "Bu API anahtarıyla erişilebilir ev yok.",
-      "unknown_selection": "Seçilen ev artık kullanılamıyor."
+      "already_configured": "Bu hane zaten yapılandırılmış.",
+      "no_systems": "Bu API anahtarına bağlı SolarMatrix sistemi yok.",
+      "no_households": "Bu API anahtarıyla erişilebilen hane bulunmuyor.",
+      "unknown_selection": "Seçilen hane artık kullanılamıyor."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Güneş gücü"
+        "name": "Güneş enerjisi gücü"
       },
       "mi_out_power": {
-        "name": "Mikro evirici çıkışı"
+        "name": "Mikroinvertör çıkışı"
       },
       "consumption": {
         "name": "Tüketim"

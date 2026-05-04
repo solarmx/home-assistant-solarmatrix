@@ -26,3 +26,17 @@ jobs:
         run: python scripts/translate.py --check
         env:
           MODEL: placeholder  # only the drift check path runs in CI; no LLM call.
+
+  hassfest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: home-assistant/actions/hassfest@master
+
+  hacs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hacs/action@main
+        with:
+          category: integration

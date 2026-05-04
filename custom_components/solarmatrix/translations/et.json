@@ -2,46 +2,46 @@
   "config": {
     "step": {
       "user": {
-        "title": "Ühenduse loomine SolarMatrixiga",
-        "description": "Kleepige SolarMatrix API võti. Looge see aadressil https://app.solarmatrix.eu/settings/api-keys.",
+        "title": "Ühenda SolarMatrixiga",
+        "description": "Kleebi SolarMatrixi API-võti. Loo võti aadressil https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "API võti",
-          "base_url": "Serveri URL"
+          "api_key": "API-võti",
+          "base_url": "Serveri aadress"
         }
       },
       "pick": {
-        "title": "Valige majapidamine",
-        "description": "Valige majapidamine, mida see integratsioon peaks jälgima. Mitme majapidamise jälgimiseks lisage integratsioon uuesti – kasutage erinevat API võtit või vähendage küsitlemise sagedust, et vältida määra piirangule jõudmist.",
+        "title": "Vali leibkond",
+        "description": "Vali leibkond, mida see integratsioon jälgib. Mitme leibkonna jälgimiseks lisa integratsioon uuesti — kasuta teist API-võtit või vähenda päringusagedust, et vältida päringupiirangu ületamist.",
         "data": {
-          "selection": "Majapidamine"
+          "selection": "Leibkond"
         }
       },
       "reauth_confirm": {
-        "title": "Sisestage API võti uuesti",
-        "description": "Teie API võti ei ole enam kehtiv. Jätkamiseks sisestage uus võti.",
+        "title": "Sisesta API-võti uuesti",
+        "description": "Sinu API-võti ei kehti enam. Jätkamiseks sisesta uus võti.",
         "data": {
-          "api_key": "API võti"
+          "api_key": "API-võti"
         }
       }
     },
     "error": {
-      "invalid_auth": "API võti on kehtetu.",
-      "cannot_connect": "SolarMatrix serveriga ei saa ühendust."
+      "invalid_auth": "API-võti on vigane.",
+      "cannot_connect": "SolarMatrixi serveriga ei saa ühendust."
     },
     "abort": {
-      "already_configured": "See majapidamine on juba konfigureeritud.",
-      "no_systems": "Sellel API võtmel pole SolarMatrix süsteeme.",
-      "no_households": "Selle API võtmega ei ole juurdepääsetavaid majapidamisi.",
-      "unknown_selection": "Valitud majapidamine pole enam saadaval."
+      "already_configured": "See leibkond on juba seadistatud.",
+      "no_systems": "Selle API-võtmega ei ole ühtegi SolarMatrixi süsteemi.",
+      "no_households": "Selle API-võtmega ei ole ükski leibkond kättesaadav.",
+      "unknown_selection": "Valitud leibkond ei ole enam saadaval."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Päikeseenergia võimsus"
+        "name": "Päikesepaneeli võimsus"
       },
       "mi_out_power": {
-        "name": "Mikroinverteri väljund"
+        "name": "Mikroinverteri väljundvõimsus"
       },
       "consumption": {
         "name": "Tarbimine"
@@ -50,7 +50,7 @@
         "name": "Aku võimsus"
       },
       "battery_soc": {
-        "name": "Aku laadimistase"
+        "name": "Aku laetus"
       }
     }
   },

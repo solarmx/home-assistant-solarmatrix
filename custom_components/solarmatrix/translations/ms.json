@@ -3,22 +3,22 @@
     "step": {
       "user": {
         "title": "Sambung ke SolarMatrix",
-        "description": "Tampal kunci API SolarMatrix. Buat satu di https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Tampalkan kunci API SolarMatrix anda di sini. Cipta kunci baharu di https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "Kunci API",
-          "base_url": "URL Pelayan"
+          "base_url": "URL pelayan"
         }
       },
       "pick": {
-        "title": "Pilih rumah tangga",
-        "description": "Pilih rumah tangga yang perlu dipantau oleh integrasi ini. Untuk memantau lebih banyak rumah tangga, tambah integrasi lagi — gunakan kunci API yang berbeza, atau kurangkan frekuensi penjajakan untuk mengelak had kadar.",
+        "title": "Pilih isi rumah",
+        "description": "Pilih isi rumah yang akan dipantau oleh integrasi ini. Untuk memantau lebih daripada satu isi rumah, tambah integrasi sekali lagi — gunakan kunci API yang berbeza, atau kurangkan kekerapan polling untuk mengelakkan had kadar.",
         "data": {
-          "selection": "Rumah tangga"
+          "selection": "Isi rumah"
         }
       },
       "reauth_confirm": {
         "title": "Masukkan semula kunci API",
-        "description": "Kunci API anda tidak lagi sah. Masukkan yang baru untuk meneruskan.",
+        "description": "Kunci API anda sudah tidak sah. Masukkan kunci baharu untuk meneruskan.",
         "data": {
           "api_key": "Kunci API"
         }
@@ -26,22 +26,22 @@
     },
     "error": {
       "invalid_auth": "Kunci API tidak sah.",
-      "cannot_connect": "Tidak dapat mencapai pelayan SolarMatrix."
+      "cannot_connect": "Tidak dapat menghubungi pelayan SolarMatrix."
     },
     "abort": {
-      "already_configured": "Rumah tangga ini sudah dikonfigurasi.",
-      "no_systems": "Kunci API ini tidak mempunyai sistem SolarMatrix.",
-      "no_households": "Tiada rumah tangga yang boleh diakses dengan kunci API ini.",
-      "unknown_selection": "Rumah tangga yang dipilih tidak lagi tersedia."
+      "already_configured": "Isi rumah ini sudah dikonfigurasi.",
+      "no_systems": "Kunci API ini tiada sistem SolarMatrix.",
+      "no_households": "Tiada isi rumah yang boleh diakses dengan kunci API ini.",
+      "unknown_selection": "Isi rumah yang dipilih sudah tidak tersedia."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Kuasa suria"
+        "name": "Kuasa solar"
       },
       "mi_out_power": {
-        "name": "Output mikro-penyongsang"
+        "name": "Output mikropenyongsang"
       },
       "consumption": {
         "name": "Penggunaan"
@@ -50,7 +50,7 @@
         "name": "Kuasa bateri"
       },
       "battery_soc": {
-        "name": "SoC bateri"
+        "name": "Tahap bateri"
       }
     }
   },

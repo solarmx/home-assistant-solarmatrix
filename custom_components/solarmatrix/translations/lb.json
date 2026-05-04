@@ -2,23 +2,23 @@
   "config": {
     "step": {
       "user": {
-        "title": "Verbindung mat SolarMatrix opbauen",
-        "description": "Setzt e SolarMatrix-API-Schlëssel an. Dir kënnt een op https://app.solarmatrix.eu/settings/api-keys erstellen.",
+        "title": "Mat SolarMatrix verbannen",
+        "description": "Setzt e SolarMatrix-API-Schlëssel an. Dir kënnt een op https://app.solarmatrix.eu/settings/api-keys uleeën.",
         "data": {
           "api_key": "API-Schlëssel",
           "base_url": "Server-URL"
         }
       },
       "pick": {
-        "title": "Wielt en Haushaltt",
-        "description": "Wielt de Haushaltt, dee dës Integratioun iwwerwaachen soll. Setzt d'Integratioun wéider zum Iwwerwaache vun méi — benotzt en anere API-Schlëssel oder reduzéiert d'Polling-Frequenz, fir d'Ratenlimit net ze touchen.",
+        "title": "Wielt en Haushalt",
+        "description": "Wielt den Haushalt, deen dës Integratioun iwwerwaache soll. Fir méi Haushalter ze iwwerwaachen, fügt d'Integratioun nach eemol bäi — benotzt en aneren API-Schlëssel, oder reduzéiert d'Ofrofrequenz, fir net un d'Ratenlimit ze stoussen.",
         "data": {
-          "selection": "Haushaltt"
+          "selection": "Haushalt"
         }
       },
       "reauth_confirm": {
         "title": "API-Schlëssel nei aginn",
-        "description": "Äre API-Schlëssel ass net méi gülteg. Ginn en neien an fir fortzefueren.",
+        "description": "Äre API-Schlëssel ass net méi gülteg. Gitt en neien an, fir weiderzefueren.",
         "data": {
           "api_key": "API-Schlëssel"
         }
@@ -26,19 +26,19 @@
     },
     "error": {
       "invalid_auth": "API-Schlëssel ass ongülteg.",
-      "cannot_connect": "Kann de SolarMatrix-Server net erreechen."
+      "cannot_connect": "Den SolarMatrix-Server ass net erreechbar."
     },
     "abort": {
-      "already_configured": "Dësen Haushaltt ass schonn konfiguriert.",
+      "already_configured": "Dësen Haushalt ass scho konfiguréiert.",
       "no_systems": "Dësen API-Schlëssel huet keng SolarMatrix-Systemer.",
-      "no_households": "Keng Haushälter sinn mat dësem API-Schlëssel zouganglech.",
-      "unknown_selection": "Ausgewielter Haushaltt ass net méi verfügbar."
+      "no_households": "Mat dësem API-Schlëssel sinn keng Haushalter zougänglech.",
+      "unknown_selection": "Den ausgewielten Haushalt ass net méi verfügbar."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Sonneenergie-Leeschtung"
+        "name": "Sonnenenergie"
       },
       "mi_out_power": {
         "name": "Mikrowechselrichter-Ausgang"
@@ -50,7 +50,7 @@
         "name": "Batterieleeschtung"
       },
       "battery_soc": {
-        "name": "Batterieladeschtand"
+        "name": "Batterieladung"
       }
     }
   },

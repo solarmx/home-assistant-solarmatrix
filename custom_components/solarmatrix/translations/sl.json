@@ -2,43 +2,43 @@
   "config": {
     "step": {
       "user": {
-        "title": "Povezava s SolarMatrix",
-        "description": "Prilepite ključ API SolarMatrix. Ustvarite ga na https://app.solarmatrix.eu/settings/api-keys.",
+        "title": "Povezava s SolarMatrixom",
+        "description": "Prilepite API ključ za SolarMatrix. Ustvarite ga na https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "Ključ API",
+          "api_key": "API ključ",
           "base_url": "URL strežnika"
         }
       },
       "pick": {
         "title": "Izberite gospodinjstvo",
-        "description": "Izberite gospodinjstvo, ki ga mora spremljati ta integracija. Za spremljanje več gospodinjstev dodajte integracijo ponovno — uporabite drugačen ključ API ali zmanjšajte pogostost poizvedb, da se izognete prekoračenju omejitve.",
+        "description": "Izberite gospodinjstvo, ki naj ga ta integracija spremlja. Za spremljanje več gospodinjstev integracijo dodajte znova — uporabite drug API ključ ali zmanjšajte pogostost poizvedovanja, da ne presežete omejitve zahtevkov.",
         "data": {
           "selection": "Gospodinjstvo"
         }
       },
       "reauth_confirm": {
-        "title": "Ponovno vnesite ključ API",
-        "description": "Vaš ključ API ni več veljaven. Vnesite novega za nadaljevanje.",
+        "title": "Ponovno vnesite API ključ",
+        "description": "Vaš API ključ ni več veljaven. Za nadaljevanje vnesite novega.",
         "data": {
-          "api_key": "Ključ API"
+          "api_key": "API ključ"
         }
       }
     },
     "error": {
-      "invalid_auth": "Ključ API ni veljaven.",
-      "cannot_connect": "Ne mogu se dosegniti strežnika SolarMatrix."
+      "invalid_auth": "API ključ ni veljaven.",
+      "cannot_connect": "Strežnika SolarMatrix ni mogoče doseči."
     },
     "abort": {
-      "already_configured": "To gospodinjstvo je že konfiguriran.",
-      "no_systems": "Ta ključ API nima sistemov SolarMatrix.",
-      "no_households": "Ta ključ API nima dostopnih gospodinjstev.",
-      "unknown_selection": "Izbrano gospodinjstvo ni več dostopno."
+      "already_configured": "To gospodinjstvo je že konfigurirano.",
+      "no_systems": "Ta API ključ nima sistemov SolarMatrix.",
+      "no_households": "S tem API ključem ni dostopnih gospodinjstev.",
+      "unknown_selection": "Izbrano gospodinjstvo ni več na voljo."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Sončna moč"
+        "name": "Solarna moč"
       },
       "mi_out_power": {
         "name": "Izhod mikroinverterja"
@@ -50,7 +50,7 @@
         "name": "Moč baterije"
       },
       "battery_soc": {
-        "name": "Raven nabitosti baterije"
+        "name": "Stanje napolnjenosti baterije"
       }
     }
   },

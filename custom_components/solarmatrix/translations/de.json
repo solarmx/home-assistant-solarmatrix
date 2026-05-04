@@ -3,22 +3,22 @@
     "step": {
       "user": {
         "title": "Mit SolarMatrix verbinden",
-        "description": "Geben Sie einen SolarMatrix-API-Schlüssel ein. Erstellen Sie einen unter https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "SolarMatrix-API-Schlüssel einfügen. Einen neuen API-Schlüssel unter https://app.solarmatrix.eu/settings/api-keys erstellen.",
         "data": {
           "api_key": "API-Schlüssel",
           "base_url": "Server-URL"
         }
       },
       "pick": {
-        "title": "Wählen Sie einen Haushalt",
-        "description": "Wählen Sie den Haushalt, den diese Integration überwachen soll. Um mehrere Haushalte zu überwachen, fügen Sie die Integration erneut hinzu — verwenden Sie einen anderen API-Schlüssel oder reduzieren Sie die Abfragehäufigkeit, um das Ratenlimit nicht zu überschreiten.",
+        "title": "Haushalt auswählen",
+        "description": "Den Haushalt wählen, den diese Integration überwachen soll. Um weitere Haushalte einzubinden, die Integration erneut hinzufügen — dabei einen anderen API-Schlüssel verwenden oder das Abfrageintervall verringern, um das Ratenlimit nicht zu überschreiten.",
         "data": {
           "selection": "Haushalt"
         }
       },
       "reauth_confirm": {
-        "title": "API-Schlüssel erneut eingeben",
-        "description": "Ihr API-Schlüssel ist nicht mehr gültig. Geben Sie einen neuen ein, um fortzufahren.",
+        "title": "API-Schlüssel neu eingeben",
+        "description": "Der API-Schlüssel ist nicht mehr gültig. Einen neuen eingeben, um fortzufahren.",
         "data": {
           "api_key": "API-Schlüssel"
         }
@@ -30,9 +30,9 @@
     },
     "abort": {
       "already_configured": "Dieser Haushalt ist bereits konfiguriert.",
-      "no_systems": "Dieser API-Schlüssel hat keine SolarMatrix-Systeme.",
+      "no_systems": "Diesem API-Schlüssel sind keine SolarMatrix-Systeme zugeordnet.",
       "no_households": "Mit diesem API-Schlüssel sind keine Haushalte zugänglich.",
-      "unknown_selection": "Der ausgewählte Haushalt ist nicht mehr verfügbar."
+      "unknown_selection": "Der gewählte Haushalt ist nicht mehr verfügbar."
     }
   },
   "entity": {
@@ -41,7 +41,7 @@
         "name": "Solarleistung"
       },
       "mi_out_power": {
-        "name": "Mikrowechselrichter-Ausgang"
+        "name": "Mikrowechselrichter-Leistung"
       },
       "consumption": {
         "name": "Verbrauch"

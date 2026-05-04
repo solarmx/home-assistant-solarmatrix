@@ -2,23 +2,23 @@
   "config": {
     "step": {
       "user": {
-        "title": "Połączenie z SolarMatrix",
-        "description": "Wklej klucz API SolarMatrix. Utwórz jeden na https://app.solarmatrix.eu/settings/api-keys.",
+        "title": "Połącz z SolarMatrix",
+        "description": "Wklej klucz API SolarMatrix. Utwórz go na https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "Klucz API",
           "base_url": "Adres URL serwera"
         }
       },
       "pick": {
-        "title": "Wybierz gospodarstwo domowe",
-        "description": "Wybierz gospodarstwo domowe, które powinna monitorować ta integracja. Aby monitorować więcej gospodarstw, dodaj integrację ponownie — użyj innego klucza API lub zmniejsz częstotliwość sondowania, aby uniknąć przekroczenia limitu.",
+        "title": "Wybierz gospodarstwo",
+        "description": "Wybierz gospodarstwo, które ma być monitorowane przez tę integrację. Aby monitorować więcej gospodarstw, dodaj integrację ponownie — użyj innego klucza API lub zmniejsz częstotliwość odpytywania, aby nie przekroczyć limitu zapytań.",
         "data": {
-          "selection": "Gospodarstwo domowe"
+          "selection": "Gospodarstwo"
         }
       },
       "reauth_confirm": {
-        "title": "Ponownie wprowadź klucz API",
-        "description": "Twój klucz API nie jest już ważny. Wpisz nowy, aby kontynuować.",
+        "title": "Wprowadź klucz API ponownie",
+        "description": "Twój klucz API nie jest już ważny. Wprowadź nowy, aby kontynuować.",
         "data": {
           "api_key": "Klucz API"
         }
@@ -26,22 +26,22 @@
     },
     "error": {
       "invalid_auth": "Klucz API jest nieprawidłowy.",
-      "cannot_connect": "Nie można nawiązać połączenia z serwerem SolarMatrix."
+      "cannot_connect": "Nie można połączyć się z serwerem SolarMatrix."
     },
     "abort": {
-      "already_configured": "To gospodarstwo domowe jest już skonfigurowane.",
-      "no_systems": "Ten klucz API nie posiada systemów SolarMatrix.",
-      "no_households": "Brak dostępnych gospodarstw domowych z tym kluczem API.",
-      "unknown_selection": "Wybrane gospodarstwo domowe nie jest już dostępne."
+      "already_configured": "To gospodarstwo jest już skonfigurowane.",
+      "no_systems": "Ten klucz API nie ma żadnych systemów SolarMatrix.",
+      "no_households": "Z tym kluczem API nie są dostępne żadne gospodarstwa.",
+      "unknown_selection": "Wybrane gospodarstwo nie jest już dostępne."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Moc solarna"
+        "name": "Moc PV"
       },
       "mi_out_power": {
-        "name": "Wyjście mikroinwertera"
+        "name": "Wyjście mikrofalownika"
       },
       "consumption": {
         "name": "Zużycie"
@@ -50,7 +50,7 @@
         "name": "Moc baterii"
       },
       "battery_soc": {
-        "name": "Stan naładowania baterii"
+        "name": "Poziom naładowania baterii"
       }
     }
   },

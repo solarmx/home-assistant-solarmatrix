@@ -2,8 +2,8 @@
   "config": {
     "step": {
       "user": {
-        "title": "Koppel aan SolarMatrix",
-        "description": "Plak 'n SolarMatrix API-sleutel. Skep een op https://app.solarmatrix.eu/settings/api-keys.",
+        "title": "Verbind met SolarMatrix",
+        "description": "Plak 'n SolarMatrix API-sleutel. Skep een by https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API-sleutel",
           "base_url": "Bediener-URL"
@@ -11,14 +11,14 @@
       },
       "pick": {
         "title": "Kies 'n huishouding",
-        "description": "Kies die huishouding wat hierdie integrasie moet monitor. Om meer huishoudings te monitor, voeg die integrasie weer by - gebruik 'n ander API-sleutel, of verlaag die opname-frekwensie om die koerslimiet te vermy.",
+        "description": "Kies die huishouding wat hierdie integrasie moet monitor. Om meer huishoudings te monitor, voeg die integrasie weer by — gebruik 'n ander API-sleutel, of verlaag die navraagfrekwensie om die tempolimiet te vermy.",
         "data": {
           "selection": "Huishouding"
         }
       },
       "reauth_confirm": {
         "title": "Voer API-sleutel weer in",
-        "description": "U API-sleutel is nie meer geldig nie. Voer 'n nuwe in om voort te gaan.",
+        "description": "Jou API-sleutel is nie meer geldig nie. Voer 'n nuwe een in om voort te gaan.",
         "data": {
           "api_key": "API-sleutel"
         }
@@ -29,10 +29,10 @@
       "cannot_connect": "Kan nie die SolarMatrix-bediener bereik nie."
     },
     "abort": {
-      "already_configured": "Hierdie huishouding is reeds gekonfigureer.",
+      "already_configured": "Hierdie huishouding is reeds opgestel.",
       "no_systems": "Hierdie API-sleutel het geen SolarMatrix-stelsels nie.",
-      "no_households": "Geen huishoudings is toeganklik met hierdie API-sleutel nie.",
-      "unknown_selection": "Gekose huishouding is nie meer beskikbaar nie."
+      "no_households": "Geen huishoudings is met hierdie API-sleutel toeganklik nie.",
+      "unknown_selection": "Die gekose huishouding is nie meer beskikbaar nie."
     }
   },
   "entity": {
@@ -41,16 +41,16 @@
         "name": "Sonkrag"
       },
       "mi_out_power": {
-        "name": "Mikro-omskakeling-uitset"
+        "name": "Mikro-omsetter-uitset"
       },
       "consumption": {
         "name": "Verbruik"
       },
       "battery_power": {
-        "name": "Batteryvermoе"
+        "name": "Batterykrag"
       },
       "battery_soc": {
-        "name": "Battery-ladingstoestand"
+        "name": "Battery laaivlak"
       }
     }
   },

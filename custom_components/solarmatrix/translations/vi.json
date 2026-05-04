@@ -3,15 +3,15 @@
     "step": {
       "user": {
         "title": "Kết nối với SolarMatrix",
-        "description": "Dán khóa API SolarMatrix. Tạo một khóa tại https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Dán khóa API SolarMatrix của bạn vào đây. Tạo khóa mới tại https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "Khóa API",
           "base_url": "URL máy chủ"
         }
       },
       "pick": {
-        "title": "Chọn một hộ gia đình",
-        "description": "Chọn hộ gia đình mà tích hợp này cần giám sát. Để giám sát nhiều hộ gia đình hơn, hãy thêm tích hợp lại — sử dụng khóa API khác hoặc giảm tần suất thăm dò để tránh vượt quá giới hạn tỷ lệ.",
+        "title": "Chọn hộ gia đình",
+        "description": "Chọn hộ gia đình mà tích hợp này sẽ giám sát. Để giám sát nhiều hộ gia đình hơn, hãy thêm tích hợp một lần nữa — dùng khóa API khác, hoặc giảm tần suất polling để tránh vượt giới hạn tốc độ.",
         "data": {
           "selection": "Hộ gia đình"
         }
@@ -26,22 +26,22 @@
     },
     "error": {
       "invalid_auth": "Khóa API không hợp lệ.",
-      "cannot_connect": "Không thể kết nối với máy chủ SolarMatrix."
+      "cannot_connect": "Không thể kết nối tới máy chủ SolarMatrix."
     },
     "abort": {
       "already_configured": "Hộ gia đình này đã được cấu hình.",
-      "no_systems": "Khóa API này không có hệ thống SolarMatrix.",
-      "no_households": "Không có hộ gia đình nào có thể truy cập được với khóa API này.",
-      "unknown_selection": "Hộ gia đình được chọn không còn khả dụng."
+      "no_systems": "Khóa API này không có hệ thống SolarMatrix nào.",
+      "no_households": "Không có hộ gia đình nào truy cập được bằng khóa API này.",
+      "unknown_selection": "Hộ gia đình đã chọn không còn khả dụng."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Công suất điện mặt trời"
+        "name": "Năng lượng mặt trời"
       },
       "mi_out_power": {
-        "name": "Đầu ra bộ chuyển đổi vi mô"
+        "name": "Đầu ra microinverter"
       },
       "consumption": {
         "name": "Tiêu thụ"
@@ -50,7 +50,7 @@
         "name": "Công suất pin"
       },
       "battery_soc": {
-        "name": "Mức SoC pin"
+        "name": "Mức pin"
       }
     }
   },

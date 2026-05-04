@@ -3,35 +3,35 @@
     "step": {
       "user": {
         "title": "Pripojenie k SolarMatrix",
-        "description": "Vložte kľúč API služby SolarMatrix. Vytvorte si ho na https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Vložte API kľúč SolarMatrix. Vytvorte si ho na https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "Kľúč API",
+          "api_key": "API kľúč",
           "base_url": "URL servera"
         }
       },
       "pick": {
         "title": "Vyberte domácnosť",
-        "description": "Vyberte domácnosť, ktorú má táto integrácia monitorovať. Ak chcete monitorovať viac domácností, pridajte integráciu znova — použite iný kľúč API alebo znížte frekvenciu dotazov, aby ste sa vyhnuli prekročeniu limitu.",
+        "description": "Vyberte domácnosť, ktorú má táto integrácia sledovať. Ak chcete sledovať viac domácností, pridajte integráciu znova — použite iný API kľúč alebo znížte frekvenciu dotazovania, aby ste neprekročili limit požiadaviek.",
         "data": {
           "selection": "Domácnosť"
         }
       },
       "reauth_confirm": {
-        "title": "Znova zadajte kľúč API",
-        "description": "Váš kľúč API už nie je platný. Zadajte nový a pokračujte.",
+        "title": "Zadajte API kľúč znova",
+        "description": "Váš API kľúč už nie je platný. Pre pokračovanie zadajte nový.",
         "data": {
-          "api_key": "Kľúč API"
+          "api_key": "API kľúč"
         }
       }
     },
     "error": {
-      "invalid_auth": "Kľúč API nie je platný.",
-      "cannot_connect": "Nie je možné dosiahnuť server SolarMatrix."
+      "invalid_auth": "API kľúč je neplatný.",
+      "cannot_connect": "Nie je možné pripojiť sa k serveru SolarMatrix."
     },
     "abort": {
       "already_configured": "Táto domácnosť je už nakonfigurovaná.",
-      "no_systems": "Tento kľúč API nemá žiadne systémy SolarMatrix.",
-      "no_households": "S týmto kľúčom API nie sú dostupné žiadne domácnosti.",
+      "no_systems": "Tento API kľúč nemá žiadne systémy SolarMatrix.",
+      "no_households": "S týmto API kľúčom nie sú dostupné žiadne domácnosti.",
       "unknown_selection": "Vybraná domácnosť už nie je dostupná."
     }
   },
@@ -50,7 +50,7 @@
         "name": "Výkon batérie"
       },
       "battery_soc": {
-        "name": "Úroveň nabitia batérie"
+        "name": "Stav nabitia batérie"
       }
     }
   },

@@ -3,34 +3,34 @@
     "step": {
       "user": {
         "title": "Connexion à SolarMatrix",
-        "description": "Collez une clé API SolarMatrix. Créez-en une sur https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Collez une clé API SolarMatrix. Pour en créer une, rendez-vous sur https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "Clé API",
+          "api_key": "clé API",
           "base_url": "URL du serveur"
         }
       },
       "pick": {
         "title": "Choisir un foyer",
-        "description": "Sélectionnez le foyer que cette intégration doit surveiller. Pour surveiller plusieurs foyers, ajoutez l'intégration à nouveau — utilisez une clé API différente, ou réduisez la fréquence d'interrogation pour éviter de dépasser la limite de débit.",
+        "description": "Sélectionnez le foyer que cette intégration doit surveiller. Pour surveiller plusieurs foyers, ajoutez l'intégration à nouveau — utilisez une clé API différente ou réduisez la fréquence d'interrogation pour ne pas dépasser la limite de débit.",
         "data": {
           "selection": "Foyer"
         }
       },
       "reauth_confirm": {
-        "title": "Réentrez la clé API",
-        "description": "Votre clé API n'est plus valide. Entrez une nouvelle pour continuer.",
+        "title": "Saisir une nouvelle clé API",
+        "description": "La clé API n'est plus valide. Saisissez-en une nouvelle pour continuer.",
         "data": {
-          "api_key": "Clé API"
+          "api_key": "clé API"
         }
       }
     },
     "error": {
-      "invalid_auth": "La clé API est invalide.",
+      "invalid_auth": "Clé API invalide.",
       "cannot_connect": "Impossible de joindre le serveur SolarMatrix."
     },
     "abort": {
       "already_configured": "Ce foyer est déjà configuré.",
-      "no_systems": "Cette clé API n'a pas de systèmes SolarMatrix.",
+      "no_systems": "Aucun système SolarMatrix n'est associé à cette clé API.",
       "no_households": "Aucun foyer n'est accessible avec cette clé API.",
       "unknown_selection": "Le foyer sélectionné n'est plus disponible."
     }
@@ -38,7 +38,7 @@
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Puissance solaire"
+        "name": "Production solaire"
       },
       "mi_out_power": {
         "name": "Sortie micro-onduleur"

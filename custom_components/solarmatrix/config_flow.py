@@ -65,13 +65,16 @@ class SolarMatrixConfigFlow(ConfigFlow, domain=DOMAIN):
 
         candidates: list[tuple[str, str, int, str, str]] = []
         for sys in systems:
-            try:
-                households = await api.list_households(sys["id"])
-            except APIError:
-                continue
-            for hh in households:
-                label = f"{sys['name']} — {hh['name']}"
-                candidates.append((label, sys["id"], hh["id"], sys["name"], hh["name"]))
+            sid = sys["id"]
+            system_name = sys.get("display_name") or sys.get("name") or "System"
+            for hid in sys.get("household_indices", []):
+                try:
+                    hh = await api.get_household(sid, int(hid))
+                except APIError:
+                    continue
+                household_name = hh.get("name") or f"Household {hid}"
+                label = f"{system_name} — {household_name}"
+                candidates.append((label, sid, int(hid), system_name, household_name))
 
         if not candidates:
             return self.async_abort(reason="no_households")

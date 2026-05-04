@@ -88,6 +88,10 @@ class SolarMatrixAPI:
         url = f"{self._base}/api/v1/systems/{sid}/households"
         return await self._get_json(url)
 
+    async def get_household(self, sid: str, hid: int) -> dict[str, Any]:
+        url = f"{self._base}/api/v1/systems/{sid}/households/{hid}"
+        return await self._get_json(url)
+
     async def get_snapshot(self, sid: str, hid: int) -> Snapshot:
         url = f"{self._base}/api/v1/systems/{sid}/households/{hid}/snapshot"
         body = await self._get_json(url)

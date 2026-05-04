@@ -6,42 +6,42 @@
         "description": "Ielīmējiet SolarMatrix API atslēgu. Izveidojiet to vietnē https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API atslēga",
-          "base_url": "Servera URL"
+          "base_url": "Servera adrese"
         }
       },
       "pick": {
         "title": "Izvēlieties mājsaimniecību",
-        "description": "Izvēlieties mājsaimniecību, kuru šai integrācijai jāuzrauga. Lai uzraugītu vairāk mājsaimniecību, pievienojiet integrāciju vēlreiz – izmantojiet atšķirīgu API atslēgu vai samaziniet aptaujas biežumu, lai nepārsniedztu ātruma ierobežojumu.",
+        "description": "Izvēlieties mājsaimniecību, kuru šī integrācija uzraudzīs. Lai uzraudzītu vairākas mājsaimniecības, pievienojiet integrāciju vēlreiz — izmantojiet citu API atslēgu vai samaziniet aptaujas biežumu, lai nepārsniegtu pieprasījumu ierobežojumu.",
         "data": {
           "selection": "Mājsaimniecība"
         }
       },
       "reauth_confirm": {
-        "title": "Ievadiet API atslēgu atkārtoti",
-        "description": "Jūsu API atslēga vairs nav derīga. Ievadiet jaunu, lai turpinātu.",
+        "title": "Ievadiet API atslēgu vēlreiz",
+        "description": "Jūsu API atslēga vairs nav derīga. Lai turpinātu, ievadiet jaunu.",
         "data": {
           "api_key": "API atslēga"
         }
       }
     },
     "error": {
-      "invalid_auth": "API atslēga ir nederīga.",
+      "invalid_auth": "API atslēga nav derīga.",
       "cannot_connect": "Nevar sasniegt SolarMatrix serveri."
     },
     "abort": {
       "already_configured": "Šī mājsaimniecība jau ir konfigurēta.",
       "no_systems": "Šai API atslēgai nav SolarMatrix sistēmu.",
-      "no_households": "Ar šo API atslēgu nav pieejamu mājsaimniecību.",
+      "no_households": "Ar šo API atslēgu nav pieejama neviena mājsaimniecība.",
       "unknown_selection": "Izvēlētā mājsaimniecība vairs nav pieejama."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Saules enerģijas jauda"
+        "name": "Saules paneļu jauda"
       },
       "mi_out_power": {
-        "name": "Mikroinvertora izejas jauda"
+        "name": "Mikroinvertera izejas jauda"
       },
       "consumption": {
         "name": "Patēriņš"

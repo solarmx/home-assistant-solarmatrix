@@ -2,37 +2,37 @@
   "config": {
     "step": {
       "user": {
-        "title": "SolarMatrix এ সংযোগ করুন",
-        "description": "একটি SolarMatrix API কী পেস্ট করুন। https://app.solarmatrix.eu/settings/api-keys এ একটি তৈরি করুন।",
+        "title": "SolarMatrix-এ সংযোগ করুন",
+        "description": "আপনার SolarMatrix API কী এখানে পেস্ট করুন। নতুন কী তৈরি করতে https://app.solarmatrix.eu/settings/api-keys-এ যান।",
         "data": {
           "api_key": "API কী",
           "base_url": "সার্ভার URL"
         }
       },
       "pick": {
-        "title": "একটি পরিবার নির্বাচন করুন",
-        "description": "সেই পরিবারটি বেছে নিন যা এই ইন্টিগ্রেশন নিরীক্ষণ করা উচিত। আরও পরিবার নিরীক্ষণ করতে, ইন্টিগ্রেশনটি আবার যোগ করুন — একটি আলাদা API কী ব্যবহার করুন, বা হার সীমায় পৌঁছানো এড়াতে পোলিং ফ্রিকোয়েন্সি হ্রাস করুন।",
+        "title": "একটি বাড়ি বেছে নিন",
+        "description": "এই ইন্টিগ্রেশন যে বাড়িটি মনিটর করবে সেটি নির্বাচন করুন। একাধিক বাড়ি মনিটর করতে চাইলে ইন্টিগ্রেশনটি আবার যোগ করুন — অন্য একটি API কী ব্যবহার করুন, অথবা রেট লিমিট এড়াতে পোলিং ফ্রিকোয়েন্সি কমিয়ে দিন।",
         "data": {
-          "selection": "পরিবার"
+          "selection": "বাড়ি"
         }
       },
       "reauth_confirm": {
-        "title": "API কী পুনরায় প্রবেश করুন",
-        "description": "আপনার API কী আর বৈধ নয়। চালিয়ে যেতে একটি নতুন কী প্রবেশ করুন।",
+        "title": "API কী আবার দিন",
+        "description": "আপনার API কী আর কার্যকর নেই। চালিয়ে যেতে একটি নতুন কী দিন।",
         "data": {
           "api_key": "API কী"
         }
       }
     },
     "error": {
-      "invalid_auth": "API কী অবৈধ।",
-      "cannot_connect": "SolarMatrix সার্ভারে পৌঁছাতে পারে না।"
+      "invalid_auth": "API কী সঠিক নয়।",
+      "cannot_connect": "SolarMatrix সার্ভারে পৌঁছানো যাচ্ছে না।"
     },
     "abort": {
-      "already_configured": "এই পরিবার ইতিমধ্যে কনফিগার করা হয়েছে।",
-      "no_systems": "এই API কীটির কোন SolarMatrix সিস্টেম নেই।",
-      "no_households": "এই API কীটির সাথে কোন পরিবার অ্যাক্সেসযোগ্য নয়।",
-      "unknown_selection": "নির্বাচিত পরিবার আর উপলব্ধ নয়।"
+      "already_configured": "এই বাড়িটি ইতিমধ্যেই কনফিগার করা আছে।",
+      "no_systems": "এই API কী-এর সাথে কোনো SolarMatrix সিস্টেম যুক্ত নেই।",
+      "no_households": "এই API কী দিয়ে কোনো বাড়ি অ্যাক্সেস করা যাচ্ছে না।",
+      "unknown_selection": "নির্বাচিত বাড়িটি আর উপলব্ধ নেই।"
     }
   },
   "entity": {
@@ -47,10 +47,10 @@
         "name": "ব্যবহার"
       },
       "battery_power": {
-        "name": "ব্যাটারি শক্তি"
+        "name": "ব্যাটারি পাওয়ার"
       },
       "battery_soc": {
-        "name": "ব্যাটারি SoC"
+        "name": "ব্যাটারি চার্জ স্তর"
       }
     }
   },

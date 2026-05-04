@@ -24,17 +24,19 @@ from custom_components.solarmatrix.const import (
 def fake_api():
     api = AsyncMock()
     api.list_systems.return_value = [
-        {"id": "sid-A", "name": "House A"},
-        {"id": "sid-B", "name": "House B"},
+        {"id": "sid-A", "display_name": "House A", "household_indices": [0, 1]},
+        {"id": "sid-B", "display_name": "House B", "household_indices": [0]},
     ]
 
-    async def households(sid: str):
-        return {
-            "sid-A": [{"id": 0, "name": "WE05"}, {"id": 1, "name": "WE07"}],
-            "sid-B": [{"id": 0, "name": "Cabin"}],
-        }[sid]
+    async def get_household(sid: str, hid: int):
+        names = {
+            ("sid-A", 0): "WE05",
+            ("sid-A", 1): "WE07",
+            ("sid-B", 0): "Cabin",
+        }
+        return {"household_id": hid, "name": names[(sid, hid)]}
 
-    api.list_households.side_effect = households
+    api.get_household.side_effect = get_household
     return api
 
 

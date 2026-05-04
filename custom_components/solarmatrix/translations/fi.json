@@ -3,36 +3,36 @@
     "step": {
       "user": {
         "title": "Yhdistä SolarMatrixiin",
-        "description": "Liitä SolarMatrix-sovellusavain. Luo sellainen osoitteessa https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Liitä SolarMatrix-API-avain. Voit luoda avaimen osoitteessa https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "Sovellusavain",
+          "api_key": "API-avain",
           "base_url": "Palvelimen osoite"
         }
       },
       "pick": {
-        "title": "Valitse asunto",
-        "description": "Valitse asunto, jota tämä integraatio valvoo. Valvoa useampaa asuntoa valitsemalla, lisää integraatio uudelleen – käytä eri sovellusavainta tai pienennä kyselyväliä nopeusrajoitukseen osumisen välttämiseksi.",
+        "title": "Valitse kotitalous",
+        "description": "Valitse kotitalous, jota tämä integraatio seuraa. Jos haluat seurata useampia kotitalouksia, lisää integraatio uudelleen — käytä eri API-avainta tai pienennä kyselytaajuutta välttääksesi kyselyrajan ylittymisen.",
         "data": {
-          "selection": "Asunto"
+          "selection": "Kotitalous"
         }
       },
       "reauth_confirm": {
-        "title": "Anna sovellusavain uudelleen",
-        "description": "Sovellusavaimesi ei ole enää kelvollinen. Anna uusi avain jatkaaksesi.",
+        "title": "Anna API-avain uudelleen",
+        "description": "API-avaimesi ei ole enää voimassa. Anna uusi avain jatkaaksesi.",
         "data": {
-          "api_key": "Sovellusavain"
+          "api_key": "API-avain"
         }
       }
     },
     "error": {
-      "invalid_auth": "Sovellusavain on virheellinen.",
-      "cannot_connect": "Ei voida saavuttaa SolarMatrix-palvelinta."
+      "invalid_auth": "API-avain ei kelpaa.",
+      "cannot_connect": "SolarMatrix-palvelimeen ei saada yhteyttä."
     },
     "abort": {
-      "already_configured": "Tämä asunto on jo määritetty.",
-      "no_systems": "Tällä sovellusavaimella ei ole SolarMatrix-järjestelmiä.",
-      "no_households": "Tälle sovellusavaimelle ei ole saatavilla asuntoja.",
-      "unknown_selection": "Valittu asunto ei ole enää käytettävissä."
+      "already_configured": "Tämä kotitalous on jo määritetty.",
+      "no_systems": "Tällä API-avaimella ei ole SolarMatrix-järjestelmiä.",
+      "no_households": "Tällä API-avaimella ei ole käytettävissä yhtään kotitaloutta.",
+      "unknown_selection": "Valittu kotitalous ei ole enää saatavilla."
     }
   },
   "entity": {
@@ -41,7 +41,7 @@
         "name": "Aurinkoteho"
       },
       "mi_out_power": {
-        "name": "Mikro-inverterin ulostulo"
+        "name": "Mikroinvertterin teho"
       },
       "consumption": {
         "name": "Kulutus"

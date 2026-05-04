@@ -2,23 +2,23 @@
   "config": {
     "step": {
       "user": {
-        "title": "SolarMatrixera konektatu",
-        "description": "Itsatsi SolarMatrix API gakoa. Sortu bat https://app.solarmatrix.eu/settings/api-keys helbidean.",
+        "title": "Konektatu SolarMatrix-era",
+        "description": "Itsatsi SolarMatrix API gako bat. Bat sor dezakezu hemen: https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API gakoa",
           "base_url": "Zerbitzariaren URLa"
         }
       },
       "pick": {
-        "title": "Aukeratu etxebizitza",
-        "description": "Hautatu integrazio honek kontrolatu behar duen etxebizitza. Etxebizitza gehiago kontrolatzeko, gehitu integrazio hau berriz — erabili API gako desberdina, edo murriztu sondeo-maiztasuna abiadura-limitera iritsieari saihesteko.",
+        "title": "Aukeratu etxea",
+        "description": "Aukeratu integrazio honek monitorizatu beharreko etxea. Etxe gehiago monitorizatzeko, gehitu integrazioa berriro — erabili beste API gako bat edo murriztu kontsulta-maiztasuna eskaera-mugara ez iristeko.",
         "data": {
-          "selection": "Etxebizitza"
+          "selection": "Etxea"
         }
       },
       "reauth_confirm": {
-        "title": "API gakoa berriz sartu",
-        "description": "Zure API gakoa ez da jada baliozkoa. Sartu berri bat jarraitzeko.",
+        "title": "Sartu API gakoa berriro",
+        "description": "Zure API gakoa jada ez da baliozkoa. Sartu berri bat jarraitzeko.",
         "data": {
           "api_key": "API gakoa"
         }
@@ -26,31 +26,31 @@
     },
     "error": {
       "invalid_auth": "API gakoa ez da baliozkoa.",
-      "cannot_connect": "Ezin da SolarMatrix zerbitzaria atzitu."
+      "cannot_connect": "Ezin da SolarMatrix zerbitzarira konektatu."
     },
     "abort": {
-      "already_configured": "Etxebizitza hau dagoeneko konfiguraturik dago.",
-      "no_systems": "API gako honek ez du SolarMatrix sistemak.",
-      "no_households": "Etxebizitzarik ez da eskuragarri API gako honekin.",
-      "unknown_selection": "Hautatutako etxebizitza ez dago jada erabilgarri."
+      "already_configured": "Etxe hau dagoeneko konfiguratuta dago.",
+      "no_systems": "API gako honek ez du SolarMatrix sistemarik.",
+      "no_households": "API gako honekin ez dago etxerik eskuragarri.",
+      "unknown_selection": "Hautatutako etxea jada ez dago eskuragarri."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Energia solagoa"
+        "name": "Eguzki-potentzia"
       },
       "mi_out_power": {
-        "name": "Microinvertearen irteera"
+        "name": "Mikroinbertsorearen irteera"
       },
       "consumption": {
         "name": "Kontsumoa"
       },
       "battery_power": {
-        "name": "Batergiaren potentzia"
+        "name": "Bateriaren potentzia"
       },
       "battery_soc": {
-        "name": "Batergiaren egoera"
+        "name": "Bateriaren karga-egoera"
       }
     }
   },
