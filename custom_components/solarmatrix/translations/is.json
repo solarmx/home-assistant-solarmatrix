@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "Tengjast við SolarMatrix",
+        "description": "Límdu inn SolarMatrix API-lykil. Þú getur búið til einn á https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "API-lykil",
+          "base_url": "Server-vefslóð"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "Veldu heimili",
+        "description": "Veldu heimili sem þessi samþætting ætti að fylgjast með. Bættu samþættingunni aftur til að fylgjast með fleiri — notaðu aðra API-lykil eða minnkaðu endurspurningatíðni til að forðast að ná hámarkinu.",
         "data": {
-          "selection": "Household"
+          "selection": "Heimili"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "Sláðu inn API-lykil aftur",
+        "description": "API-lykilinn þinn er ekki lengur gildur. Sláðu inn nýjan til að halda áfram.",
         "data": {
-          "api_key": "API key"
+          "api_key": "API-lykil"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "API-lykil er ógildur.",
+      "cannot_connect": "Get ekki náð til SolarMatrix-þjóns."
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "Þetta heimili er þegar skilgreint.",
+      "no_systems": "Þessi API-lykil er ekki með neinum SolarMatrix-kerfum.",
+      "no_households": "Engin heimili eru aðgengileg með þessum API-lykli.",
+      "unknown_selection": "Valið heimili er ekki lengur tiltækt."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "Sólarpennaafli"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "Smá-ómsettafrábrot"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "Neysla"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "Rafhlöðuafli"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "Hleðslustaða rafhlöðu"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }

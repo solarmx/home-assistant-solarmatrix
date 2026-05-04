@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "SolarMatrixకు కనెక్ట్ చేయండి",
+        "description": "SolarMatrix API కీ ను పేస్ట్ చేయండి. https://app.solarmatrix.eu/settings/api-keys వద్ద ఒకటి సృష్టించండి.",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "API కీ",
+          "base_url": "సర్వర్ URL"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "ఒక గృహం ఎంచుకోండి",
+        "description": "ఈ ఇంటిగ్రేషన్ పర్యవేక్షించవలసిన గృహాన్ని ఎంచుకోండి. మరిన్ని గృహాలను పర్యవేక్షించడానికి, ఇంటిగ్రేషన్‌ను మళ్లీ జోడించండి — వేరే API కీ ను ఉపయోగించండి, లేదా రేట్ పరిమితిని నివారించడానికి పోలింగ్ ఫ్రీక్వెన్సీ కోసం తగ్గించండి.",
         "data": {
-          "selection": "Household"
+          "selection": "గృహం"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "API కీ ను మళ్లీ ప్రవేశించండి",
+        "description": "మీ API కీ ఇక చెల్లుబాటుకు లోబడి ఉండదు. కొనసాగించడానికి ఒక నవీనమైనది ప్రవేశించండి.",
         "data": {
-          "api_key": "API key"
+          "api_key": "API కీ"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "API కీ చెల్లుబాటుకు లోబడిలేనిది.",
+      "cannot_connect": "SolarMatrix సర్వర్‌కు చేరుకోలేము."
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "ఈ గృహం ఇప్పటికే ఆకృతీకరించబడింది.",
+      "no_systems": "ఈ API కీ కు SolarMatrix సిస్టమ్‌లు లేవు.",
+      "no_households": "ఈ API కీ చేత ఆ గృహాలను యాక్సెస్ చేయడానికి ఉపలభ్యమైనవి లేవు.",
+      "unknown_selection": "ఎంచుకున్న గృహం ఇక ఉపలభ్యమైనది కాదు."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "సౌర శక్తి"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "మైక్రోఇన్‌వర్టర్ అవుట్‌పుట్"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "వినియోగం"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "బ్యాటరీ శక్తి"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "బ్యాటరీ SoC"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }

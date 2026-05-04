@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "description": "Paste a SolarMatrix API key. Create one at https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API key",
           "base_url": "Server URL"
@@ -11,7 +11,7 @@
       },
       "pick": {
         "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "description": "Pick the household this integration should monitor. To monitor more households, add the integration again — use a different API key, or reduce polling frequency to avoid hitting the rate limit.",
         "data": {
           "selection": "Household"
         }

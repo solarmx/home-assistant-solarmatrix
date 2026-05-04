@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "Prisijungti prie SolarMatrix",
+        "description": "Įklijuokite SolarMatrix API raktą. Sukurkite jį adresu https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "API raktas",
+          "base_url": "Serverio URL"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "Pasirinkite namų ūkį",
+        "description": "Pasirinkite namų ūkį, kurį turėtų stebėti ši integracija. Norėdami stebėti daugiau namų ūkių, pridėkite integracijos dar kartą – naudokite kitą API raktą arba sumažinkite apklausos dažnį, kad išvengtumėte ribojimo.",
         "data": {
-          "selection": "Household"
+          "selection": "Namų ūkis"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "Iš naujo įveskite API raktą",
+        "description": "Jūsų API raktas nebe galioja. Įveskite naują, kad tęstumėte.",
         "data": {
-          "api_key": "API key"
+          "api_key": "API raktas"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "API raktas yra netinkamas.",
+      "cannot_connect": "Nepavyksta pasiekti SolarMatrix serverio."
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "Šis namų ūkis jau sukonfigūruotas.",
+      "no_systems": "Šis API raktas neturi SolarMatrix sistemų.",
+      "no_households": "Su šiuo API raktu nėra pasiekiamų namų ūkių.",
+      "unknown_selection": "Pasirinktas namų ūkis nebe galimas."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "Saulės energijos galia"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "Mikroinverterio išėjimas"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "Suvartojimas"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "Akumuliatoriaus galia"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "Akumuliatoriaus įkrovos lygis"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }

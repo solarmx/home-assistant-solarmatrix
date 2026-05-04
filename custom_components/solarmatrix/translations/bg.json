@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "Свързване към SolarMatrix",
+        "description": "Поставете API ключ на SolarMatrix. Създайте един на https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "API ключ",
+          "base_url": "URL на сервъра"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "Изберете домакинство",
+        "description": "Изберете домакинството, което трябва да мониторира тази интеграция. За мониторинг на повече домакинства добавете интеграцията отново — използвайте различен API ключ или намалете честотата на проверката, за да избегнете превишаване на лимита.",
         "data": {
-          "selection": "Household"
+          "selection": "Домакинство"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "Повторно въведете API ключ",
+        "description": "Вашият API ключ вече не е валиден. Въведете нов, за да продължите.",
         "data": {
-          "api_key": "API key"
+          "api_key": "API ключ"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "API ключът е невалиден.",
+      "cannot_connect": "Не можете да достигнете сървъра на SolarMatrix."
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "Това домакинство вече е конфигурирано.",
+      "no_systems": "Този API ключ няма системи на SolarMatrix.",
+      "no_households": "Няма достъпни домакинства с този API ключ.",
+      "unknown_selection": "Избраното домакинство вече не е налично."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "Слънчева мощност"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "Изход на микроинвертор"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "Потребление"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "Мощност на батерията"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "Ниво на заряд на батерията"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }

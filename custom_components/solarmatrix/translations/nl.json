@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "Verbinding maken met SolarMatrix",
+        "description": "Plak een SolarMatrix-API-sleutel. Maak er een aan op https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "API-sleutel",
+          "base_url": "Server-URL"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "Kies een huishouden",
+        "description": "Selecteer het huishouden dat deze integratie moet bewaken. Voeg de integratie opnieuw toe om meer huishoudens te bewaken — gebruik een ander API-sleutel of verlaag de pollfrequentie om het ratenlimit niet te overschrijden.",
         "data": {
-          "selection": "Household"
+          "selection": "Huishouden"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "Voer API-sleutel opnieuw in",
+        "description": "Uw API-sleutel is niet langer geldig. Voer een nieuwe in om door te gaan.",
         "data": {
-          "api_key": "API key"
+          "api_key": "API-sleutel"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "API-sleutel is ongeldig.",
+      "cannot_connect": "Kan de SolarMatrix-server niet bereiken."
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "Dit huishouden is al geconfigureerd.",
+      "no_systems": "Deze API-sleutel heeft geen SolarMatrix-systemen.",
+      "no_households": "Er zijn geen huishoudens toegankelijk met deze API-sleutel.",
+      "unknown_selection": "Geselecteerd huishouden is niet meer beschikbaar."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "Zonnepaneelvermogen"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "Micro-omvormervermogen"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "Verbruik"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "Accuvermogen"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "Acculadingsniveau"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }

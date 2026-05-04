@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "เชื่อมต่อกับ SolarMatrix",
+        "description": "วางคีย์ API SolarMatrix สร้างคีย์ที่ https://app.solarmatrix.eu/settings/api-keys",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "คีย์ API",
+          "base_url": "URL เซิร์ฟเวอร์"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "เลือกครัวเรือน",
+        "description": "เลือกครัวเรือนที่ควรติดตามโดยการรวมนี้ เพื่อติดตามครัวเรือนเพิ่มเติม ให้เพิ่มการรวมอีกครั้ง - ใช้คีย์ API อื่น หรือลดความถี่ในการสำรวจเพื่อหลีกเลี่ยงการเกินขีดจำกัดอัตรา",
         "data": {
-          "selection": "Household"
+          "selection": "ครัวเรือน"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "ใส่คีย์ API ใหม่อีกครั้ง",
+        "description": "คีย์ API ของคุณไม่ถูกต้องอีกต่อไป ใส่คีย์ใหม่เพื่อดำเนินต่อ",
         "data": {
-          "api_key": "API key"
+          "api_key": "คีย์ API"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "คีย์ API ไม่ถูกต้อง",
+      "cannot_connect": "ไม่สามารถเข้าถึงเซิร์ฟเวอร์ SolarMatrix"
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "ครัวเรือนนี้ได้รับการกำหนดค่าแล้ว",
+      "no_systems": "คีย์ API นี้ไม่มีระบบ SolarMatrix",
+      "no_households": "ไม่มีครัวเรือนที่สามารถเข้าถึงได้โดยใช้คีย์ API นี้",
+      "unknown_selection": "ครัวเรือนที่เลือกไม่พร้อมใช้งานอีกต่อไป"
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "กำลังไฟฟ้าจากแสงอาทิตย์"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "เอาต์พุตไมโครอินเวอร์เตอร์"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "การใช้"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "กำลังไฟแบตเตอรี่"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "SoC แบตเตอรี่"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }

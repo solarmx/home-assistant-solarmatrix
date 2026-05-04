@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "Conectar a SolarMatrix",
+        "description": "Pegue unha chave API de SolarMatrix. Cree unha en https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "Chave API",
+          "base_url": "URL do servidor"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "Escoller un fogar",
+        "description": "Seleccione o fogar que esta integración debe monitorizar. Para monitorizar máis fogares, engada a integración de novo — use unha chave API diferente, ou reduza a frecuencia de sondaxe para evitar alcanzar o límite de velocidade.",
         "data": {
-          "selection": "Household"
+          "selection": "Fogar"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "Reintroduza a chave API",
+        "description": "A súa chave API xa non é válida. Introduza unha nova para continuar.",
         "data": {
-          "api_key": "API key"
+          "api_key": "Chave API"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "A chave API non é válida.",
+      "cannot_connect": "Non é posible alcanzar o servidor de SolarMatrix."
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "Este fogar xa está configurado.",
+      "no_systems": "Esta chave API non ten sistemas SolarMatrix.",
+      "no_households": "Ningún fogar é accesible con esta chave API.",
+      "unknown_selection": "O fogar seleccionado xa non está dispoñible."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "Potencia solar"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "Saída do microinversor"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "Consumo"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "Potencia da batería"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "Estado da bateria"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }

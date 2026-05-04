@@ -2,57 +2,57 @@
   "config": {
     "step": {
       "user": {
-        "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. You can create one at app.solarmatrix.app under your account → API keys.",
+        "title": "SolarMatrix に接続",
+        "description": "SolarMatrix APIキーを貼り付けます。https://app.solarmatrix.eu/settings/api-keys で作成できます。",
         "data": {
-          "api_key": "API key",
-          "base_url": "Server URL"
+          "api_key": "APIキー",
+          "base_url": "サーバーURL"
         }
       },
       "pick": {
-        "title": "Choose a household",
-        "description": "Pick the household this integration should monitor. Add the integration again to monitor more.",
+        "title": "世帯を選択",
+        "description": "このインテグレーションが監視する世帯を選択します。より多くの世帯を監視するには、インテグレーションを再度追加してください——別の APIキーを使用するか、レート制限に達しないようにポーリング頻度を下げてください。",
         "data": {
-          "selection": "Household"
+          "selection": "世帯"
         }
       },
       "reauth_confirm": {
-        "title": "Re-enter API key",
-        "description": "Your API key is no longer valid. Enter a new one to continue.",
+        "title": "APIキーを再入力",
+        "description": "お客様の APIキーは有効ではなくなりました。続行するには新しいキーを入力してください。",
         "data": {
-          "api_key": "API key"
+          "api_key": "APIキー"
         }
       }
     },
     "error": {
-      "invalid_auth": "API key is invalid.",
-      "cannot_connect": "Cannot reach the SolarMatrix server."
+      "invalid_auth": "APIキーが無効です。",
+      "cannot_connect": "SolarMatrix サーバーに接続できません。"
     },
     "abort": {
-      "already_configured": "This household is already configured.",
-      "no_systems": "This API key has no SolarMatrix systems.",
-      "no_households": "No households are accessible with this API key.",
-      "unknown_selection": "Selected household is no longer available."
+      "already_configured": "この世帯は既に構成されています。",
+      "no_systems": "この APIキーに SolarMatrix システムがありません。",
+      "no_households": "このAPIキーでアクセスできる世帯がありません。",
+      "unknown_selection": "選択した世帯は利用できなくなりました。"
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solar power"
+        "name": "太陽光パワー"
       },
       "mi_out_power": {
-        "name": "Microinverter output"
+        "name": "マイクロインバータ出力"
       },
       "consumption": {
-        "name": "Consumption"
+        "name": "消費"
       },
       "battery_power": {
-        "name": "Battery power"
+        "name": "バッテリーパワー"
       },
       "battery_soc": {
-        "name": "Battery SoC"
+        "name": "バッテリー残量"
       }
     }
   },
-  "__source_hash": "0fa780f0b4cdd0cfb5150a26f903718e67f7318b5ecfedb55515681c0897bb21"
+  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
 }
