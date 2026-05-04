@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "SolarMatrix에 연결",
-        "description": "SolarMatrix API 키를 붙여넣으세요. https://app.solarmatrix.eu/settings/api-keys에서 생성할 수 있습니다.",
+        "description": "SolarMatrix API 키를 붙여넣으세요. https://app.solarmatrix.eu/settings/api-keys 에서 생성할 수 있습니다.",
         "data": {
           "api_key": "API 키",
           "base_url": "서버 URL"
@@ -11,14 +11,14 @@
       },
       "pick": {
         "title": "가구 선택",
-        "description": "이 통합이 모니터링할 가구를 선택하세요. 더 많은 가구를 모니터링하려면 통합을 다시 추가하세요 - 다른 API 키를 사용하거나 속도 제한을 피하기 위해 폴링 빈도를 줄이세요.",
+        "description": "이 통합으로 모니터링할 가구를 선택하세요. 여러 가구를 모니터링하려면 통합을 다시 추가하세요. 다른 API 키를 사용하거나, 속도 제한에 걸리지 않도록 폴링 주기를 늘리세요.",
         "data": {
           "selection": "가구"
         }
       },
       "reauth_confirm": {
         "title": "API 키 다시 입력",
-        "description": "API 키가 더 이상 유효하지 않습니다. 계속하려면 새로운 키를 입력하세요.",
+        "description": "API 키가 더 이상 유효하지 않습니다. 계속하려면 새 키를 입력하세요.",
         "data": {
           "api_key": "API 키"
         }
@@ -26,25 +26,25 @@
     },
     "error": {
       "invalid_auth": "API 키가 유효하지 않습니다.",
-      "cannot_connect": "SolarMatrix 서버에 도달할 수 없습니다."
+      "cannot_connect": "SolarMatrix 서버에 연결할 수 없습니다."
     },
     "abort": {
-      "already_configured": "이 가구는 이미 구성되었습니다.",
+      "already_configured": "이 가구는 이미 구성되어 있습니다.",
       "no_systems": "이 API 키에는 SolarMatrix 시스템이 없습니다.",
-      "no_households": "이 API 키로 액세스할 수 있는 가구가 없습니다.",
+      "no_households": "이 API 키로 접근할 수 있는 가구가 없습니다.",
       "unknown_selection": "선택한 가구를 더 이상 사용할 수 없습니다."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "태양광 전력"
+        "name": "태양광 발전"
       },
       "mi_out_power": {
-        "name": "마이크로인버터 출력"
+        "name": "마이크로 인버터 출력"
       },
       "consumption": {
-        "name": "소비"
+        "name": "소비 전력"
       },
       "battery_power": {
         "name": "배터리 전력"

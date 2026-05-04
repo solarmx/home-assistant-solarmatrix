@@ -3,34 +3,34 @@
     "step": {
       "user": {
         "title": "Tengjast við SolarMatrix",
-        "description": "Límdu inn SolarMatrix API-lykil. Þú getur búið til einn á https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Límdu inn SolarMatrix API-lykil. Þú getur búið til lykil á https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
-          "api_key": "API-lykil",
-          "base_url": "Server-vefslóð"
+          "api_key": "API-lykill",
+          "base_url": "Vefslóð þjóns"
         }
       },
       "pick": {
         "title": "Veldu heimili",
-        "description": "Veldu heimili sem þessi samþætting ætti að fylgjast með. Bættu samþættingunni aftur til að fylgjast með fleiri — notaðu aðra API-lykil eða minnkaðu endurspurningatíðni til að forðast að ná hámarkinu.",
+        "description": "Veldu heimilið sem þessi samþætting á að fylgjast með. Til að fylgjast með fleiri heimilum, bættu samþættingunni við aftur — notaðu annan API-lykil eða dragðu úr fyrirspurnatíðni til að lenda ekki á tíðnimörkum.",
         "data": {
           "selection": "Heimili"
         }
       },
       "reauth_confirm": {
         "title": "Sláðu inn API-lykil aftur",
-        "description": "API-lykilinn þinn er ekki lengur gildur. Sláðu inn nýjan til að halda áfram.",
+        "description": "API-lykillinn þinn er ekki lengur gildur. Sláðu inn nýjan til að halda áfram.",
         "data": {
-          "api_key": "API-lykil"
+          "api_key": "API-lykill"
         }
       }
     },
     "error": {
-      "invalid_auth": "API-lykil er ógildur.",
-      "cannot_connect": "Get ekki náð til SolarMatrix-þjóns."
+      "invalid_auth": "API-lykillinn er ógildur.",
+      "cannot_connect": "Næ ekki sambandi við SolarMatrix-þjóninn."
     },
     "abort": {
-      "already_configured": "Þetta heimili er þegar skilgreint.",
-      "no_systems": "Þessi API-lykil er ekki með neinum SolarMatrix-kerfum.",
+      "already_configured": "Þetta heimili er þegar uppsett.",
+      "no_systems": "Þessi API-lykill er ekki tengdur neinum SolarMatrix-kerfum.",
       "no_households": "Engin heimili eru aðgengileg með þessum API-lykli.",
       "unknown_selection": "Valið heimili er ekki lengur tiltækt."
     }
@@ -38,19 +38,19 @@
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Sólarpennaafli"
+        "name": "Sólarafl"
       },
       "mi_out_power": {
-        "name": "Smá-ómsettafrábrot"
+        "name": "Útgangur örbreytis"
       },
       "consumption": {
-        "name": "Neysla"
+        "name": "Notkun"
       },
       "battery_power": {
-        "name": "Rafhlöðuafli"
+        "name": "Rafhlöðuafl"
       },
       "battery_soc": {
-        "name": "Hleðslustaða rafhlöðu"
+        "name": "Hleðsla rafhlöðu"
       }
     }
   },

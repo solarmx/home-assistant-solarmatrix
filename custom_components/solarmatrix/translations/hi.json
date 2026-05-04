@@ -3,22 +3,22 @@
     "step": {
       "user": {
         "title": "SolarMatrix से कनेक्ट करें",
-        "description": "एक SolarMatrix API कुंजी पेस्ट करें। https://app.solarmatrix.eu/settings/api-keys पर एक बनाएँ।",
+        "description": "अपनी SolarMatrix API कुंजी यहाँ चिपकाएँ। नई कुंजी बनाने के लिए https://app.solarmatrix.eu/settings/api-keys पर जाएँ।",
         "data": {
           "api_key": "API कुंजी",
           "base_url": "सर्वर URL"
         }
       },
       "pick": {
-        "title": "एक घर चुनें",
-        "description": "वह घर चुनें जिसे यह एकीकरण मॉनिटर करना चाहिए। अधिक घरों की निगरानी के लिए, एकीकरण को फिर से जोड़ें — एक अलग API कुंजी का उपयोग करें, या दर सीमा से बचने के लिए पोलिंग आवृत्ति कम करें।",
+        "title": "घर चुनें",
+        "description": "वह घर चुनें जिसकी यह इंटीग्रेशन निगरानी करेगा। एक से अधिक घरों की निगरानी के लिए इंटीग्रेशन को दोबारा जोड़ें — किसी दूसरी API कुंजी का उपयोग करें, या रेट लिमिट से बचने के लिए पोलिंग की आवृत्ति कम करें।",
         "data": {
           "selection": "घर"
         }
       },
       "reauth_confirm": {
         "title": "API कुंजी फिर से दर्ज करें",
-        "description": "आपकी API कुंजी अब मान्य नहीं है। जारी रखने के लिए एक नई कुंजी दर्ज करें।",
+        "description": "आपकी API कुंजी अब मान्य नहीं है। जारी रखने के लिए नई कुंजी दर्ज करें।",
         "data": {
           "api_key": "API कुंजी"
         }
@@ -26,19 +26,19 @@
     },
     "error": {
       "invalid_auth": "API कुंजी अमान्य है।",
-      "cannot_connect": "SolarMatrix सर्वर तक नहीं पहुंच सकते।"
+      "cannot_connect": "SolarMatrix सर्वर से कनेक्ट नहीं हो पा रहा।"
     },
     "abort": {
-      "already_configured": "यह घर पहले से कॉन्फ़िगर किया गया है।",
-      "no_systems": "इस API कुंजी के पास कोई SolarMatrix सिस्टम नहीं है।",
-      "no_households": "इस API कुंजी के साथ कोई घर सुलभ नहीं है।",
-      "unknown_selection": "चयनित घर अब उपलब्ध नहीं है।"
+      "already_configured": "यह घर पहले से कॉन्फ़िगर है।",
+      "no_systems": "इस API कुंजी से जुड़ा कोई SolarMatrix सिस्टम नहीं है।",
+      "no_households": "इस API कुंजी से कोई घर एक्सेस नहीं किया जा सकता।",
+      "unknown_selection": "चुना गया घर अब उपलब्ध नहीं है।"
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "सौर शक्ति"
+        "name": "सौर ऊर्जा"
       },
       "mi_out_power": {
         "name": "माइक्रोइन्वर्टर आउटपुट"
@@ -47,10 +47,10 @@
         "name": "खपत"
       },
       "battery_power": {
-        "name": "बैटरी शक्ति"
+        "name": "बैटरी पावर"
       },
       "battery_soc": {
-        "name": "बैटरी SoC"
+        "name": "बैटरी चार्ज स्तर"
       }
     }
   },

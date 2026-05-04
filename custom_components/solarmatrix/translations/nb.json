@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Koble til SolarMatrix",
-        "description": "Lim inn en SolarMatrix API-nøkkel. Lag en på https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Lim inn en SolarMatrix-API-nøkkel. Opprett en på https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API-nøkkel",
           "base_url": "Server-URL"
@@ -11,37 +11,37 @@
       },
       "pick": {
         "title": "Velg en husholdning",
-        "description": "Velg husholdningen som denne integrasjonen skal overvåke. Legg til integrasjonen igjen for å overvåke flere — bruk en annen API-nøkkel eller reduser pollingsfrekvensen for å unngå å treffe grensen.",
+        "description": "Velg husholdningen som denne integrasjonen skal overvåke. For å overvåke flere husholdninger, legg til integrasjonen på nytt — bruk en annen API-nøkkel, eller reduser pollingfrekvensen for å unngå å treffe hastighetsgrensen.",
         "data": {
           "selection": "Husholdning"
         }
       },
       "reauth_confirm": {
         "title": "Skriv inn API-nøkkel på nytt",
-        "description": "Din API-nøkkel er ikke lenger gyldig. Skriv inn en ny for å fortsette.",
+        "description": "API-nøkkelen din er ikke lenger gyldig. Skriv inn en ny for å fortsette.",
         "data": {
           "api_key": "API-nøkkel"
         }
       }
     },
     "error": {
-      "invalid_auth": "API-nøkkel er ugyldig.",
-      "cannot_connect": "Kan ikke nå SolarMatrix-serveren."
+      "invalid_auth": "API-nøkkelen er ugyldig.",
+      "cannot_connect": "Får ikke kontakt med SolarMatrix-serveren."
     },
     "abort": {
       "already_configured": "Denne husholdningen er allerede konfigurert.",
       "no_systems": "Denne API-nøkkelen har ingen SolarMatrix-systemer.",
       "no_households": "Ingen husholdninger er tilgjengelige med denne API-nøkkelen.",
-      "unknown_selection": "Valgt husholdning er ikke lenger tilgjengelig."
+      "unknown_selection": "Den valgte husholdningen er ikke lenger tilgjengelig."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solarpaneleffekt"
+        "name": "Solcelleeffekt"
       },
       "mi_out_power": {
-        "name": "Mikro-invertereffekt"
+        "name": "Mikroinverter-utgang"
       },
       "consumption": {
         "name": "Forbruk"
@@ -50,7 +50,7 @@
         "name": "Batterieffekt"
       },
       "battery_soc": {
-        "name": "Batteriladningstilstand"
+        "name": "Batterinivå"
       }
     }
   },

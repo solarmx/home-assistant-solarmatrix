@@ -6,42 +6,42 @@
         "description": "Įklijuokite SolarMatrix API raktą. Sukurkite jį adresu https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API raktas",
-          "base_url": "Serverio URL"
+          "base_url": "Serverio adresas"
         }
       },
       "pick": {
         "title": "Pasirinkite namų ūkį",
-        "description": "Pasirinkite namų ūkį, kurį turėtų stebėti ši integracija. Norėdami stebėti daugiau namų ūkių, pridėkite integracijos dar kartą – naudokite kitą API raktą arba sumažinkite apklausos dažnį, kad išvengtumėte ribojimo.",
+        "description": "Pasirinkite namų ūkį, kurį ši integracija turėtų stebėti. Norėdami stebėti daugiau namų ūkių, pridėkite integraciją dar kartą — naudokite kitą API raktą arba sumažinkite užklausų dažnį, kad neviršytumėte užklausų limito.",
         "data": {
           "selection": "Namų ūkis"
         }
       },
       "reauth_confirm": {
         "title": "Iš naujo įveskite API raktą",
-        "description": "Jūsų API raktas nebe galioja. Įveskite naują, kad tęstumėte.",
+        "description": "Jūsų API raktas nebegalioja. Norėdami tęsti, įveskite naują.",
         "data": {
           "api_key": "API raktas"
         }
       }
     },
     "error": {
-      "invalid_auth": "API raktas yra netinkamas.",
+      "invalid_auth": "API raktas neteisingas.",
       "cannot_connect": "Nepavyksta pasiekti SolarMatrix serverio."
     },
     "abort": {
       "already_configured": "Šis namų ūkis jau sukonfigūruotas.",
       "no_systems": "Šis API raktas neturi SolarMatrix sistemų.",
-      "no_households": "Su šiuo API raktu nėra pasiekiamų namų ūkių.",
-      "unknown_selection": "Pasirinktas namų ūkis nebe galimas."
+      "no_households": "Su šiuo API raktu nepasiekiamas joks namų ūkis.",
+      "unknown_selection": "Pasirinktas namų ūkis nebepasiekiamas."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Saulės energijos galia"
+        "name": "Saulės elektros galia"
       },
       "mi_out_power": {
-        "name": "Mikroinverterio išėjimas"
+        "name": "Mikroinverterio išėjimo galia"
       },
       "consumption": {
         "name": "Suvartojimas"
@@ -50,7 +50,7 @@
         "name": "Akumuliatoriaus galia"
       },
       "battery_soc": {
-        "name": "Akumuliatoriaus įkrovos lygis"
+        "name": "Akumuliatoriaus įkrova"
       }
     }
   },

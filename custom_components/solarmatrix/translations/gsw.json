@@ -3,22 +3,22 @@
     "step": {
       "user": {
         "title": "Mit SolarMatrix verbinde",
-        "description": "Gib einen SolarMatrix-API-Schlüssel ii. Du chasch einen erstelle auf https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Füeg en SolarMatrix-API-Schlüssel ii. Du chasch eine uf https://app.solarmatrix.eu/settings/api-keys aalege.",
         "data": {
           "api_key": "API-Schlüssel",
           "base_url": "Server-URL"
         }
       },
       "pick": {
-        "title": "Wähle e Huushalte",
-        "description": "Wähle d Huushalte, wo dini Integration überwaache soll. Füeg d Integration nochmal i, um meh z überwaache — verwende einen andere API-Schlüssel oder reduzier d Abfrage-Häufigkeit, um s Rate-Limit nid z treffe.",
+        "title": "Wähl en Hushalt",
+        "description": "Wähl de Hushalt, wo die Integration söll überwache. Wänn meh Hushält söllid überwacht werde, füeg d Integration nomal dezue — bruuch en andere API-Schlüssel, oder reduzier d Abfraghüfigkeit, ass es nid as Rate-Limit chunnt.",
         "data": {
-          "selection": "Huushalte"
+          "selection": "Hushalt"
         }
       },
       "reauth_confirm": {
-        "title": "API-Schlüssel nochmal iigle",
-        "description": "Din API-Schlüssel isch nid meh gültig. Gib einen neue ii, um wiiters z mache.",
+        "title": "API-Schlüssel nomal iigäh",
+        "description": "Din API-Schlüssel isch nümm gültig. Gib en neue ii, ass es chann witergah.",
         "data": {
           "api_key": "API-Schlüssel"
         }
@@ -26,31 +26,31 @@
     },
     "error": {
       "invalid_auth": "API-Schlüssel isch ungültig.",
-      "cannot_connect": "Cha de SolarMatrix-Server nid erreiche."
+      "cannot_connect": "De SolarMatrix-Server isch nid erreichbar."
     },
     "abort": {
-      "already_configured": "Disi Huushalte isch scho konfiguriert.",
+      "already_configured": "Dä Hushalt isch scho iigrichtet.",
       "no_systems": "Dä API-Schlüssel het kei SolarMatrix-Systeme.",
-      "no_households": "Kei Huushalt sind mit dem API-Schlüssel zuängig.",
-      "unknown_selection": "Gwählti Huushalte isch nümme verfüegbar."
+      "no_households": "Mit em API-Schlüssel sind kei Hushält erreichbar.",
+      "unknown_selection": "De gwählti Hushalt isch nümm verfüegbar."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solarleistung"
+        "name": "Sunnechraft"
       },
       "mi_out_power": {
-        "name": "Mikrowechselrichter-Usgang"
+        "name": "Mikrowechselrichter-Ausgang"
       },
       "consumption": {
         "name": "Verbruuch"
       },
       "battery_power": {
-        "name": "Batterieleistung"
+        "name": "Batterieleistig"
       },
       "battery_soc": {
-        "name": "Batterie-Ladeschtand"
+        "name": "Batterie-Ladestand"
       }
     }
   },

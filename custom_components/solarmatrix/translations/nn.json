@@ -3,45 +3,45 @@
     "step": {
       "user": {
         "title": "Kopla til SolarMatrix",
-        "description": "Lim inn ein SolarMatrix API-nøkkel. Lag ein på https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Lim inn ein SolarMatrix-API-nøkkel. Opprett ein på https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API-nøkkel",
-          "base_url": "Server-URL"
+          "base_url": "Tenar-URL"
         }
       },
       "pick": {
         "title": "Vel ein husstand",
-        "description": "Vel husstanden som denne integrasjonen skal overvaka. Legg til integrasjonen på nytt for å overvaka fleire — bruk ein annan API-nøkkel eller reduser pollingsfrekvensen for å unngå å treffe grensa.",
+        "description": "Vel husstanden som denne integrasjonen skal overvaka. For å overvaka fleire husstandar, legg til integrasjonen på nytt — bruk ein annan API-nøkkel, eller reduser pollingfrekvensen for å unngå å treffa hastigheitsgrensa.",
         "data": {
           "selection": "Husstand"
         }
       },
       "reauth_confirm": {
-        "title": "Skriv inn API-nøkkel på nytt",
-        "description": "Din API-nøkkel er ikkje lenger gyldig. Skriv inn ein ny for å halda fram.",
+        "title": "Skriv inn API-nøkkelen på nytt",
+        "description": "API-nøkkelen din er ikkje lenger gyldig. Skriv inn ein ny for å halda fram.",
         "data": {
           "api_key": "API-nøkkel"
         }
       }
     },
     "error": {
-      "invalid_auth": "API-nøkkel er ugyldig.",
-      "cannot_connect": "Kan ikkje nå SolarMatrix-serveren."
+      "invalid_auth": "API-nøkkelen er ugyldig.",
+      "cannot_connect": "Får ikkje kontakt med SolarMatrix-tenaren."
     },
     "abort": {
-      "already_configured": "Denne husstanden er allereie konfigurert.",
+      "already_configured": "Denne husstanden er allereie sett opp.",
       "no_systems": "Denne API-nøkkelen har ingen SolarMatrix-system.",
       "no_households": "Ingen husstandar er tilgjengelege med denne API-nøkkelen.",
-      "unknown_selection": "Vald husstand er ikkje lenger tilgjengeleleg."
+      "unknown_selection": "Den valde husstanden er ikkje lenger tilgjengeleg."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solarpaneleffekt"
+        "name": "Solcelleeffekt"
       },
       "mi_out_power": {
-        "name": "Mikro-invertereffekt"
+        "name": "Mikroinvertar-utgang"
       },
       "consumption": {
         "name": "Forbruk"
@@ -50,7 +50,7 @@
         "name": "Batterieffekt"
       },
       "battery_soc": {
-        "name": "Batteriladningstilstand"
+        "name": "Batterinivå"
       }
     }
   },

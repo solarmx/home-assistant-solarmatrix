@@ -2,55 +2,55 @@
   "config": {
     "step": {
       "user": {
-        "title": "התחברות ל-SolarMatrix",
-        "description": "הדבק מפתח API של SolarMatrix. צור אחד ב-https://app.solarmatrix.eu/settings/api-keys.",
+        "title": "התחברות אל SolarMatrix",
+        "description": "הדביקו מפתח API של SolarMatrix. ניתן ליצור מפתח בכתובת https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "מפתח API",
-          "base_url": "כתובת URL של השרת"
+          "base_url": "כתובת השרת"
         }
       },
       "pick": {
-        "title": "בחר משק בית",
-        "description": "בחר את משק הבית שהאינטגרציה הזו צריכה לנטר. כדי לנטר משקי בית נוספים, הוסף את האינטגרציה שוב — השתמש במפתח API שונה, או הפחת את תדירות הסקר כדי להימנע מהגעה לגבול קצב.",
+        "title": "בחירת משק בית",
+        "description": "בחרו את משק הבית שאינטגרציה זו תנטר. כדי לנטר משקי בית נוספים, הוסיפו את האינטגרציה שוב — השתמשו במפתח API אחר או הפחיתו את תדירות השאילתות כדי להימנע מחריגה ממגבלת הקצב.",
         "data": {
           "selection": "משק בית"
         }
       },
       "reauth_confirm": {
-        "title": "הזן מחדש את מפתח ה-API",
-        "description": "מפתח ה-API שלך כבר לא תקף. הזן חדש כדי להמשיך.",
+        "title": "הזנה מחדש של מפתח API",
+        "description": "מפתח ה-API שלכם אינו תקף עוד. הזינו מפתח חדש כדי להמשיך.",
         "data": {
           "api_key": "מפתח API"
         }
       }
     },
     "error": {
-      "invalid_auth": "מפתח API אינו תקף.",
-      "cannot_connect": "לא ניתן להגיע לשרת SolarMatrix."
+      "invalid_auth": "מפתח ה-API אינו תקין.",
+      "cannot_connect": "לא ניתן להתחבר לשרת SolarMatrix."
     },
     "abort": {
       "already_configured": "משק בית זה כבר מוגדר.",
       "no_systems": "למפתח API זה אין מערכות SolarMatrix.",
-      "no_households": "אין משקי בית שנגישים עם מפתח API זה.",
-      "unknown_selection": "משק הבית שנבחר כבר לא זמין."
+      "no_households": "אין משקי בית הנגישים באמצעות מפתח API זה.",
+      "unknown_selection": "משק הבית שנבחר אינו זמין עוד."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "כוח סולארי"
+        "name": "הספק סולארי"
       },
       "mi_out_power": {
-        "name": "פלט מיקרו-ממיר"
+        "name": "פלט מיקרו ממיר"
       },
       "consumption": {
         "name": "צריכה"
       },
       "battery_power": {
-        "name": "כוח הסוללה"
+        "name": "הספק סוללה"
       },
       "battery_soc": {
-        "name": "מצב טעינת הסוללה"
+        "name": "מצב טעינת סוללה"
       }
     }
   },

@@ -2,23 +2,23 @@
   "config": {
     "step": {
       "user": {
-        "title": "Csatlakozás a SolarMatrix-hez",
-        "description": "Illesszen be egy SolarMatrix API-kulcsot. Hozzon létre egyet a https://app.solarmatrix.eu/settings/api-keys helyen.",
+        "title": "Csatlakozás a SolarMatrixhoz",
+        "description": "Illessze be a SolarMatrix API-kulcsát. Hozzon létre egyet itt: https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API-kulcs",
-          "base_url": "Szerver URL"
+          "base_url": "Kiszolgáló címe"
         }
       },
       "pick": {
-        "title": "Válasszon egy háztartást",
-        "description": "Válassza ki azt a háztartást, amelyet ennek az integrációnak figyelnie kell. További háztartások figyeléséhez adja hozzá az integrációt újra – használjon más API-kulcsot, vagy csökkentse a lekérdezési gyakoriságot a sebesség korlátozásának elkerülése érdekében.",
+        "title": "Válasszon háztartást",
+        "description": "Válassza ki a háztartást, amelyet az integráció figyeljen. Több háztartás figyeléséhez adja hozzá az integrációt újra — használjon másik API-kulcsot, vagy csökkentse a lekérdezési gyakoriságot a kérési korlát túllépésének elkerülése érdekében.",
         "data": {
           "selection": "Háztartás"
         }
       },
       "reauth_confirm": {
-        "title": "Adja meg ismét az API-kulcsot",
-        "description": "Az Ön API-kulcsa már nem érvényes. Adjon meg egy újat a folytatáshoz.",
+        "title": "Adja meg újra az API-kulcsot",
+        "description": "Az API-kulcsa már nem érvényes. A folytatáshoz adjon meg egy újat.",
         "data": {
           "api_key": "API-kulcs"
         }
@@ -26,31 +26,31 @@
     },
     "error": {
       "invalid_auth": "Az API-kulcs érvénytelen.",
-      "cannot_connect": "Nem sikerült elérni a SolarMatrix szerver."
+      "cannot_connect": "A SolarMatrix kiszolgáló nem érhető el."
     },
     "abort": {
-      "already_configured": "Ez a háztartás már konfigurálva van.",
-      "no_systems": "Ennek az API-kulcsnak nincsenek SolarMatrix rendszerei.",
-      "no_households": "Ehhez az API-kulcshoz nem érhetők el háztartások.",
+      "already_configured": "Ez a háztartás már be van állítva.",
+      "no_systems": "Ehhez az API-kulcshoz nem tartozik SolarMatrix rendszer.",
+      "no_households": "Ezzel az API-kulccsal egyetlen háztartás sem érhető el.",
       "unknown_selection": "A kiválasztott háztartás már nem érhető el."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Napenergia teljesítménye"
+        "name": "Napelem teljesítmény"
       },
       "mi_out_power": {
-        "name": "Mikroinverter kimenete"
+        "name": "Mikroinverter kimenő teljesítmény"
       },
       "consumption": {
         "name": "Fogyasztás"
       },
       "battery_power": {
-        "name": "Akkumulátor teljesítménye"
+        "name": "Akkumulátor teljesítmény"
       },
       "battery_soc": {
-        "name": "Akkumulátor töltöttségi szintje"
+        "name": "Akkumulátor töltöttsége"
       }
     }
   },

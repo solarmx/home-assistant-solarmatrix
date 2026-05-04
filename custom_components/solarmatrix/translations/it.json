@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Connessione a SolarMatrix",
-        "description": "Incolla una chiave API di SolarMatrix. Creane una su https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Incolla una chiave API SolarMatrix. Per crearne una, vai su https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "Chiave API",
           "base_url": "URL del server"
@@ -11,14 +11,14 @@
       },
       "pick": {
         "title": "Scegli un'abitazione",
-        "description": "Seleziona l'abitazione che questa integrazione deve monitorare. Per monitorare più abitazioni, aggiungi nuovamente l'integrazione — usa una chiave API diversa, o riduci la frequenza di polling per evitare di raggiungere il limite di velocità.",
+        "description": "Seleziona l'abitazione che questa integrazione deve monitorare. Per monitorare più abitazioni, aggiungi di nuovo l'integrazione — usa una chiave API diversa oppure riduci la frequenza di polling per non superare il limite di richieste.",
         "data": {
           "selection": "Abitazione"
         }
       },
       "reauth_confirm": {
-        "title": "Reinserisci la chiave API",
-        "description": "La tua chiave API non è più valida. Inserisci una nuova per continuare.",
+        "title": "Inserisci di nuovo la chiave API",
+        "description": "La chiave API non è più valida. Inseriscine una nuova per continuare.",
         "data": {
           "api_key": "Chiave API"
         }
@@ -30,7 +30,7 @@
     },
     "abort": {
       "already_configured": "Questa abitazione è già configurata.",
-      "no_systems": "Questa chiave API non ha sistemi SolarMatrix.",
+      "no_systems": "Nessun sistema SolarMatrix è associato a questa chiave API.",
       "no_households": "Nessuna abitazione è accessibile con questa chiave API.",
       "unknown_selection": "L'abitazione selezionata non è più disponibile."
     }
@@ -38,7 +38,7 @@
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Potenza solare"
+        "name": "Produzione solare"
       },
       "mi_out_power": {
         "name": "Uscita microinverter"

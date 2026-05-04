@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Anslut till SolarMatrix",
-        "description": "Klistra in en SolarMatrix API-nyckel. Skapa en på https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Klistra in en SolarMatrix-API-nyckel. Skapa en på https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API-nyckel",
           "base_url": "Server-URL"
@@ -11,7 +11,7 @@
       },
       "pick": {
         "title": "Välj ett hushåll",
-        "description": "Välj det hushåll som denna integration ska övervaka. Lägg till integrationen igen för att övervaka fler — använd en annan API-nyckel eller minska avsökningsfrekvensen för att undvika att nå gränsen.",
+        "description": "Välj det hushåll som integrationen ska övervaka. Lägg till integrationen igen för att övervaka fler hushåll — använd en annan API-nyckel, eller minska avsökningsfrekvensen för att undvika att slå i hastighetsgränsen.",
         "data": {
           "selection": "Hushåll"
         }
@@ -25,32 +25,32 @@
       }
     },
     "error": {
-      "invalid_auth": "API-nyckel är ogiltig.",
+      "invalid_auth": "API-nyckeln är ogiltig.",
       "cannot_connect": "Kan inte nå SolarMatrix-servern."
     },
     "abort": {
-      "already_configured": "Detta hushåll är redan konfigurerat.",
-      "no_systems": "Denna API-nyckel har inga SolarMatrix-system.",
-      "no_households": "Inga hushåll är tillgängliga med denna API-nyckel.",
-      "unknown_selection": "Valt hushåll är inte längre tillgängligt."
+      "already_configured": "Det här hushållet är redan konfigurerat.",
+      "no_systems": "Den här API-nyckeln har inga SolarMatrix-system.",
+      "no_households": "Inga hushåll är tillgängliga med den här API-nyckeln.",
+      "unknown_selection": "Det valda hushållet är inte längre tillgängligt."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Solarpanelseffekt"
+        "name": "Solcellseffekt"
       },
       "mi_out_power": {
-        "name": "Mikro-inverteruteffekt"
+        "name": "Mikroväxelriktarens utgång"
       },
       "consumption": {
         "name": "Förbrukning"
       },
       "battery_power": {
-        "name": "Batterikraft"
+        "name": "Batterieffekt"
       },
       "battery_soc": {
-        "name": "Batteriladningstillstånd"
+        "name": "Batterinivå"
       }
     }
   },

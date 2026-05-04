@@ -4,9 +4,10 @@
   "version": "1.0.0",
   "iot_class": "cloud_polling",
   "config_flow": true,
-  "integration_type": "service",
-  "codeowners": ["@solar-matrix"],
-  "documentation": "https://github.com/solar-matrix/home-assistant-solarmatrix",
-  "issue_tracker": "https://github.com/solar-matrix/home-assistant-solarmatrix/issues",
+  "integration_type": "hub",
+  "codeowners": ["@qianqin"],
+  "dependencies": [],
+  "documentation": "https://github.com/solarmx/home-assistant-solarmatrix",
+  "issue_tracker": "https://github.com/solarmx/home-assistant-solarmatrix/issues",
   "requirements": []
 }

@@ -2,8 +2,8 @@
   "config": {
     "step": {
       "user": {
-        "title": "Povezivanje sa SolarMatrix",
-        "description": "Zalijepite SolarMatrix API ključ. Kreirajte jedan na https://app.solarmatrix.eu/settings/api-keys.",
+        "title": "Povezivanje sa SolarMatrixom",
+        "description": "Zalijepite SolarMatrix API ključ. Kreirajte ga na https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API ključ",
           "base_url": "URL servera"
@@ -11,27 +11,27 @@
       },
       "pick": {
         "title": "Odaberite domaćinstvo",
-        "description": "Odaberite domaćinstvo koje ova integracija trebala pratiti. Za praćenje više domaćinstava dodajte integraciju ponovo — koristite drugačiji API ključ ili smanjite frekvenciju ispitivanja da izbjegnete prekoračenje limit-a.",
+        "description": "Odaberite domaćinstvo koje će ova integracija pratiti. Za praćenje više domaćinstava, ponovo dodajte integraciju — koristite drugi API ključ ili smanjite učestalost upita kako biste izbjegli ograničenje broja zahtjeva.",
         "data": {
           "selection": "Domaćinstvo"
         }
       },
       "reauth_confirm": {
-        "title": "Ponovno unesite API ključ",
-        "description": "Vaš API ključ više nije validan. Unesite novi da nastavite.",
+        "title": "Ponovo unesite API ključ",
+        "description": "Vaš API ključ više nije važeći. Unesite novi da nastavite.",
         "data": {
           "api_key": "API ključ"
         }
       }
     },
     "error": {
-      "invalid_auth": "API ključ nije validan.",
-      "cannot_connect": "Ne mogu dosegnuti SolarMatrix server."
+      "invalid_auth": "API ključ nije važeći.",
+      "cannot_connect": "Nije moguće povezati se sa SolarMatrix serverom."
     },
     "abort": {
       "already_configured": "Ovo domaćinstvo je već konfigurirano.",
       "no_systems": "Ovaj API ključ nema SolarMatrix sisteme.",
-      "no_households": "Nema dostupnih domaćinstava s ovim API ključem.",
+      "no_households": "S ovim API ključem nije dostupno nijedno domaćinstvo.",
       "unknown_selection": "Odabrano domaćinstvo više nije dostupno."
     }
   },
@@ -41,7 +41,7 @@
         "name": "Solarna snaga"
       },
       "mi_out_power": {
-        "name": "Izlaz mikro-invertera"
+        "name": "Izlaz mikroinvertora"
       },
       "consumption": {
         "name": "Potrošnja"
@@ -50,7 +50,7 @@
         "name": "Snaga baterije"
       },
       "battery_soc": {
-        "name": "Razina naboja baterije"
+        "name": "Nivo baterije"
       }
     }
   },

@@ -2,37 +2,37 @@
   "config": {
     "step": {
       "user": {
-        "title": "Povezivanje sa SolarMatrix",
-        "description": "Zalijepite SolarMatrix API ključ. Napravite ga na https://app.solarmatrix.eu/settings/api-keys.",
+        "title": "Povezivanje sa SolarMatrix-om",
+        "description": "Nalepite SolarMatrix API ključ. Kreirajte ga na https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API ključ",
           "base_url": "URL servera"
         }
       },
       "pick": {
-        "title": "Odaberite domaćinstvo",
-        "description": "Odaberite domaćinstvo koje ova integracija treba da prati. Za praćenje više domaćinstava dodajte integraciju ponovo — koristite drugačiji API ključ ili smanjite učestalost upita da biste izbegali prekoračenje granice.",
+        "title": "Izaberite domaćinstvo",
+        "description": "Izaberite domaćinstvo koje će ova integracija pratiti. Za praćenje više domaćinstava, ponovo dodajte integraciju — koristite drugi API ključ ili smanjite učestalost upita kako biste izbegli prekoračenje ograničenja broja zahteva.",
         "data": {
           "selection": "Domaćinstvo"
         }
       },
       "reauth_confirm": {
         "title": "Ponovo unesite API ključ",
-        "description": "Vaš API ključ nije više validan. Unesite novi da nastavite.",
+        "description": "Vaš API ključ više nije važeći. Unesite novi da nastavite.",
         "data": {
           "api_key": "API ključ"
         }
       }
     },
     "error": {
-      "invalid_auth": "API ključ nije validan.",
-      "cannot_connect": "Ne mogu dosegnuti SolarMatrix server."
+      "invalid_auth": "API ključ nije važeći.",
+      "cannot_connect": "Nije moguće povezati se sa SolarMatrix serverom."
     },
     "abort": {
       "already_configured": "Ovo domaćinstvo je već konfigurisano.",
       "no_systems": "Ovaj API ključ nema SolarMatrix sisteme.",
-      "no_households": "Nema dostupnih domaćinstava sa ovim API ključem.",
-      "unknown_selection": "Odabrano domaćinstvo nije više dostupno."
+      "no_households": "Sa ovim API ključem nije dostupno nijedno domaćinstvo.",
+      "unknown_selection": "Izabrano domaćinstvo više nije dostupno."
     }
   },
   "entity": {

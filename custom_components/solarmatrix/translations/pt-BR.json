@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Conectar ao SolarMatrix",
-        "description": "Cole uma chave de API do SolarMatrix. Crie uma em https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Cole uma chave de API do SolarMatrix. Para criar uma, acesse https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "Chave de API",
           "base_url": "URL do servidor"
@@ -11,14 +11,14 @@
       },
       "pick": {
         "title": "Escolher uma residência",
-        "description": "Selecione a residência que essa integração deve monitorar. Para monitorar mais residências, adicione a integração novamente — use uma chave de API diferente, ou reduza a frequência de sondagem para evitar atingir o limite de taxa.",
+        "description": "Selecione a residência que esta integração deve monitorar. Para monitorar mais residências, adicione a integração novamente — use uma chave de API diferente ou reduza a frequência de consulta para não atingir o limite de requisições.",
         "data": {
           "selection": "Residência"
         }
       },
       "reauth_confirm": {
-        "title": "Reinsira a chave de API",
-        "description": "Sua chave de API não é mais válida. Insira uma nova para continuar.",
+        "title": "Inserir nova chave de API",
+        "description": "A chave de API não é mais válida. Insira uma nova para continuar.",
         "data": {
           "api_key": "Chave de API"
         }
@@ -29,16 +29,16 @@
       "cannot_connect": "Não foi possível alcançar o servidor SolarMatrix."
     },
     "abort": {
-      "already_configured": "Essa residência já está configurada.",
-      "no_systems": "Essa chave de API não tem sistemas SolarMatrix.",
-      "no_households": "Nenhuma residência está acessível com essa chave de API.",
+      "already_configured": "Esta residência já está configurada.",
+      "no_systems": "Esta chave de API não tem sistemas SolarMatrix associados.",
+      "no_households": "Nenhuma residência está acessível com esta chave de API.",
       "unknown_selection": "A residência selecionada não está mais disponível."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Potência solar"
+        "name": "Produção solar"
       },
       "mi_out_power": {
         "name": "Saída do microinversor"

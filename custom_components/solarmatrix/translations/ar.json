@@ -3,22 +3,22 @@
     "step": {
       "user": {
         "title": "الاتصال بـ SolarMatrix",
-        "description": "الصق مفتاح API في SolarMatrix. قم بإنشاء واحد على https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "ألصق مفتاح API الخاص بـ SolarMatrix. يمكنك إنشاء مفتاح من https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "مفتاح API",
-          "base_url": "عنوان URL للخادم"
+          "base_url": "عنوان الخادم"
         }
       },
       "pick": {
-        "title": "اختر أسرة",
-        "description": "اختر الأسرة التي يجب على هذا التكامل مراقبتها. لمراقبة المزيد من الأسر، أضف التكامل مرة أخرى — استخدم مفتاح API مختلف، أو قلل تكرار الاستطلاع لتجنب الوصول إلى حد المعدل.",
+        "title": "اختيار المنزل",
+        "description": "اختر المنزل الذي ستراقبه هذه الإضافة. لمراقبة منازل إضافية، أضف الإضافة مرة أخرى — استخدم مفتاح API مختلفًا، أو قلّل تكرار الاستعلام لتجنّب تجاوز حد المعدّل.",
         "data": {
-          "selection": "أسرة"
+          "selection": "المنزل"
         }
       },
       "reauth_confirm": {
-        "title": "أعد إدخال مفتاح API",
-        "description": "مفتاح API الخاص بك لم يعد صالحاً. أدخل واحداً جديداً للمتابعة.",
+        "title": "إعادة إدخال مفتاح API",
+        "description": "لم يعد مفتاح API الخاص بك صالحًا. أدخل مفتاحًا جديدًا للمتابعة.",
         "data": {
           "api_key": "مفتاح API"
         }
@@ -26,28 +26,28 @@
     },
     "error": {
       "invalid_auth": "مفتاح API غير صالح.",
-      "cannot_connect": "لا يمكن الوصول إلى خادم SolarMatrix."
+      "cannot_connect": "تعذّر الوصول إلى خادم SolarMatrix."
     },
     "abort": {
-      "already_configured": "تم تكوين هذه الأسرة بالفعل.",
-      "no_systems": "مفتاح API هذا لا يحتوي على أنظمة SolarMatrix.",
-      "no_households": "لا توجد أسر يمكن الوصول إليها باستخدام مفتاح API هذا.",
-      "unknown_selection": "الأسرة المختارة لم تعد متاحة."
+      "already_configured": "هذا المنزل مُعدّ مسبقًا.",
+      "no_systems": "لا توجد أنظمة SolarMatrix مرتبطة بمفتاح API هذا.",
+      "no_households": "لا توجد منازل يمكن الوصول إليها بمفتاح API هذا.",
+      "unknown_selection": "المنزل المحدد لم يعد متاحًا."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "قوة الطاقة الشمسية"
+        "name": "الطاقة الشمسية"
       },
       "mi_out_power": {
-        "name": "إخراج المحول الصغير"
+        "name": "خرج المحول الدقيق"
       },
       "consumption": {
         "name": "الاستهلاك"
       },
       "battery_power": {
-        "name": "قوة البطارية"
+        "name": "طاقة البطارية"
       },
       "battery_soc": {
         "name": "حالة شحن البطارية"

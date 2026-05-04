@@ -2,37 +2,37 @@
   "config": {
     "step": {
       "user": {
-        "title": "Cysylltu a SolarMatrix",
-        "description": "Glynwch allwedd API SolarMatrix. Gallwch greu un ar https://app.solarmatrix.eu/settings/api-keys.",
+        "title": "Cysylltu â SolarMatrix",
+        "description": "Gludwch allwedd API SolarMatrix. Crëwch un yn https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "Allwedd API",
-          "base_url": "URL y Gweinydd"
+          "base_url": "URL y gweinydd"
         }
       },
       "pick": {
-        "title": "Dewiswch aelwyd",
-        "description": "Dewiswch yr aelwyd y dylai'r integreiddiad hwn ei fonitro. I fonitro mwy o aelwydydd, ychwanegwch yr integreiddiad eto - defnyddiwch allwedd API wahanol, neu leihau'r amledd pledio i osgoi taro'r terfyn cyfraddau.",
+        "title": "Dewis aelwyd",
+        "description": "Dewiswch yr aelwyd y dylai'r integreiddiad hwn ei monitro. I fonitro mwy o aelwydydd, ychwanegwch yr integreiddiad eto — defnyddiwch allwedd API gwahanol, neu leihewch amlder yr ymholi i osgoi'r terfyn cyfradd.",
         "data": {
           "selection": "Aelwyd"
         }
       },
       "reauth_confirm": {
-        "title": "Ailddatgloi'r allwedd API",
-        "description": "Nid yw'ch allwedd API yn ddilys mwyach. Lla newydd i barhau.",
+        "title": "Ailroi'r allwedd API",
+        "description": "Nid yw'ch allwedd API yn ddilys mwyach. Rhowch un newydd i barhau.",
         "data": {
           "api_key": "Allwedd API"
         }
       }
     },
     "error": {
-      "invalid_auth": "Nid yw'r allwedd API yn ddilys.",
-      "cannot_connect": "Ni ellir cyrraedd y gweinydd SolarMatrix."
+      "invalid_auth": "Mae'r allwedd API yn annilys.",
+      "cannot_connect": "Methu cyrraedd gweinydd SolarMatrix."
     },
     "abort": {
       "already_configured": "Mae'r aelwyd hon eisoes wedi'i ffurfweddu.",
-      "no_systems": "Nid oes gan yr allwedd API hon systemau SolarMatrix.",
-      "no_households": "Nid oes aelwydydd yn hygyrch gyda'r allwedd API hon.",
-      "unknown_selection": "Nid yw'r aelwyd a ddewiswyd yn hygyrch mwyach."
+      "no_systems": "Nid oes gan yr allwedd API hon unrhyw systemau SolarMatrix.",
+      "no_households": "Nid oes aelwydydd y gellir eu cyrchu gyda'r allwedd API hon.",
+      "unknown_selection": "Nid yw'r aelwyd a ddewiswyd ar gael mwyach."
     }
   },
   "entity": {
@@ -41,16 +41,16 @@
         "name": "Pŵer solar"
       },
       "mi_out_power": {
-        "name": "Allbwn microinverter"
+        "name": "Allbwn microinferiwr"
       },
       "consumption": {
         "name": "Defnydd"
       },
       "battery_power": {
-        "name": "Pŵer y batri"
+        "name": "Pŵer batri"
       },
       "battery_soc": {
-        "name": "Cyflwr gwefru'r batri"
+        "name": "Lefel batri"
       }
     }
   },

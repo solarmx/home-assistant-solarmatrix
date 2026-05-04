@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Verbinding maken met SolarMatrix",
-        "description": "Plak een SolarMatrix-API-sleutel. Maak er een aan op https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Plak een SolarMatrix-API-sleutel. Maak een nieuwe aan via https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "API-sleutel",
           "base_url": "Server-URL"
@@ -11,14 +11,14 @@
       },
       "pick": {
         "title": "Kies een huishouden",
-        "description": "Selecteer het huishouden dat deze integratie moet bewaken. Voeg de integratie opnieuw toe om meer huishoudens te bewaken — gebruik een ander API-sleutel of verlaag de pollfrequentie om het ratenlimit niet te overschrijden.",
+        "description": "Selecteer het huishouden dat deze integratie moet bewaken. Om meerdere huishoudens te bewaken, voeg de integratie opnieuw toe — gebruik dan een andere API-sleutel of verlaag de pollingfrequentie om het aanvraaglimiet niet te overschrijden.",
         "data": {
           "selection": "Huishouden"
         }
       },
       "reauth_confirm": {
-        "title": "Voer API-sleutel opnieuw in",
-        "description": "Uw API-sleutel is niet langer geldig. Voer een nieuwe in om door te gaan.",
+        "title": "API-sleutel opnieuw invoeren",
+        "description": "De API-sleutel is niet langer geldig. Voer een nieuwe in om door te gaan.",
         "data": {
           "api_key": "API-sleutel"
         }
@@ -30,15 +30,15 @@
     },
     "abort": {
       "already_configured": "Dit huishouden is al geconfigureerd.",
-      "no_systems": "Deze API-sleutel heeft geen SolarMatrix-systemen.",
-      "no_households": "Er zijn geen huishoudens toegankelijk met deze API-sleutel.",
-      "unknown_selection": "Geselecteerd huishouden is niet meer beschikbaar."
+      "no_systems": "Aan deze API-sleutel zijn geen SolarMatrix-systemen gekoppeld.",
+      "no_households": "Met deze API-sleutel zijn geen huishoudens toegankelijk.",
+      "unknown_selection": "Het geselecteerde huishouden is niet meer beschikbaar."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Zonnepaneelvermogen"
+        "name": "Zonne-energie"
       },
       "mi_out_power": {
         "name": "Micro-omvormervermogen"
@@ -50,7 +50,7 @@
         "name": "Accuvermogen"
       },
       "battery_soc": {
-        "name": "Acculadingsniveau"
+        "name": "Acculading"
       }
     }
   },

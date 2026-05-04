@@ -2,23 +2,23 @@
   "config": {
     "step": {
       "user": {
-        "title": "Terhubung ke SolarMatrix",
-        "description": "Tempel kunci API SolarMatrix. Buat satu di https://app.solarmatrix.eu/settings/api-keys.",
+        "title": "Hubungkan ke SolarMatrix",
+        "description": "Tempelkan kunci API SolarMatrix Anda di sini. Buat kunci baru di https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "Kunci API",
-          "base_url": "URL Server"
+          "base_url": "URL server"
         }
       },
       "pick": {
         "title": "Pilih rumah tangga",
-        "description": "Pilih rumah tangga yang harus dipantau oleh integrasi ini. Untuk memantau lebih banyak rumah tangga, tambahkan integrasi lagi — gunakan kunci API yang berbeda, atau kurangi frekuensi polling untuk menghindari batas laju.",
+        "description": "Pilih rumah tangga yang akan dipantau oleh integrasi ini. Untuk memantau lebih dari satu rumah tangga, tambahkan integrasi sekali lagi — gunakan kunci API yang berbeda, atau kurangi frekuensi polling agar tidak melewati batas laju.",
         "data": {
           "selection": "Rumah tangga"
         }
       },
       "reauth_confirm": {
-        "title": "Masukkan kembali kunci API",
-        "description": "Kunci API Anda tidak lagi berlaku. Masukkan yang baru untuk melanjutkan.",
+        "title": "Masukkan ulang kunci API",
+        "description": "Kunci API Anda sudah tidak berlaku. Masukkan kunci baru untuk melanjutkan.",
         "data": {
           "api_key": "Kunci API"
         }
@@ -26,13 +26,13 @@
     },
     "error": {
       "invalid_auth": "Kunci API tidak valid.",
-      "cannot_connect": "Tidak dapat menjangkau server SolarMatrix."
+      "cannot_connect": "Tidak dapat terhubung ke server SolarMatrix."
     },
     "abort": {
       "already_configured": "Rumah tangga ini sudah dikonfigurasi.",
       "no_systems": "Kunci API ini tidak memiliki sistem SolarMatrix.",
       "no_households": "Tidak ada rumah tangga yang dapat diakses dengan kunci API ini.",
-      "unknown_selection": "Rumah tangga yang dipilih tidak lagi tersedia."
+      "unknown_selection": "Rumah tangga yang dipilih sudah tidak tersedia."
     }
   },
   "entity": {
@@ -41,7 +41,7 @@
         "name": "Daya surya"
       },
       "mi_out_power": {
-        "name": "Keluaran mikro-inverter"
+        "name": "Keluaran mikroinverter"
       },
       "consumption": {
         "name": "Konsumsi"
@@ -50,7 +50,7 @@
         "name": "Daya baterai"
       },
       "battery_soc": {
-        "name": "SoC baterai"
+        "name": "Tingkat baterai"
       }
     }
   },

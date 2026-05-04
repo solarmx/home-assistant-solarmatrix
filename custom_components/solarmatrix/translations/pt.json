@@ -2,8 +2,8 @@
   "config": {
     "step": {
       "user": {
-        "title": "Conectar a SolarMatrix",
-        "description": "Cole uma chave de API do SolarMatrix. Crie uma em https://app.solarmatrix.eu/settings/api-keys.",
+        "title": "Ligar ao SolarMatrix",
+        "description": "Cole uma chave de API do SolarMatrix. Para criar uma, aceda a https://app.solarmatrix.eu/settings/api-keys.",
         "data": {
           "api_key": "Chave de API",
           "base_url": "URL do servidor"
@@ -11,14 +11,14 @@
       },
       "pick": {
         "title": "Escolher uma residência",
-        "description": "Selecione a residência que esta integração deve monitorar. Para monitorar mais residências, adicione a integração novamente — use uma chave de API diferente, ou reduza a frequência de sondagem para evitar atingir o limite de taxa.",
+        "description": "Selecione a residência que esta integração deve monitorizar. Para monitorizar mais residências, adicione a integração novamente — utilize uma chave de API diferente ou reduza a frequência de consulta para não exceder o limite de pedidos.",
         "data": {
           "selection": "Residência"
         }
       },
       "reauth_confirm": {
-        "title": "Reinsira a chave de API",
-        "description": "Sua chave de API não é mais válida. Insira uma nova para continuar.",
+        "title": "Introduzir nova chave de API",
+        "description": "A chave de API já não é válida. Introduza uma nova para continuar.",
         "data": {
           "api_key": "Chave de API"
         }
@@ -26,19 +26,19 @@
     },
     "error": {
       "invalid_auth": "A chave de API é inválida.",
-      "cannot_connect": "Não foi possível alcançar o servidor SolarMatrix."
+      "cannot_connect": "Não foi possível contactar o servidor SolarMatrix."
     },
     "abort": {
       "already_configured": "Esta residência já está configurada.",
-      "no_systems": "Esta chave de API não tem sistemas SolarMatrix.",
+      "no_systems": "Esta chave de API não tem sistemas SolarMatrix associados.",
       "no_households": "Nenhuma residência está acessível com esta chave de API.",
-      "unknown_selection": "A residência selecionada não está mais disponível."
+      "unknown_selection": "A residência selecionada já não está disponível."
     }
   },
   "entity": {
     "sensor": {
       "solar_power": {
-        "name": "Potência solar"
+        "name": "Produção solar"
       },
       "mi_out_power": {
         "name": "Saída do microinversor"
