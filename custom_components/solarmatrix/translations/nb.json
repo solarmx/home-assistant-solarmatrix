@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Koble til SolarMatrix",
-        "description": "Lim inn en SolarMatrix-API-nøkkel. Opprett en på https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Lim inn en SolarMatrix-API-nøkkel. Opprett en på {api_keys_url}.",
         "data": {
           "api_key": "API-nøkkel",
           "base_url": "Server-URL"
@@ -53,6 +53,5 @@
         "name": "Batterinivå"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

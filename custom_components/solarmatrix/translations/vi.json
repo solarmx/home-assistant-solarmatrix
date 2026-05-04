@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Kết nối với SolarMatrix",
-        "description": "Dán khóa API SolarMatrix của bạn vào đây. Tạo khóa mới tại https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Dán khóa API SolarMatrix của bạn vào đây. Tạo khóa mới tại {api_keys_url}.",
         "data": {
           "api_key": "Khóa API",
           "base_url": "URL máy chủ"
@@ -53,6 +53,5 @@
         "name": "Mức pin"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

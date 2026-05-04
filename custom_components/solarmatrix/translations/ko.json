@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "SolarMatrix에 연결",
-        "description": "SolarMatrix API 키를 붙여넣으세요. https://app.solarmatrix.eu/settings/api-keys 에서 생성할 수 있습니다.",
+        "description": "SolarMatrix API 키를 붙여넣으세요. {api_keys_url} 에서 생성할 수 있습니다.",
         "data": {
           "api_key": "API 키",
           "base_url": "서버 URL"
@@ -53,6 +53,5 @@
         "name": "배터리 잔량"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

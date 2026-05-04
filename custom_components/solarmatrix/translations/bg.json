@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Свързване със SolarMatrix",
-        "description": "Поставете API ключ за SolarMatrix. Създайте го на https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Поставете API ключ за SolarMatrix. Създайте го на {api_keys_url}.",
         "data": {
           "api_key": "API ключ",
           "base_url": "URL на сървъра"
@@ -53,6 +53,5 @@
         "name": "Заряд на батерията"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

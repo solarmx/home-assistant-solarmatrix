@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Connect to SolarMatrix",
-        "description": "Paste a SolarMatrix API key. Create one at https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Paste a SolarMatrix API key. Create one at {api_keys_url}.",
         "data": {
           "api_key": "API key",
           "base_url": "Server URL"

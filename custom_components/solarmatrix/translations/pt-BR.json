@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Conectar ao SolarMatrix",
-        "description": "Cole uma chave de API do SolarMatrix. Para criar uma, acesse https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Cole uma chave de API do SolarMatrix. Para criar uma, acesse {api_keys_url}.",
         "data": {
           "api_key": "Chave de API",
           "base_url": "URL do servidor"
@@ -53,6 +53,5 @@
         "name": "Estado da bateria"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

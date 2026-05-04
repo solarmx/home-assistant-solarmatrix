@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "SolarMatrix కు కనెక్ట్ చేయండి",
-        "description": "మీ SolarMatrix API కీని ఇక్కడ పేస్ట్ చేయండి. కొత్తది సృష్టించడానికి https://app.solarmatrix.eu/settings/api-keys కి వెళ్లండి.",
+        "description": "మీ SolarMatrix API కీని ఇక్కడ పేస్ట్ చేయండి. కొత్తది సృష్టించడానికి {api_keys_url} కి వెళ్లండి.",
         "data": {
           "api_key": "API కీ",
           "base_url": "సర్వర్ URL"
@@ -53,6 +53,5 @@
         "name": "బ్యాటరీ చార్జ్ స్థాయి"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

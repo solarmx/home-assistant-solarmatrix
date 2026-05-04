@@ -40,3 +40,5 @@ jobs:
       - uses: hacs/action@main
         with:
           category: integration
+          # `brands` ignored until icon is registered in home-assistant/brands.
+          ignore: brands

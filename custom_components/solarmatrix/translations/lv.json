@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Savienoties ar SolarMatrix",
-        "description": "Ielīmējiet SolarMatrix API atslēgu. Izveidojiet to vietnē https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Ielīmējiet SolarMatrix API atslēgu. Izveidojiet to vietnē {api_keys_url}.",
         "data": {
           "api_key": "API atslēga",
           "base_url": "Servera adrese"
@@ -53,6 +53,5 @@
         "name": "Akumulatora uzlādes līmenis"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

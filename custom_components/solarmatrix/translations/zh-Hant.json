@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "連線至 SolarMatrix",
-        "description": "貼上 SolarMatrix API 金鑰。可至 https://app.solarmatrix.eu/settings/api-keys 建立。",
+        "description": "貼上 SolarMatrix API 金鑰。可至 {api_keys_url} 建立。",
         "data": {
           "api_key": "API 金鑰",
           "base_url": "伺服器位址"
@@ -53,6 +53,5 @@
         "name": "電池電量"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Pripojenie k SolarMatrix",
-        "description": "Vložte API kľúč SolarMatrix. Vytvorte si ho na https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Vložte API kľúč SolarMatrix. Vytvorte si ho na {api_keys_url}.",
         "data": {
           "api_key": "API kľúč",
           "base_url": "URL servera"
@@ -53,6 +53,5 @@
         "name": "Stav nabitia batérie"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

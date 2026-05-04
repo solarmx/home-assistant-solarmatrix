@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Hubungkan ke SolarMatrix",
-        "description": "Tempelkan kunci API SolarMatrix Anda di sini. Buat kunci baru di https://app.solarmatrix.eu/settings/api-keys.",
+        "description": "Tempelkan kunci API SolarMatrix Anda di sini. Buat kunci baru di {api_keys_url}.",
         "data": {
           "api_key": "Kunci API",
           "base_url": "URL server"
@@ -53,6 +53,5 @@
         "name": "Tingkat baterai"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

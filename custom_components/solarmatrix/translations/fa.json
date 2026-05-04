@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "اتصال به SolarMatrix",
-        "description": "یک کلید API از SolarMatrix را وارد کنید. می‌توانید کلید را در https://app.solarmatrix.eu/settings/api-keys بسازید.",
+        "description": "یک کلید API از SolarMatrix را وارد کنید. می‌توانید کلید را در {api_keys_url} بسازید.",
         "data": {
           "api_key": "کلید API",
           "base_url": "نشانی سرور"
@@ -53,6 +53,5 @@
         "name": "سطح شارژ باتری"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

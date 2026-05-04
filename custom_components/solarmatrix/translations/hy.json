@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Միացում SolarMatrix-ին",
-        "description": "Տեղադրեք SolarMatrix-ի API բանալին։ Այն կարող եք ստեղծել https://app.solarmatrix.eu/settings/api-keys հասցեում։",
+        "description": "Տեղադրեք SolarMatrix-ի API բանալին։ Այն կարող եք ստեղծել {api_keys_url} հասցեում։",
         "data": {
           "api_key": "API բանալի",
           "base_url": "Սերվերի հասցե"
@@ -53,6 +53,5 @@
         "name": "Մարտկոցի լիցքավորման մակարդակ"
       }
     }
-  },
-  "__source_hash": "1713423d0ff99b7fa83ada2f05470bd9333d8e05f8d059f6848a226bdb92eb74"
+  }
 }

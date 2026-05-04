@@ -6,6 +6,10 @@ Usage:
 
 Requires:
     OPENAI_API_KEY (or set MODEL=anthropic + ANTHROPIC_API_KEY)
+
+The current source hash is recorded in scripts/translation_state.json and
+compared on --check. Hassfest's translation schema rejects extra keys, so
+the bookkeeping cannot live inside the translation files themselves.
 """
 
 from __future__ import annotations
@@ -23,6 +27,7 @@ TRANSLATIONS_DIR = ROOT / "custom_components" / "solarmatrix" / "translations"
 SOURCE = TRANSLATIONS_DIR / "en.json"
 LOCALES = ROOT / "scripts" / "locales.json"
 GLOSSARY = ROOT / "scripts" / "glossary.json"
+STATE_FILE = ROOT / "scripts" / "translation_state.json"
 
 
 def _flatten(d: Any, prefix: str = "") -> dict[str, str]:
@@ -47,24 +52,18 @@ def _unflatten(flat: dict[str, str]) -> dict[str, Any]:
 
 
 def _source_hash() -> str:
-    """Hash the source content, ignoring any prior ``__source_hash`` stamp.
-
-    Computed by canonicalising the JSON without the bookkeeping key so the
-    stamp is stable across regen cycles.
-    """
     body = json.loads(SOURCE.read_text())
-    body.pop("__source_hash", None)
     canonical = json.dumps(body, ensure_ascii=False, sort_keys=True).encode()
     return hashlib.sha256(canonical).hexdigest()
 
 
-def translate(locale: str, source_flat: dict[str, str], glossary: dict[str, Any]) -> dict[str, str]:
-    """Translate source_flat into locale, respecting glossary pins.
+def _stored_hash() -> str | None:
+    if not STATE_FILE.exists():
+        return None
+    return json.loads(STATE_FILE.read_text()).get("source_hash")
 
-    Implementation note: this script can be run by maintainers offline. The
-    actual LLM call lives behind an ``os.system``-able shim so CI doesn't
-    need network. For local regen, set MODEL and an API key.
-    """
+
+def translate(locale: str, source_flat: dict[str, str], glossary: dict[str, Any]) -> dict[str, str]:
     if locale == "en":
         return source_flat
 
@@ -75,8 +74,9 @@ def translate(locale: str, source_flat: dict[str, str], glossary: dict[str, Any]
         client = OpenAI()
         prompt = (
             "Translate the following Home Assistant integration strings into "
-            f"locale {locale!r}. Preserve placeholders, JSON keys, and the "
-            f"glossary mappings: {json.dumps(glossary)}. Return JSON only."
+            f"locale {locale!r}. Preserve placeholders (text inside curly "
+            f"braces like {{api_keys_url}}), JSON keys, and the glossary "
+            f"mappings: {json.dumps(glossary)}. Return JSON only."
         )
         body = json.dumps(source_flat, ensure_ascii=False)
         resp = client.chat.completions.create(
@@ -91,7 +91,8 @@ def translate(locale: str, source_flat: dict[str, str], glossary: dict[str, Any]
         client = anthropic.Anthropic()
         prompt = (
             "Translate this JSON object's values to "
-            f"locale {locale!r}. Keep keys identical. Glossary "
+            f"locale {locale!r}. Keep keys and curly-brace placeholders "
+            f"(e.g. {{api_keys_url}}) untouched. Glossary "
             f"(do not paraphrase pinned terms): {json.dumps(glossary)}. "
             "Return JSON only, no prose."
         )
@@ -103,9 +104,9 @@ def translate(locale: str, source_flat: dict[str, str], glossary: dict[str, Any]
         )
         return json.loads(resp.content[0].text)
     if model == "placeholder":
-        # Used by maintainers/CI when no LLM token is available. Copies the
-        # English source verbatim so the integration is shippable; running
-        # maintainers should re-run with ``MODEL=openai`` or ``anthropic``.
+        # Used by CI when no LLM token is available. Copies the English source
+        # verbatim so drift checks pass; maintainers should re-run with a real
+        # MODEL before publishing user-facing changes.
         return dict(source_flat)
     raise SystemExit(f"unsupported MODEL={model}")
 
@@ -115,35 +116,37 @@ def main(check: bool) -> int:
     glossary = json.loads(GLOSSARY.read_text())
     source = json.loads(SOURCE.read_text())
     source_flat = _flatten(source)
-    src_hash = _source_hash()
-    drift = False
+    current_hash = _source_hash()
+    stored_hash = _stored_hash()
+
+    if check:
+        if stored_hash != current_hash:
+            print(
+                f"drift: source hash {current_hash} does not match recorded "
+                f"{stored_hash}. Re-run scripts/translate.py to regenerate."
+            )
+            return 1
+        missing = [
+            locale for locale in locales
+            if not (TRANSLATIONS_DIR / f"{locale}.json").exists()
+        ]
+        if missing:
+            print(f"missing translations for: {', '.join(missing)}")
+            return 1
+        return 0
 
     for locale in locales:
         out = TRANSLATIONS_DIR / f"{locale}.json"
-        if out.exists():
-            existing = json.loads(out.read_text())
-            stamp = existing.get("__source_hash")
-            if stamp == src_hash and not check:
-                continue
-            if stamp == src_hash and check:
-                continue
-            if check:
-                drift = True
-                print(f"drift detected for {locale}")
-                continue
-
-        if check:
-            drift = True
-            print(f"missing translation for {locale}")
-            continue
-
         translated = translate(locale, source_flat, glossary)
         body = _unflatten(translated)
-        body["__source_hash"] = src_hash
         out.write_text(json.dumps(body, ensure_ascii=False, indent=2) + "\n")
         print(f"wrote {out.name}")
 
-    return 1 if drift else 0
+    STATE_FILE.write_text(
+        json.dumps({"source_hash": current_hash}, indent=2) + "\n"
+    )
+    print(f"updated {STATE_FILE}")
+    return 0
 
 
 if __name__ == "__main__":
