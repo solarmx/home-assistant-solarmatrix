@@ -6,7 +6,7 @@ from datetime import timedelta
 
 DOMAIN = "solarmatrix"
 
-DEFAULT_BASE_URL = "https://api.solarmatrix.app"
+DEFAULT_BASE_URL = "https://api.solarmatrix.eu"
 
 CONF_API_KEY = "api_key"
 CONF_BASE_URL = "base_url"

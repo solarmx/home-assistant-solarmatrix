@@ -154,14 +154,12 @@ class SolarMatrixConfigFlow(ConfigFlow, domain=DOMAIN):
     def _user_form(
         self, errors: dict[str, str] | None = None
     ) -> ConfigFlowResult:
+        schema: dict[Any, Any] = {vol.Required(CONF_API_KEY): str}
+        if self.show_advanced_options:
+            schema[vol.Optional(CONF_BASE_URL, default=DEFAULT_BASE_URL)] = str
         return self.async_show_form(
             step_id="user",
-            data_schema=vol.Schema(
-                {
-                    vol.Required(CONF_API_KEY): str,
-                    vol.Optional(CONF_BASE_URL, default=DEFAULT_BASE_URL): str,
-                }
-            ),
+            data_schema=vol.Schema(schema),
             errors=errors or {},
             description_placeholders={
                 "api_keys_url": "https://app.solarmatrix.eu/settings/api-keys",
