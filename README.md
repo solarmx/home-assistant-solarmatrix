@@ -1,18 +1,10 @@
 # SolarMatrix Home Assistant Integration
 
-Polls a SolarMatrix system per household and exposes its live energy data
-to Home Assistant. Designed for the Energy Dashboard.
+Live energy data from a SolarMatrix system, surfaced as Home Assistant
+sensors and ready for the Energy Dashboard.
 
-## Install
-
-1. Add this repo as a HACS custom repository.
-2. Install **SolarMatrix** from HACS.
-3. Restart Home Assistant.
-4. Settings → Devices & Services → Add Integration → SolarMatrix.
-5. Paste your API key (create one at app.solarmatrix.app under your
-   account → API keys), then pick a household.
-
-## Sensors
+The integration polls the cloud API every 5 seconds over a single
+keep-alive connection and exposes five sensors per configured household:
 
 | Entity | Unit |
 |---|---|
@@ -22,10 +14,24 @@ to Home Assistant. Designed for the Energy Dashboard.
 | Battery power (signed: + charging, − discharging) | W |
 | Battery state of charge | % |
 
+## Install
+
+1. In HACS, add this repo as a custom repository (category: *Integration*):
+   `https://github.com/solarmx/home-assistant-solarmatrix`
+2. Install **SolarMatrix** from HACS.
+3. Restart Home Assistant.
+4. Settings → Devices & Services → **Add Integration** → SolarMatrix.
+5. Paste an API key, then pick the household you want to monitor.
+   Create or manage keys at <https://app.solarmatrix.eu/settings/api-keys>.
+
+To monitor a second household, add the integration again. Use a different
+API key, or otherwise lower the polling cadence on one of the entries to
+stay below the per-key rate limit.
+
 ## Energy Dashboard
 
-The Energy Dashboard expects cumulative kWh sensors. Use the built-in
-Riemann helper to integrate the watt sensors above into kWh:
+The Energy Dashboard expects cumulative kWh sensors. Convert the live
+watt sensors above with Home Assistant's built-in Riemann helper:
 
 ```yaml
 sensor:
@@ -38,32 +44,6 @@ sensor:
 
 Repeat for `consumption`, `microinverter_output`, and the two halves of
 `battery_power` (split with a template into `battery_in` ≥ 0 and
-`battery_out` ≤ 0 so the Energy Dashboard can attribute charge vs.
-discharge). Then in **Settings → Dashboards → Energy**, point each card at
-the matching Riemann sensor.
-
-## Development
-
-```bash
-python3 -m venv .venv
-. .venv/bin/activate
-pip install -r requirements_test.txt
-pytest
-```
-
-## Translations
-
-The integration ships translations for the full HA-supported locale list
-(see `scripts/locales.json`). The non-English files in
-`custom_components/solarmatrix/translations/` are currently machine-translated
-placeholders — running maintainers should regenerate them with a real LLM
-backend before each release:
-
-```bash
-OPENAI_API_KEY=sk-... python scripts/translate.py
-# or:
-ANTHROPIC_API_KEY=sk-ant-... MODEL=anthropic python scripts/translate.py
-```
-
-The drift check (run in CI as `python scripts/translate.py --check`) only
-reads files; it does not call any LLM and so does not need credentials.
+`battery_out` ≤ 0 so the dashboard can show charge vs. discharge).
+Then in **Settings → Dashboards → Energy**, point each card at the
+matching Riemann sensor.
