@@ -82,6 +82,11 @@ class SolarMatrixConfigFlow(ConfigFlow, domain=DOMAIN):
         self._api_key = user_input[CONF_API_KEY]
         self._base_url = user_input.get(CONF_BASE_URL, DEFAULT_BASE_URL)
         self._candidates = candidates
+
+        # If exactly one household is reachable, skip the pick step.
+        if len(candidates) == 1:
+            label, sid, hid, _, _ = candidates[0]
+            return await self.async_step_pick({"selection": f"{sid}|{hid}"})
         return await self.async_step_pick()
 
     async def async_step_pick(

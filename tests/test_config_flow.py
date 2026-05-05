@@ -81,6 +81,30 @@ async def test_full_flow_creates_entry(hass: HomeAssistant, fake_api) -> None:
     assert result["data"][CONF_SYSTEM_NAME] == "House A"
 
 
+async def test_single_household_skips_pick_step(hass: HomeAssistant) -> None:
+    api = AsyncMock()
+    api.list_systems.return_value = [
+        {"id": "sid-A", "display_name": "House A", "household_indices": [0]}
+    ]
+
+    async def get_household(sid: str, hid: int):
+        return {"household_id": hid, "name": "WE05"}
+
+    api.get_household.side_effect = get_household
+
+    with patch("custom_components.solarmatrix.config_flow._build_api", return_value=api):
+        first = await hass.config_entries.flow.async_init(
+            DOMAIN, context={"source": SOURCE_USER}
+        )
+        result = await hass.config_entries.flow.async_configure(
+            first["flow_id"], {CONF_API_KEY: "sm_x"}
+        )
+    assert result["type"] == FlowResultType.CREATE_ENTRY
+    assert result["data"][CONF_SID] == "sid-A"
+    assert result["data"][CONF_HID] == 0
+    assert result["data"][CONF_HOUSEHOLD_NAME] == "WE05"
+
+
 async def test_duplicate_household_blocked(hass: HomeAssistant, fake_api) -> None:
     # Pre-create an entry for sid-A:0.
     from pytest_homeassistant_custom_component.common import MockConfigEntry
