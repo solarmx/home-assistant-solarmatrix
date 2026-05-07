@@ -4,7 +4,7 @@ Live energy data from a SolarMatrix system, surfaced as Home Assistant
 sensors and ready for the Energy Dashboard.
 
 The integration polls the cloud API every 5 seconds over a single
-keep-alive connection and exposes five sensors per configured household:
+keep-alive connection and exposes twelve sensors per configured household:
 
 | Entity | Unit |
 |---|---|
@@ -13,6 +13,13 @@ keep-alive connection and exposes five sensors per configured household:
 | Grid power (signed: + import, − export) | W |
 | Battery power (signed: + charging, − discharging) | W |
 | Battery state of charge | % |
+| Consumption (microinverter + grid) | W |
+| Solar production energy | kWh |
+| Microinverter output energy | kWh |
+| Grid import energy | kWh |
+| Grid export energy | kWh |
+| Battery charge energy | kWh |
+| Battery discharge energy | kWh |
 
 ## Install
 
@@ -30,23 +37,16 @@ stay below the per-key rate limit.
 
 ## Energy Dashboard
 
-The Energy Dashboard expects cumulative kWh sensors. Convert the live
-watt sensors above with Home Assistant's built-in Riemann helper:
+The integration exposes lifetime kWh counters directly. Configure under
+**Settings → Dashboards → Energy**:
 
-```yaml
-sensor:
-  - platform: integration
-    source: sensor.solarmatrix_solar_power
-    name: Solar Production Energy
-    unit_prefix: k
-    method: left
-```
+- Solar production: `sensor.<…>_solar_production_energy`
+- Grid consumption: `sensor.<…>_grid_import_energy`
+- Return to grid: `sensor.<…>_grid_export_energy`
+- Battery in: `sensor.<…>_battery_charge_energy`
+- Battery out: `sensor.<…>_battery_discharge_energy`
 
-Repeat for `microinverter_output` and the two halves of `battery_power`
-(split with a template into `battery_in` ≥ 0 and `battery_out` ≤ 0 so the
-dashboard can show charge vs. discharge). For grid energy, split
-`grid_power` the same way into `grid_import` ≥ 0 and `grid_export` ≤ 0
-before integrating, then feed the resulting kWh sensors into the
-**Grid consumption** and **Return to grid** tiles.
-Then in **Settings → Dashboards → Energy**, point each card at the
-matching Riemann sensor.
+Home Assistant derives the "Home consumption" tile automatically from
+those.
+
+No Riemann helpers needed. Numbers match the SolarMatrix portal exactly.
