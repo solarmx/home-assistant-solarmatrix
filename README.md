@@ -50,11 +50,6 @@ Paste the API key from step 1 and submit.
 
 ![Connect to SolarMatrix dialog](docs/screenshots/01-config-flow-user.png)
 
-If your account has more than one household, pick the one you want;
-add the integration again per household.
-
-![Device created confirmation](docs/screenshots/03-device-created.png)
-
 A device appears under SolarMatrix with twelve sensors.
 
 ![Device page with all twelve sensors](docs/screenshots/05-device-entities.png)
