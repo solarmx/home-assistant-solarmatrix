@@ -37,7 +37,7 @@ async def async_setup_entry(
         [
             SolarPower(coordinator, system_name, household_name),
             MIOutPower(coordinator, system_name, household_name),
-            Consumption(coordinator, system_name, household_name),
+            GridPower(coordinator, system_name, household_name),
             BatteryPower(coordinator, system_name, household_name),
             BatterySOC(coordinator, system_name, household_name),
         ]
@@ -104,15 +104,15 @@ class MIOutPower(_PowerSensor):
         return self._snap().mi_out_w
 
 
-class Consumption(_PowerSensor):
-    _attr_translation_key = "consumption"
+class GridPower(_PowerSensor):
+    _attr_translation_key = "grid_power"
 
     def _slug(self) -> str:
-        return "consumption"
+        return "grid_power"
 
     @property
     def native_value(self) -> int:
-        return self._snap().consumption_w
+        return self._snap().grid_w
 
 
 class BatteryPower(_PowerSensor):

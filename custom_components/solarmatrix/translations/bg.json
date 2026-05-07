@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Изход на микроинвертора"
       },
-      "consumption": {
-        "name": "Потребление"
-      },
       "battery_power": {
         "name": "Мощност на батерията"
       },
       "battery_soc": {
         "name": "Заряд на батерията"
+      },
+      "grid_power": {
+        "name": "Мощност от мрежата"
       }
     }
   }

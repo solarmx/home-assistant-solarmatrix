@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Output mikropenyongsang"
       },
-      "consumption": {
-        "name": "Penggunaan"
-      },
       "battery_power": {
         "name": "Kuasa bateri"
       },
       "battery_soc": {
         "name": "Tahap bateri"
+      },
+      "grid_power": {
+        "name": "Kuasa grid"
       }
     }
   }

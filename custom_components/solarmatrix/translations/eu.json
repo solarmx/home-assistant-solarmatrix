@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Mikroinbertsorearen irteera"
       },
-      "consumption": {
-        "name": "Kontsumoa"
-      },
       "battery_power": {
         "name": "Bateriaren potentzia"
       },
       "battery_soc": {
         "name": "Bateriaren karga-egoera"
+      },
+      "grid_power": {
+        "name": "Sarearen potentzia"
       }
     }
   }

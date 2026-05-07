@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "פלט מיקרו ממיר"
       },
-      "consumption": {
-        "name": "צריכה"
-      },
       "battery_power": {
         "name": "הספק סוללה"
       },
       "battery_soc": {
         "name": "מצב טעינת סוללה"
+      },
+      "grid_power": {
+        "name": "הספק הרשת"
       }
     }
   }

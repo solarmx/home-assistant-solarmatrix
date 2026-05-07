@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Micro-omvormervermogen"
       },
-      "consumption": {
-        "name": "Verbruik"
-      },
       "battery_power": {
         "name": "Accuvermogen"
       },
       "battery_soc": {
         "name": "Acculading"
+      },
+      "grid_power": {
+        "name": "Netvermogen"
       }
     }
   }

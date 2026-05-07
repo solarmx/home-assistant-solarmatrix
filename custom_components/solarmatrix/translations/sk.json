@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Výstup mikroinvertora"
       },
-      "consumption": {
-        "name": "Spotreba"
-      },
       "battery_power": {
         "name": "Výkon batérie"
       },
       "battery_soc": {
         "name": "Stav nabitia batérie"
+      },
+      "grid_power": {
+        "name": "Výkon zo siete"
       }
     }
   }

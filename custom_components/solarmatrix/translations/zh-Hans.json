@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "微型逆变器输出功率"
       },
-      "consumption": {
-        "name": "用电功率"
-      },
       "battery_power": {
         "name": "电池功率"
       },
       "battery_soc": {
         "name": "电池电量"
+      },
+      "grid_power": {
+        "name": "电网功率"
       }
     }
   }

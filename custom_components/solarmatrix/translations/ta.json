@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "மைக்ரோஇன்வெர்டர் வெளியீடு"
       },
-      "consumption": {
-        "name": "நுகர்வு"
-      },
       "battery_power": {
         "name": "பேட்டரி பவர்"
       },
       "battery_soc": {
         "name": "பேட்டரி சார்ஜ் நிலை"
+      },
+      "grid_power": {
+        "name": "கிரிட் சக்தி"
       }
     }
   }

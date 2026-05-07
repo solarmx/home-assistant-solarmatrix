@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Keluaran mikroinverter"
       },
-      "consumption": {
-        "name": "Konsumsi"
-      },
       "battery_power": {
         "name": "Daya baterai"
       },
       "battery_soc": {
         "name": "Tingkat baterai"
+      },
+      "grid_power": {
+        "name": "Daya jaringan"
       }
     }
   }

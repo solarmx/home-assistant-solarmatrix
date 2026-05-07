@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Microinverter output"
       },
-      "consumption": {
-        "name": "Consumption"
-      },
       "battery_power": {
         "name": "Battery power"
       },
       "battery_soc": {
         "name": "Battery SoC"
+      },
+      "grid_power": {
+        "name": "Grid power"
       }
     }
   }

@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Mikroinvertterin teho"
       },
-      "consumption": {
-        "name": "Kulutus"
-      },
       "battery_power": {
         "name": "Akun teho"
       },
       "battery_soc": {
         "name": "Akun varaustaso"
+      },
+      "grid_power": {
+        "name": "Verkon teho"
       }
     }
   }

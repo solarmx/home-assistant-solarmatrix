@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "خرج المحول الدقيق"
       },
-      "consumption": {
-        "name": "الاستهلاك"
-      },
       "battery_power": {
         "name": "طاقة البطارية"
       },
       "battery_soc": {
         "name": "حالة شحن البطارية"
+      },
+      "grid_power": {
+        "name": "طاقة الشبكة"
       }
     }
   }

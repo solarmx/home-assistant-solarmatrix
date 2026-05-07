@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Ieșire microinvertor"
       },
-      "consumption": {
-        "name": "Consum"
-      },
       "battery_power": {
         "name": "Putere baterie"
       },
       "battery_soc": {
         "name": "Nivel încărcare baterie"
+      },
+      "grid_power": {
+        "name": "Putere rețea"
       }
     }
   }

@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Mikroinvertör çıkışı"
       },
-      "consumption": {
-        "name": "Tüketim"
-      },
       "battery_power": {
         "name": "Pil gücü"
       },
       "battery_soc": {
         "name": "Pil şarj durumu"
+      },
+      "grid_power": {
+        "name": "Şebeke gücü"
       }
     }
   }

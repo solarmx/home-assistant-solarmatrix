@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "माइक्रोइन्वर्टर आउटपुट"
       },
-      "consumption": {
-        "name": "खपत"
-      },
       "battery_power": {
         "name": "बैटरी पावर"
       },
       "battery_soc": {
         "name": "बैटरी चार्ज स्तर"
+      },
+      "grid_power": {
+        "name": "ग्रिड पावर"
       }
     }
   }

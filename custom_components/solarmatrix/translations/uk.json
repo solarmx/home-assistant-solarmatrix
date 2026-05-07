@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Вихід мікроінвертора"
       },
-      "consumption": {
-        "name": "Споживання"
-      },
       "battery_power": {
         "name": "Потужність акумулятора"
       },
       "battery_soc": {
         "name": "Заряд акумулятора"
+      },
+      "grid_power": {
+        "name": "Потужність мережі"
       }
     }
   }

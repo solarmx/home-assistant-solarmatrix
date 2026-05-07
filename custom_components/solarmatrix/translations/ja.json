@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "マイクロインバーター出力"
       },
-      "consumption": {
-        "name": "消費電力"
-      },
       "battery_power": {
         "name": "バッテリー電力"
       },
       "battery_soc": {
         "name": "バッテリー残量"
+      },
+      "grid_power": {
+        "name": "系統電力"
       }
     }
   }

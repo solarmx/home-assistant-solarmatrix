@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Sortie micro-onduleur"
       },
-      "consumption": {
-        "name": "Consommation"
-      },
       "battery_power": {
         "name": "Puissance batterie"
       },
       "battery_soc": {
         "name": "Charge de la batterie"
+      },
+      "grid_power": {
+        "name": "Puissance réseau"
       }
     }
   }

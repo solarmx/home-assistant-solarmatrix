@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Izlaz mikroinvertera"
       },
-      "consumption": {
-        "name": "Potrošnja"
-      },
       "battery_power": {
         "name": "Snaga baterije"
       },
       "battery_soc": {
         "name": "Razina baterije"
+      },
+      "grid_power": {
+        "name": "Snaga mreže"
       }
     }
   }

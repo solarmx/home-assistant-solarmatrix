@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Mikroinvertera izejas jauda"
       },
-      "consumption": {
-        "name": "Patēriņš"
-      },
       "battery_power": {
         "name": "Akumulatora jauda"
       },
       "battery_soc": {
         "name": "Akumulatora uzlādes līmenis"
+      },
+      "grid_power": {
+        "name": "Tīkla jauda"
       }
     }
   }

@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "مائیکرو انورٹر آؤٹ پٹ"
       },
-      "consumption": {
-        "name": "کھپت"
-      },
       "battery_power": {
         "name": "بیٹری پاور"
       },
       "battery_soc": {
         "name": "بیٹری چارج لیول"
+      },
+      "grid_power": {
+        "name": "گرڈ پاور"
       }
     }
   }

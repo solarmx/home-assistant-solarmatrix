@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "মাইক্রোইনভার্টার আউটপুট"
       },
-      "consumption": {
-        "name": "ব্যবহার"
-      },
       "battery_power": {
         "name": "ব্যাটারি পাওয়ার"
       },
       "battery_soc": {
         "name": "ব্যাটারি চার্জ স্তর"
+      },
+      "grid_power": {
+        "name": "গ্রিড পাওয়ার"
       }
     }
   }

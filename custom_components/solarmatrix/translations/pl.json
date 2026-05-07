@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Wyjście mikrofalownika"
       },
-      "consumption": {
-        "name": "Zużycie"
-      },
       "battery_power": {
         "name": "Moc baterii"
       },
       "battery_soc": {
         "name": "Poziom naładowania baterii"
+      },
+      "grid_power": {
+        "name": "Moc sieci"
       }
     }
   }

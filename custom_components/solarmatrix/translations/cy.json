@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Allbwn microinferiwr"
       },
-      "consumption": {
-        "name": "Defnydd"
-      },
       "battery_power": {
         "name": "Pŵer batri"
       },
       "battery_soc": {
         "name": "Lefel batri"
+      },
+      "grid_power": {
+        "name": "Pŵer y grid"
       }
     }
   }

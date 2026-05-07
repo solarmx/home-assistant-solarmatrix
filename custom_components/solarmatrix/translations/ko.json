@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "마이크로 인버터 출력"
       },
-      "consumption": {
-        "name": "소비 전력"
-      },
       "battery_power": {
         "name": "배터리 전력"
       },
       "battery_soc": {
         "name": "배터리 잔량"
+      },
+      "grid_power": {
+        "name": "그리드 전력"
       }
     }
   }

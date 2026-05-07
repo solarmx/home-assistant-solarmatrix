@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Mikroinverteri väljundvõimsus"
       },
-      "consumption": {
-        "name": "Tarbimine"
-      },
       "battery_power": {
         "name": "Aku võimsus"
       },
       "battery_soc": {
         "name": "Aku laetus"
+      },
+      "grid_power": {
+        "name": "Võrgu võimsus"
       }
     }
   }

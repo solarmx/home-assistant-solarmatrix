@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Mikrowechselrichter-Ausgang"
       },
-      "consumption": {
-        "name": "Verbruuch"
-      },
       "battery_power": {
         "name": "Batterieleistig"
       },
       "battery_soc": {
         "name": "Batterie-Ladestand"
+      },
+      "grid_power": {
+        "name": "Netzleistig"
       }
     }
   }

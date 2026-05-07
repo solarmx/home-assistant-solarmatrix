@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "เอาต์พุตไมโครอินเวอร์เตอร์"
       },
-      "consumption": {
-        "name": "การใช้พลังงาน"
-      },
       "battery_power": {
         "name": "กำลังไฟแบตเตอรี่"
       },
       "battery_soc": {
         "name": "ระดับแบตเตอรี่"
+      },
+      "grid_power": {
+        "name": "พลังงานจากกริด"
       }
     }
   }

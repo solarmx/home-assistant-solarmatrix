@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Έξοδος μικροαντιστροφέα"
       },
-      "consumption": {
-        "name": "Κατανάλωση"
-      },
       "battery_power": {
         "name": "Ισχύς μπαταρίας"
       },
       "battery_soc": {
         "name": "Στάθμη μπαταρίας"
+      },
+      "grid_power": {
+        "name": "Ισχύς δικτύου"
       }
     }
   }

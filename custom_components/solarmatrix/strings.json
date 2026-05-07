@@ -39,7 +39,7 @@
     "sensor": {
       "solar_power": { "name": "Solar power" },
       "mi_out_power": { "name": "Microinverter output" },
-      "consumption": { "name": "Consumption" },
+      "grid_power": { "name": "Grid power" },
       "battery_power": { "name": "Battery power" },
       "battery_soc": { "name": "Battery SoC" }
     }

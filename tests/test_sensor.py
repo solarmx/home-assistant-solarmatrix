@@ -11,7 +11,7 @@ from custom_components.solarmatrix.api import Snapshot
 from custom_components.solarmatrix.sensor import (
     BatteryPower,
     BatterySOC,
-    Consumption,
+    GridPower,
     MIOutPower,
     SolarPower,
 )
@@ -44,8 +44,8 @@ def test_mi_out_power_attrs() -> None:
     assert s.native_value == 21
 
 
-def test_consumption_attrs() -> None:
-    s = Consumption(_coord(_snap()), system_name="Sys", household_name="WE05")
+def test_grid_power_attrs() -> None:
+    s = GridPower(_coord(_snap()), system_name="Sys", household_name="WE05")
     assert s.native_value == 374
 
 
@@ -68,7 +68,7 @@ def test_unique_ids_are_distinct() -> None:
     sensors = [
         SolarPower(coord, "Sys", "WE05"),
         MIOutPower(coord, "Sys", "WE05"),
-        Consumption(coord, "Sys", "WE05"),
+        GridPower(coord, "Sys", "WE05"),
         BatteryPower(coord, "Sys", "WE05"),
         BatterySOC(coord, "Sys", "WE05"),
     ]

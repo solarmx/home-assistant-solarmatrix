@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Đầu ra microinverter"
       },
-      "consumption": {
-        "name": "Tiêu thụ"
-      },
       "battery_power": {
         "name": "Công suất pin"
       },
       "battery_soc": {
         "name": "Mức pin"
+      },
+      "grid_power": {
+        "name": "Công suất lưới"
       }
     }
   }

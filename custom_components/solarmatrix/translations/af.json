@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Mikro-omsetter-uitset"
       },
-      "consumption": {
-        "name": "Verbruik"
-      },
       "battery_power": {
         "name": "Batterykrag"
       },
       "battery_soc": {
         "name": "Battery laaivlak"
+      },
+      "grid_power": {
+        "name": "Netvermoë"
       }
     }
   }

@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "మైక్రోఇన్వర్టర్ అవుట్‌పుట్"
       },
-      "consumption": {
-        "name": "వినియోగం"
-      },
       "battery_power": {
         "name": "బ్యాటరీ పవర్"
       },
       "battery_soc": {
         "name": "బ్యాటరీ చార్జ్ స్థాయి"
+      },
+      "grid_power": {
+        "name": "గ్రిడ్ పవర్"
       }
     }
   }

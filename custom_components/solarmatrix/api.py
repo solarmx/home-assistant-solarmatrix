@@ -53,7 +53,7 @@ class Snapshot:
 
     household_id: int
     ts_ms: int
-    consumption_w: int
+    grid_w: int
     mi_out_w: int
     solar_w: int
     battery_w: int
@@ -64,7 +64,7 @@ class Snapshot:
         return cls(
             household_id=int(body["household_id"]),
             ts_ms=int(body["ts_ms"]),
-            consumption_w=int(body["consumption_w"]),
+            grid_w=int(body["grid_w"]),
             mi_out_w=int(body["mi_out_w"]),
             solar_w=int(body["solar_w"]),
             battery_w=int(body["battery_w"]),

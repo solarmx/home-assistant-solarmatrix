@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Mikroinverterio išėjimo galia"
       },
-      "consumption": {
-        "name": "Suvartojimas"
-      },
       "battery_power": {
         "name": "Akumuliatoriaus galia"
       },
       "battery_soc": {
         "name": "Akumuliatoriaus įkrova"
+      },
+      "grid_power": {
+        "name": "Tinklo galia"
       }
     }
   }

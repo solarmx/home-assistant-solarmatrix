@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "خروجی میکرواینورتر"
       },
-      "consumption": {
-        "name": "مصرف"
-      },
       "battery_power": {
         "name": "توان باتری"
       },
       "battery_soc": {
         "name": "سطح شارژ باتری"
+      },
+      "grid_power": {
+        "name": "توان شبکه"
       }
     }
   }

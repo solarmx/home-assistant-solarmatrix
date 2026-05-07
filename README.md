@@ -10,7 +10,7 @@ keep-alive connection and exposes five sensors per configured household:
 |---|---|
 | Solar power | W |
 | Microinverter output | W |
-| Consumption | W |
+| Grid power (signed: + import, − export) | W |
 | Battery power (signed: + charging, − discharging) | W |
 | Battery state of charge | % |
 
@@ -42,8 +42,11 @@ sensor:
     method: left
 ```
 
-Repeat for `consumption`, `microinverter_output`, and the two halves of
-`battery_power` (split with a template into `battery_in` ≥ 0 and
-`battery_out` ≤ 0 so the dashboard can show charge vs. discharge).
+Repeat for `microinverter_output` and the two halves of `battery_power`
+(split with a template into `battery_in` ≥ 0 and `battery_out` ≤ 0 so the
+dashboard can show charge vs. discharge). For grid energy, split
+`grid_power` the same way into `grid_import` ≥ 0 and `grid_export` ≤ 0
+before integrating, then feed the resulting kWh sensors into the
+**Grid consumption** and **Return to grid** tiles.
 Then in **Settings → Dashboards → Energy**, point each card at the
 matching Riemann sensor.

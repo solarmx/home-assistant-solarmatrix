@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Mikroinverter kimenő teljesítmény"
       },
-      "consumption": {
-        "name": "Fogyasztás"
-      },
       "battery_power": {
         "name": "Akkumulátor teljesítmény"
       },
       "battery_soc": {
         "name": "Akkumulátor töltöttsége"
+      },
+      "grid_power": {
+        "name": "Hálózati teljesítmény"
       }
     }
   }

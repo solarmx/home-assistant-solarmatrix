@@ -53,7 +53,7 @@ async def test_get_snapshot_happy_path(session: aiohttp.ClientSession) -> None:
     body = {
         "household_id": 0,
         "ts_ms": 1735000000000,
-        "consumption_w": 374,
+        "grid_w": 374,
         "mi_out_w": 21,
         "solar_w": 42,
         "battery_w": -41,
@@ -66,7 +66,7 @@ async def test_get_snapshot_happy_path(session: aiohttp.ClientSession) -> None:
         )
         snap = await api.get_snapshot("sid-x", 0)
     assert isinstance(snap, Snapshot)
-    assert snap.consumption_w == 374
+    assert snap.grid_w == 374
     assert snap.battery_w == -41
     assert snap.battery_soc_pct == 45
 

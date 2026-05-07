@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "მიკროინვერტორის გამოსავალი"
       },
-      "consumption": {
-        "name": "მოხმარება"
-      },
       "battery_power": {
         "name": "ბატარეის სიმძლავრე"
       },
       "battery_soc": {
         "name": "ბატარეის მუხტი"
+      },
+      "grid_power": {
+        "name": "ქსელის სიმძლავრე"
       }
     }
   }

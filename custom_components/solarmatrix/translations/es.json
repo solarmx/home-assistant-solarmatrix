@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Salida del microinversor"
       },
-      "consumption": {
-        "name": "Consumo"
-      },
       "battery_power": {
         "name": "Potencia de la batería"
       },
       "battery_soc": {
         "name": "Estado de carga"
+      },
+      "grid_power": {
+        "name": "Potencia de red"
       }
     }
   }

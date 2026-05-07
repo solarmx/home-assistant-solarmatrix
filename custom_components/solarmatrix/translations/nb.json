@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Mikroinverter-utgang"
       },
-      "consumption": {
-        "name": "Forbruk"
-      },
       "battery_power": {
         "name": "Batterieffekt"
       },
       "battery_soc": {
         "name": "Batterinivå"
+      },
+      "grid_power": {
+        "name": "Netteffekt"
       }
     }
   }

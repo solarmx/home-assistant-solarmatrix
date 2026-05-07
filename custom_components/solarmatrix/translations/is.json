@@ -43,14 +43,14 @@
       "mi_out_power": {
         "name": "Útgangur örbreytis"
       },
-      "consumption": {
-        "name": "Notkun"
-      },
       "battery_power": {
         "name": "Rafhlöðuafl"
       },
       "battery_soc": {
         "name": "Hleðsla rafhlöðu"
+      },
+      "grid_power": {
+        "name": "Netafl"
       }
     }
   }
