@@ -51,6 +51,27 @@
       },
       "grid_power": {
         "name": "Netvermogen"
+      },
+      "consumption_power": {
+        "name": "Verbruik"
+      },
+      "solar_energy": {
+        "name": "Zonneproductie (energie)"
+      },
+      "mi_out_energy": {
+        "name": "Micro-omvormer-energie"
+      },
+      "grid_import_energy": {
+        "name": "Energie van net"
+      },
+      "grid_export_energy": {
+        "name": "Energie naar net"
+      },
+      "battery_charge_energy": {
+        "name": "Accu opgeladen energie"
+      },
+      "battery_discharge_energy": {
+        "name": "Accu ontladen energie"
       }
     }
   }

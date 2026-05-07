@@ -51,6 +51,27 @@
       },
       "grid_power": {
         "name": "Potenza rete"
+      },
+      "consumption_power": {
+        "name": "Consumo"
+      },
+      "solar_energy": {
+        "name": "Energia solare prodotta"
+      },
+      "mi_out_energy": {
+        "name": "Energia uscita microinverter"
+      },
+      "grid_import_energy": {
+        "name": "Energia importata dalla rete"
+      },
+      "grid_export_energy": {
+        "name": "Energia esportata in rete"
+      },
+      "battery_charge_energy": {
+        "name": "Energia ricarica batteria"
+      },
+      "battery_discharge_energy": {
+        "name": "Energia scarica batteria"
       }
     }
   }

@@ -51,6 +51,27 @@
       },
       "grid_power": {
         "name": "系統電力"
+      },
+      "consumption_power": {
+        "name": "消費電力"
+      },
+      "solar_energy": {
+        "name": "太陽光発電 (エネルギー)"
+      },
+      "mi_out_energy": {
+        "name": "マイクロインバーター出力 (エネルギー)"
+      },
+      "grid_import_energy": {
+        "name": "系統からの受電エネルギー"
+      },
+      "grid_export_energy": {
+        "name": "系統への送電エネルギー"
+      },
+      "battery_charge_energy": {
+        "name": "バッテリー充電エネルギー"
+      },
+      "battery_discharge_energy": {
+        "name": "バッテリー放電エネルギー"
       }
     }
   }

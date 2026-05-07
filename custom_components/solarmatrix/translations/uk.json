@@ -51,6 +51,27 @@
       },
       "grid_power": {
         "name": "Потужність мережі"
+      },
+      "consumption_power": {
+        "name": "Споживання"
+      },
+      "solar_energy": {
+        "name": "Енергія СЕС"
+      },
+      "mi_out_energy": {
+        "name": "Енергія мікроінвертора"
+      },
+      "grid_import_energy": {
+        "name": "Енергія з мережі"
+      },
+      "grid_export_energy": {
+        "name": "Енергія в мережу"
+      },
+      "battery_charge_energy": {
+        "name": "Енергія заряду акумулятора"
+      },
+      "battery_discharge_energy": {
+        "name": "Енергія розряду акумулятора"
       }
     }
   }

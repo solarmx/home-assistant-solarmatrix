@@ -51,6 +51,27 @@
       },
       "grid_power": {
         "name": "Moc sieci"
+      },
+      "consumption_power": {
+        "name": "Zużycie"
+      },
+      "solar_energy": {
+        "name": "Energia z PV"
+      },
+      "mi_out_energy": {
+        "name": "Energia mikrofalownika"
+      },
+      "grid_import_energy": {
+        "name": "Energia pobrana z sieci"
+      },
+      "grid_export_energy": {
+        "name": "Energia oddana do sieci"
+      },
+      "battery_charge_energy": {
+        "name": "Energia ładowania akumulatora"
+      },
+      "battery_discharge_energy": {
+        "name": "Energia rozładowania akumulatora"
       }
     }
   }

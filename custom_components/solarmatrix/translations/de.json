@@ -51,6 +51,27 @@
       },
       "grid_power": {
         "name": "Netzleistung"
+      },
+      "consumption_power": {
+        "name": "Verbrauch"
+      },
+      "solar_energy": {
+        "name": "Solarproduktion (Energie)"
+      },
+      "mi_out_energy": {
+        "name": "Mikrowechselrichter-Energie"
+      },
+      "grid_import_energy": {
+        "name": "Netzbezug (Energie)"
+      },
+      "grid_export_energy": {
+        "name": "Netzeinspeisung (Energie)"
+      },
+      "battery_charge_energy": {
+        "name": "Batterie geladen (Energie)"
+      },
+      "battery_discharge_energy": {
+        "name": "Batterie entladen (Energie)"
       }
     }
   }

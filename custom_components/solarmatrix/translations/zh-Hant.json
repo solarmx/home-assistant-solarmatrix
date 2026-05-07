@@ -51,6 +51,27 @@
       },
       "grid_power": {
         "name": "電網功率"
+      },
+      "consumption_power": {
+        "name": "消耗"
+      },
+      "solar_energy": {
+        "name": "太陽能產量"
+      },
+      "mi_out_energy": {
+        "name": "微型逆變器輸出能量"
+      },
+      "grid_import_energy": {
+        "name": "電網輸入電量"
+      },
+      "grid_export_energy": {
+        "name": "電網輸出電量"
+      },
+      "battery_charge_energy": {
+        "name": "電池充電電量"
+      },
+      "battery_discharge_energy": {
+        "name": "電池放電電量"
       }
     }
   }
