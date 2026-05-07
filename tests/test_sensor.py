@@ -5,15 +5,21 @@ from __future__ import annotations
 from unittest.mock import MagicMock
 
 from homeassistant.components.sensor import SensorDeviceClass, SensorStateClass
-from homeassistant.const import PERCENTAGE, UnitOfPower
+from homeassistant.const import PERCENTAGE, UnitOfEnergy, UnitOfPower
 
 from custom_components.solarmatrix.api import EnergyTotals, Snapshot
 from custom_components.solarmatrix.sensor import (
+    BatteryChargeEnergy,
+    BatteryDischargeEnergy,
     BatteryPower,
     BatterySOC,
     ConsumptionPower,
+    GridExportEnergy,
+    GridImportEnergy,
     GridPower,
+    MIOutEnergy,
     MIOutPower,
+    SolarEnergy,
     SolarPower,
 )
 
@@ -118,3 +124,68 @@ def test_consumption_power_attrs() -> None:
     assert s.native_unit_of_measurement == UnitOfPower.WATT
     # mi_out_w + grid_w
     assert s.native_value == snap.mi_out_w + snap.grid_w
+
+
+def test_solar_energy_attrs() -> None:
+    snap = _snap_with_energy()
+    s = SolarEnergy(_coord(snap), system_name="Sys", household_name="WE05")
+    assert s.device_class == SensorDeviceClass.ENERGY
+    assert s.state_class == SensorStateClass.TOTAL_INCREASING
+    assert s.native_unit_of_measurement == UnitOfEnergy.KILO_WATT_HOUR
+    expected = round(snap.energy.solar_generation_mws / 3_600_000_000, 3)
+    assert s.native_value == expected
+
+
+def test_mi_out_energy_attrs() -> None:
+    snap = _snap_with_energy()
+    s = MIOutEnergy(_coord(snap), system_name="Sys", household_name="WE05")
+    expected = round(snap.energy.microinverter_output_mws / 3_600_000_000, 3)
+    assert s.native_value == expected
+
+
+def test_grid_import_energy_attrs() -> None:
+    snap = _snap_with_energy()
+    s = GridImportEnergy(_coord(snap), system_name="Sys", household_name="WE05")
+    expected = round(snap.energy.grid_import_mws / 3_600_000_000, 3)
+    assert s.native_value == expected
+
+
+def test_grid_export_energy_attrs() -> None:
+    snap = _snap_with_energy()
+    s = GridExportEnergy(_coord(snap), system_name="Sys", household_name="WE05")
+    expected = round(snap.energy.grid_export_mws / 3_600_000_000, 3)
+    assert s.native_value == expected
+
+
+def test_battery_charge_energy_attrs() -> None:
+    snap = _snap_with_energy()
+    s = BatteryChargeEnergy(_coord(snap), system_name="Sys", household_name="WE05")
+    expected = round(snap.energy.battery_charge_mws / 3_600_000_000, 3)
+    assert s.native_value == expected
+
+
+def test_battery_discharge_energy_attrs() -> None:
+    snap = _snap_with_energy()
+    s = BatteryDischargeEnergy(_coord(snap), system_name="Sys", household_name="WE05")
+    expected = round(snap.energy.battery_discharge_mws / 3_600_000_000, 3)
+    assert s.native_value == expected
+
+
+def test_unique_ids_distinct_with_energy_sensors() -> None:
+    coord = _coord(_snap_with_energy())
+    sensors = [
+        SolarPower(coord, "Sys", "WE05"),
+        MIOutPower(coord, "Sys", "WE05"),
+        GridPower(coord, "Sys", "WE05"),
+        BatteryPower(coord, "Sys", "WE05"),
+        BatterySOC(coord, "Sys", "WE05"),
+        ConsumptionPower(coord, "Sys", "WE05"),
+        SolarEnergy(coord, "Sys", "WE05"),
+        MIOutEnergy(coord, "Sys", "WE05"),
+        GridImportEnergy(coord, "Sys", "WE05"),
+        GridExportEnergy(coord, "Sys", "WE05"),
+        BatteryChargeEnergy(coord, "Sys", "WE05"),
+        BatteryDischargeEnergy(coord, "Sys", "WE05"),
+    ]
+    ids = {s.unique_id for s in sensors}
+    assert len(ids) == 12

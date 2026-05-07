@@ -8,7 +8,7 @@ from homeassistant.components.sensor import (
     SensorStateClass,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import PERCENTAGE, UnitOfPower
+from homeassistant.const import PERCENTAGE, UnitOfEnergy, UnitOfPower
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.device_registry import DeviceInfo
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
@@ -41,6 +41,12 @@ async def async_setup_entry(
             BatteryPower(coordinator, system_name, household_name),
             BatterySOC(coordinator, system_name, household_name),
             ConsumptionPower(coordinator, system_name, household_name),
+            SolarEnergy(coordinator, system_name, household_name),
+            MIOutEnergy(coordinator, system_name, household_name),
+            GridImportEnergy(coordinator, system_name, household_name),
+            GridExportEnergy(coordinator, system_name, household_name),
+            BatteryChargeEnergy(coordinator, system_name, household_name),
+            BatteryDischargeEnergy(coordinator, system_name, household_name),
         ]
     )
 
@@ -81,6 +87,24 @@ class _BaseSensor(CoordinatorEntity[SolarMatrixCoordinator], SensorEntity):
 class _PowerSensor(_BaseSensor):
     _attr_device_class = SensorDeviceClass.POWER
     _attr_native_unit_of_measurement = UnitOfPower.WATT
+
+
+class _EnergySensor(_BaseSensor):
+    """Lifetime cumulative kWh, server-side counter."""
+
+    _attr_device_class = SensorDeviceClass.ENERGY
+    _attr_state_class = SensorStateClass.TOTAL_INCREASING
+    _attr_native_unit_of_measurement = UnitOfEnergy.KILO_WATT_HOUR
+    _attr_suggested_display_precision = 3
+
+    _MWS_PER_KWH = 3_600_000_000
+
+    def _mws(self) -> int:
+        raise NotImplementedError
+
+    @property
+    def native_value(self) -> float:
+        return round(self._mws() / self._MWS_PER_KWH, 3)
 
 
 class SolarPower(_PowerSensor):
@@ -152,3 +176,63 @@ class ConsumptionPower(_PowerSensor):
     def native_value(self) -> int:
         s = self._snap()
         return s.mi_out_w + s.grid_w
+
+
+class SolarEnergy(_EnergySensor):
+    _attr_translation_key = "solar_energy"
+
+    def _slug(self) -> str:
+        return "solar_energy"
+
+    def _mws(self) -> int:
+        return self._snap().energy.solar_generation_mws
+
+
+class MIOutEnergy(_EnergySensor):
+    _attr_translation_key = "mi_out_energy"
+
+    def _slug(self) -> str:
+        return "mi_out_energy"
+
+    def _mws(self) -> int:
+        return self._snap().energy.microinverter_output_mws
+
+
+class GridImportEnergy(_EnergySensor):
+    _attr_translation_key = "grid_import_energy"
+
+    def _slug(self) -> str:
+        return "grid_import_energy"
+
+    def _mws(self) -> int:
+        return self._snap().energy.grid_import_mws
+
+
+class GridExportEnergy(_EnergySensor):
+    _attr_translation_key = "grid_export_energy"
+
+    def _slug(self) -> str:
+        return "grid_export_energy"
+
+    def _mws(self) -> int:
+        return self._snap().energy.grid_export_mws
+
+
+class BatteryChargeEnergy(_EnergySensor):
+    _attr_translation_key = "battery_charge_energy"
+
+    def _slug(self) -> str:
+        return "battery_charge_energy"
+
+    def _mws(self) -> int:
+        return self._snap().energy.battery_charge_mws
+
+
+class BatteryDischargeEnergy(_EnergySensor):
+    _attr_translation_key = "battery_discharge_energy"
+
+    def _slug(self) -> str:
+        return "battery_discharge_energy"
+
+    def _mws(self) -> int:
+        return self._snap().energy.battery_discharge_mws
