@@ -48,8 +48,35 @@ class UpstreamError(APIError):
 
 
 @dataclass(frozen=True)
+class EnergyTotals:
+    """Lifetime cumulative energy per channel, in milliwatt-seconds.
+
+    Always non-negative and monotonically non-decreasing across calls.
+    Convert to kWh: ``mws / 3_600_000_000``.
+    """
+
+    solar_generation_mws: int
+    microinverter_output_mws: int
+    grid_import_mws: int
+    grid_export_mws: int
+    battery_charge_mws: int
+    battery_discharge_mws: int
+
+    @classmethod
+    def from_json(cls, body: dict[str, Any]) -> "EnergyTotals":
+        return cls(
+            solar_generation_mws=int(body["solar_generation_mws"]),
+            microinverter_output_mws=int(body["microinverter_output_mws"]),
+            grid_import_mws=int(body["grid_import_mws"]),
+            grid_export_mws=int(body["grid_export_mws"]),
+            battery_charge_mws=int(body["battery_charge_mws"]),
+            battery_discharge_mws=int(body["battery_discharge_mws"]),
+        )
+
+
+@dataclass(frozen=True)
 class Snapshot:
-    """One sample of live power and SoC for a household."""
+    """One sample of live power, SoC, and lifetime energy for a household."""
 
     household_id: int
     ts_ms: int
@@ -58,6 +85,7 @@ class Snapshot:
     solar_w: int
     battery_w: int
     battery_soc_pct: int
+    energy: EnergyTotals
 
     @classmethod
     def from_json(cls, body: dict[str, Any]) -> "Snapshot":
@@ -69,6 +97,7 @@ class Snapshot:
             solar_w=int(body["solar_w"]),
             battery_w=int(body["battery_w"]),
             battery_soc_pct=int(body["battery_soc_pct"]),
+            energy=EnergyTotals.from_json(body["energy"]),
         )
 
 

@@ -58,6 +58,14 @@ async def test_get_snapshot_happy_path(session: aiohttp.ClientSession) -> None:
         "solar_w": 42,
         "battery_w": -41,
         "battery_soc_pct": 45,
+        "energy": {
+            "solar_generation_mws":     12345678901234,
+            "microinverter_output_mws":  9876543210987,
+            "grid_import_mws":           2345678901234,
+            "grid_export_mws":            123456789012,
+            "battery_charge_mws":        5678901234567,
+            "battery_discharge_mws":     5345678901234,
+        },
     }
     with aioresponses() as m:
         m.get(
@@ -67,8 +75,13 @@ async def test_get_snapshot_happy_path(session: aiohttp.ClientSession) -> None:
         snap = await api.get_snapshot("sid-x", 0)
     assert isinstance(snap, Snapshot)
     assert snap.grid_w == 374
-    assert snap.battery_w == -41
     assert snap.battery_soc_pct == 45
+    assert snap.energy.solar_generation_mws == 12345678901234
+    assert snap.energy.microinverter_output_mws == 9876543210987
+    assert snap.energy.grid_import_mws == 2345678901234
+    assert snap.energy.grid_export_mws == 123456789012
+    assert snap.energy.battery_charge_mws == 5678901234567
+    assert snap.energy.battery_discharge_mws == 5345678901234
 
 
 @pytest.mark.parametrize(
