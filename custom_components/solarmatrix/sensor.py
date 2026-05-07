@@ -40,6 +40,7 @@ async def async_setup_entry(
             GridPower(coordinator, system_name, household_name),
             BatteryPower(coordinator, system_name, household_name),
             BatterySOC(coordinator, system_name, household_name),
+            ConsumptionPower(coordinator, system_name, household_name),
         ]
     )
 
@@ -137,3 +138,17 @@ class BatterySOC(_BaseSensor):
     @property
     def native_value(self) -> int:
         return self._snap().battery_soc_pct
+
+
+class ConsumptionPower(_PowerSensor):
+    """Live home consumption: microinverter output + grid (signed)."""
+
+    _attr_translation_key = "consumption_power"
+
+    def _slug(self) -> str:
+        return "consumption_power"
+
+    @property
+    def native_value(self) -> int:
+        s = self._snap()
+        return s.mi_out_w + s.grid_w

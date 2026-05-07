@@ -13,6 +13,7 @@ from homeassistant.helpers.update_coordinator import UpdateFailed
 from custom_components.solarmatrix.api import (
     AccessError,
     AuthError,
+    EnergyTotals,
     NotFoundError,
     RateLimitError,
     Snapshot,
@@ -26,8 +27,19 @@ from custom_components.solarmatrix.const import (
 from custom_components.solarmatrix.coordinator import SolarMatrixCoordinator
 
 
+def _energy() -> EnergyTotals:
+    return EnergyTotals(
+        solar_generation_mws=0,
+        microinverter_output_mws=0,
+        grid_import_mws=0,
+        grid_export_mws=0,
+        battery_charge_mws=0,
+        battery_discharge_mws=0,
+    )
+
+
 def _snap() -> Snapshot:
-    return Snapshot(0, 1, 1, 1, 1, 1, 50)
+    return Snapshot(0, 1, 1, 1, 1, 1, 50, _energy())
 
 
 async def test_success_resets_interval(hass: HomeAssistant) -> None:
@@ -94,11 +106,14 @@ async def test_backoff_caps_at_30_minutes(hass: HomeAssistant) -> None:
 
 
 async def test_setup_entry_runs(hass: HomeAssistant, mock_entry, monkeypatch) -> None:
-    from custom_components.solarmatrix.api import Snapshot
+    from custom_components.solarmatrix.api import EnergyTotals, Snapshot
     from custom_components.solarmatrix.const import DOMAIN
 
     async def fake_first_refresh(self):
-        self.data = Snapshot(0, 1, 1, 1, 1, 1, 50)
+        self.data = Snapshot(
+            0, 1, 1, 1, 1, 1, 50,
+            EnergyTotals(0, 0, 0, 0, 0, 0),
+        )
         self.last_update_success = True
 
     monkeypatch.setattr(
