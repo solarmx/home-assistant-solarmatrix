@@ -40,6 +40,16 @@ def fake_api():
     return api
 
 
+async def test_user_step_links_to_portal_api_keys(hass: HomeAssistant) -> None:
+    result = await hass.config_entries.flow.async_init(
+        DOMAIN, context={"source": SOURCE_USER}
+    )
+    assert result["type"] == FlowResultType.FORM
+    assert result["description_placeholders"] == {
+        "api_keys_url": "https://portal.solarmatrix.eu/settings/api-keys"
+    }
+
+
 async def test_user_step_invalid_key(hass: HomeAssistant) -> None:
     api = AsyncMock()
     api.list_systems.side_effect = AuthError("nope")
