@@ -26,7 +26,7 @@ Each household exposes twelve sensors:
 
 ### 1. Get an API key
 
-Open <https://app.solarmatrix.eu/settings/api-keys> and create a key.
+Open <https://portal.solarmatrix.eu/settings/api-keys> and create a key.
 
 ### 2. Add this repository to HACS
 

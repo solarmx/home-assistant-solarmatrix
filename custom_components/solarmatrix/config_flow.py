@@ -167,6 +167,6 @@ class SolarMatrixConfigFlow(ConfigFlow, domain=DOMAIN):
             data_schema=vol.Schema(schema),
             errors=errors or {},
             description_placeholders={
-                "api_keys_url": "https://app.solarmatrix.eu/settings/api-keys",
+                "api_keys_url": "https://portal.solarmatrix.eu/settings/api-keys",
             },
         )
